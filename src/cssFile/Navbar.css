@@ -1,0 +1,18 @@
+.navbar_main
+{
+    width: 100%;
+    height: 100px;
+    /* background-color: aqua; */
+    padding: 0px 0px 0px 0px;
+}
+.navabr_logo{
+    width: 300px;
+    height: 100%;
+    margin-left: 30px;
+}
+@media screen and (max-width: 768px) {
+    .navabr_logo{
+      
+        margin-left: 0px;
+    }
+}

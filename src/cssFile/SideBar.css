@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.HA_side_bar_btn{
+    display: flex;
+    align-items: center;
+    width:auto;
+    /* border: 2px solid yellow; */
+    padding: 20px;
+    /* height: 20px; */
+}
+.HA_side_bar_text{
+    font-size: 1.5em;
+    color: black;
+    font-family: 'Montserrat, sans-serif';
+    margin-left: 30px;
+}

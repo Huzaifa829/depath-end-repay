@@ -1,0 +1,17 @@
+    .HA_side_btn_main{
+        margin: 10px 0px;
+        display: flex;
+        align-items: center;
+        width: 80%;
+        padding: 20px;
+        border-radius: 10px 10px 10px 0px;
+        /* border: 1px solid black; */
+    }
+    .HA_side_btn_main:hover{
+        background-color: rgb(202, 202, 202);
+        transition: 0.5s;
+    }
+    .HA_side_btn_text{
+        font-size: 1.2rem;
+        margin-left: 30px;
+    }
