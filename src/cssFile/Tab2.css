@@ -1,0 +1,31 @@
+.HA_tab2_main_text {
+    width: 20vmax;
+    height: 6vmax;
+    padding: 20px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 0px 0px 10px 0px;
+}
+
+.HA_tab2_main_text>p {
+color: white;
+margin: 0px 0px 10px 0px;
+}
+.HA_tab2_main{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+
+}
+.HA_tab2_main_para{
+    font-size: 1.2vmax;
+}
+.HA_tab2_main_para1{
+    font-size: 1vmax;
+}

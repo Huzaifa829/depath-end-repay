@@ -1,0 +1,15 @@
+.HA_table_main_add{
+    padding: 20px;
+}
+.HA_table_main_add_child{
+    width: 100%;
+    /* background-color: aqua; */
+    margin:20px 0px;
+    padding: 20px 0px;
+    border-bottom: 1px solid gray;
+
+}
+.HA_table_main_add_child_text{
+    font-size: 2vmax;
+    margin: 0px;
+}
