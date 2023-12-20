@@ -45,7 +45,7 @@ const App = () => {
   const max = Math.max(...temperatures);
 
   return (
-    <div className=''>
+    <div className='HA_tab2_main_top'>
       <div className='HA_tab2_main'>
       <div className='HA_tab2_main_text'>
         <p className='HA_tab2_main_para'>Total RepayCoins:</p>
@@ -60,7 +60,7 @@ const App = () => {
         <p>45,562 coins</p>
       </div>
       </div>
-    <VictoryChart width={1000} height={400}>
+    <VictoryChart width={1000} height={380}>
       <VictoryLine data={data} />
       <VictoryScatter
         data={data}

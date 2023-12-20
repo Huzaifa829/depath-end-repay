@@ -5,7 +5,7 @@ import { FacebookOutlined } from '@ant-design/icons';
 import '../cssFile/LoginPage.css'
 import { Link } from 'react-router-dom';
 
-const LoginPage = () => {
+const SignupPage = () => {
 
    const asdasdasd= {
     borderRadius:'20px',
@@ -43,6 +43,17 @@ const LoginPage = () => {
       autoComplete="off"
     >
       <Form.Item
+        name="name"
+        rules={[
+          {
+            required: true,
+            message: 'Please input your name!',
+          },
+        ]}
+      >
+        <Input placeholder="Full Name" style={{ width: '30vmax' }} />
+      </Form.Item>
+      <Form.Item
         name="username"
         rules={[
           {
@@ -51,7 +62,7 @@ const LoginPage = () => {
           },
         ]}
       >
-        <Input className='my-input' placeholder="Username" style={{ width: '30vmax' }} />
+        <Input placeholder="Username" style={{ width: '30vmax' }} />
       </Form.Item>
 
       <Form.Item
@@ -63,7 +74,7 @@ const LoginPage = () => {
           },
         ]}
       >
-        <Input.Password className='my-input'   placeholder="Password" style={{ width: '30vmax' }} />
+        <Input.Password placeholder="Password" style={{ width: '30vmax' }} />
       </Form.Item>
 
       <Form.Item
@@ -83,14 +94,16 @@ const LoginPage = () => {
           span: 18,
         }}
       >
-         <Link to="/home">
+        <Link to="/home">
         <Button style={{width:"100%"}} type="primary" htmlType="submit">
-          Login
+          Sign up
         </Button>
         </Link>
       </Form.Item>
+
+      {/* Facebook Login Button */}
       <Form.Item
-      style={{marginBottom:'50px'}}
+        style={{marginBottom:'50px'}}
         wrapperCol={{
           offset: 3,
           span: 18,
@@ -100,14 +113,11 @@ const LoginPage = () => {
         Login with Facebook
         </Button>
       </Form.Item>
-
-      {/* Facebook Login Button */}
-    
       {/* <Link to="/home">Go to Home Page</Link> */}
     </Form>
   );
 };
 
-export default LoginPage;
+export default SignupPage;
 
 

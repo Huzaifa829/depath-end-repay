@@ -1,5 +1,33 @@
 button.kep-login-facebook.metro{
     border-radius: 5px;
-    padding: 14px;
-    font-size: 15px;
+    padding: 10px;
+    font-size: 10px;
 }
+.HA_create_acount{
+    color: rgb(0, 162, 255);
+    cursor: pointer;
+}
+.HA_create_acount_span{
+    color: black;
+}
+.my-input{
+    border: 1px solid gray;
+    transition: border-color 0.3s;
+  }
+  
+  .my-input:focus {
+    border-color: black !important;
+    box-shadow: 0px 0px 9px -4px black;
+  }
+  
+  .my-input:hover {
+    border-color: black !important;
+  }
+  .HA_login_border{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    width: 100%;
+    border-top: 1px solid black;
+  }

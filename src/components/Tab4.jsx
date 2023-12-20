@@ -23,21 +23,22 @@ function createData(name, code, population, size, density,Amount) {
 }
 
 const rows = [
-    createData('1', 'Huzaifa', "abc", "huizafahemd829@gmail.com","2023-12-23","123123123 Coins"),
-    createData('2', 'Huzaifa', "abc", "huizafahemd829@gmail.com","2023-12-23","123123123 Coins"),
-    createData('3', 'Huzaifa', "abc", "huizafahemd829@gmail.com","2023-12-23","123123123 Coins"),
-    createData('4', 'Huzaifa', "abc", "huizafahemd829@gmail.com","2023-12-23","123123123 Coins"),
-    createData('5', 'Huzaifa', "abc", "huizafahemd829@gmail.com","2023-12-23","123123123 Coins"),
-    createData('6', 'Huzaifa', "abc", "huizafahemd829@gmail.com","2023-12-23","123123123 Coins"),
-    createData('7', 'Huzaifa', "abc", "huizafahemd829@gmail.com","2023-12-23","123123123 Coins"),
-    createData('8', 'Huzaifa', "abc", "huizafahemd829@gmail.com","2023-12-23","123123123 Coins"),
-    createData('9', 'Huzaifa', "abc", "huizafahemd829@gmail.com","2023-12-23","123123123 Coins"),
-    createData('10', 'Huzaifa', "abc", "huizafahemd829@gmail.com","2023-12-23","123123123 Coins"),
-    createData('11', 'Huzaifa', "abc", "huizafahemd829@gmail.com","2023-12-23","123123123 Coins"),
+    createData('1', 'John', "abc", "John121@gmail.com","2023-12-23","123123123 Coins"),
+    createData('1', 'John', "abc", "John121@gmail.com","2023-12-23","123123123 Coins"),
+    createData('1', 'John', "abc", "John121@gmail.com","2023-12-23","123123123 Coins"),
+    createData('1', 'John', "abc", "John121@gmail.com","2023-12-23","123123123 Coins"),
+    createData('1', 'John', "abc", "John121@gmail.com","2023-12-23","123123123 Coins"),
+    createData('1', 'John', "abc", "John121@gmail.com","2023-12-23","123123123 Coins"),
+    createData('1', 'John', "abc", "John121@gmail.com","2023-12-23","123123123 Coins"),
+    createData('1', 'John', "abc", "John121@gmail.com","2023-12-23","123123123 Coins"),
+    createData('1', 'John', "abc", "John121@gmail.com","2023-12-23","123123123 Coins"),
+    createData('1', 'John', "abc", "John121@gmail.com","2023-12-23","123123123 Coins"),
+    createData('1', 'John', "abc", "John121@gmail.com","2023-12-23","123123123 Coins"),
+    
    
   
 ];
-console.log(rows)
+
 
 export default function Tab4() {
     const [page, setPage] = React.useState(0);

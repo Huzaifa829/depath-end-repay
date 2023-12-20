@@ -20,6 +20,10 @@ import Tab4 from '../components/Tab4';
 import Tab5 from '../components/Tab5';
 import Tab6 from '../components/Tab6';
 import Tab7 from '../components/Tab7';
+import Tab8 from '../components/Tab8';
+import Tab9 from '../components/Tab9';
+import { Link } from 'react-router-dom';
+import FooterHA from '../components/Footer_HA'
 
 const HomePage = () => {
   const btnstyle = {
@@ -29,11 +33,10 @@ const HomePage = () => {
     width: '100%',
     marginTop: '15px'
   }
-  const [activeTab, setActiveTab] = useState('Tab1'); 
-  const handleTabChange = (tab) => {
-    setActiveTab(tab);
-    console.log('c', tab)
-  };
+    const [activeTab, setActiveTab] = useState('Tab1'); 
+    const handleTabChange = (tab) => {
+      setActiveTab(tab);
+    };
 
   return (
     <>
@@ -44,35 +47,41 @@ const HomePage = () => {
             <MenuIcon color='white' />
             <span className='HA_side_bar_text'>Repay Menu</span>
           </div>
-          <div onClick={() => handleTabChange('Tab1')}>
+          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab1')}>
           <Sidebtn  text='Add Debt Cases' icon={<FolderIcon />} />
           </div>
-          <div onClick={() => handleTabChange('Tab2')}  >
+          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab2')}  >
 
           <Sidebtn  text='Overview' icon={<BlurCircularIcon />} />
           </div>
-          <div onClick={() => handleTabChange('Tab3')}>
+          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab3')}>
           <Sidebtn text='My Adversaries' icon={<PersonIcon />} />
           </div>
-          <div  onClick={() => handleTabChange('Tab4')}>
+          <div className='HA_side_bar_btn_check'  onClick={() => handleTabChange('Tab4')}>
           <Sidebtn text='Requests Sent' icon={<FolderCopyIcon />} />
           </div>
-          <div  onClick={() => handleTabChange('Tab5')}>
+          <div className='HA_side_bar_btn_check'  onClick={() => handleTabChange('Tab5')}>
           <Sidebtn text='Offers Recieved' icon={<FavoriteBorderIcon />} />
           </div>
-          <div  onClick={() => handleTabChange('Tab6')}>
+          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab6')}>
           <Sidebtn text='Settled Debt Cases' icon={<WidgetsIcon />} />
           </div>
-          <div  onClick={() => handleTabChange('Tab7')}>
+          <div className='HA_side_bar_btn_check'  onClick={() => handleTabChange('Tab7')}>
           <Sidebtn text='Notification Settings' icon={<SettingsIcon />} />
           </div>
+          <div className='HA_side_bar_btn_check'  onClick={() => handleTabChange('Tab8')}>
           <Sidebtn text='Profile' icon={<PersonIcon />} />
+          </div>
+          <div className='HA_side_bar_btn_check'  onClick={() => handleTabChange('Tab9')}>
           <Sidebtn text='Wallet' icon={<AccountBalanceWalletIcon />} />
+          </div>
+          <Link to="/">
           <Button variant="contained" endIcon={<LogoutIcon />}
             style={btnstyle}
           >
             Logout
           </Button>
+          </Link>
         </div>
         <div className='HA_main_part2'>
         {activeTab === 'Tab1' && <Tab1 />}
@@ -82,8 +91,11 @@ const HomePage = () => {
           {activeTab === 'Tab5' && <Tab5 />}
           {activeTab === 'Tab6' && <Tab6 />}
           {activeTab === 'Tab7' && <Tab7 />}
+          {activeTab === 'Tab8' && <Tab8 />}
+          {activeTab === 'Tab9' && <Tab9 />}
         </div>
       </div>
+    <FooterHA/>
     </>
   )
 }

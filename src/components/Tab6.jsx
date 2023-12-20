@@ -44,7 +44,6 @@ const rows = [
   
 
 ];
-console.log(rows)
 
 export default function Tab6() {
     const [page, setPage] = React.useState(0);

@@ -25,20 +25,20 @@ function createData(name, code, population, size,density,datapass,price) {
 }
 
 const rows = [
-    createData('1', 'Please Select Adversary Name:', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
-    createData('2', 'Please Select Adversary Name:', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
-    createData('3', 'Please Select Adversary Name:', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
-    createData('4', 'Please Select Adversary Name:', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
-    createData('5', 'Please Select Adversary Name:', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
-    createData('6', 'Please Select Adversary Name:', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
-    createData('7', 'Please Select Adversary Name:', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
-    createData('8', 'Please Select Adversary Name:', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
-    createData('9', 'Please Select Adversary Name:', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
-    createData('10', 'Please Select Adversary Name:', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
+    createData('1', 'John', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
+    createData('1', 'John', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
+    createData('1', 'John', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
+    createData('1', 'John', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
+    createData('1', 'John', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
+    createData('1', 'John', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
+    createData('1', 'John', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
+    createData('1', 'John', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
+    createData('1', 'John', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
+    createData('1', 'John', "Money", "undefined",'asdasda',"2023-12-23","123123123 Coins"),
   
 
 ];
-console.log(rows)
+
 
 export default function Tab3() {
     const [page, setPage] = React.useState(0);
@@ -84,10 +84,10 @@ export default function Tab3() {
                                                 <TableCell key={column.id} align={column.align}>
                                                     {column.id === 'density' ? (
                                                         <>
-                                                        <Button style={{backgroundColor:'red',color:'white'}} key={columnIndex} onClick={() => console.log('Button clicked')}>
+                                                        <Button style={{backgroundColor:'red',color:'white'}} key={columnIndex} >
                                                             Add A Debt Case
                                                         </Button>
-                                                        <Button style={{backgroundColor:'#00e500',color:'white'}} key={columnIndex} onClick={() => console.log('Button clicked')}>
+                                                        <Button style={{backgroundColor:'#00e500',color:'white'}} key={columnIndex}>
                                                             Accpet
                                                         </Button>
                                                         </>

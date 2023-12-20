@@ -8,6 +8,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
+import { Button } from 'antd';
+
 
 const columns = [
     { id: 'name', label: 'S.no', minWidth: 30 },
@@ -39,22 +41,28 @@ function createData(name, code, population, size) {
 }
 
 const rows = [
-    createData('1', 'Huzaifa', "abc", "huizafahemd829@gmail.com"),
-    createData('2', 'Huzaifa', "abc", "huizafahemd829@gmail.com"),
-    createData('3', 'Huzaifa', "abc", "huizafahemd829@gmail.com"),
-    createData('4', 'Huzaifa', "abc", "huizafahemd829@gmail.com"),
-    createData('5', 'Huzaifa', "abc", "huizafahemd829@gmail.com"),
-    createData('6', 'Huzaifa', "abc", "huizafahemd829@gmail.com"),
-    createData('7', 'Huzaifa', "abc", "huizafahemd829@gmail.com"),
-    createData('8', 'Huzaifa', "abc", "huizafahemd829@gmail.com"),
-    createData('9', 'Huzaifa', "abc", "huizafahemd829@gmail.com"),
-    createData('10', 'Huzaifa', "abc", "huizafahemd829@gmail.com"),
-    createData('11', 'Huzaifa', "abc", "huizafahemd829@gmail.com"),
+    createData('1', 'john', "abc", "john121@gmail.com"),
+    createData('1', 'john', "abc", "john121@gmail.com"),
+    createData('1', 'john', "abc", "john121@gmail.com"),
+    createData('1', 'john', "abc", "john121@gmail.com"),
+    createData('1', 'john', "abc", "john121@gmail.com"),
+    createData('1', 'john', "abc", "john121@gmail.com"),
+    createData('1', 'john', "abc", "john121@gmail.com"),
+    createData('1', 'john', "abc", "john121@gmail.com"),
+    createData('1', 'john', "abc", "john121@gmail.com"),
+    createData('1', 'john', "abc", "john121@gmail.com"),
+
   
 ];
-console.log(rows)
+
 
 export default function Tab3() {
+    const buttonStyles = {
+        backgroundColor: 'black',
+        color: '#ffffff',
+        borderColor: 'black',
+        transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',
+      };
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -63,9 +71,11 @@ export default function Tab3() {
     };
 
     const handleChangeRowsPerPage = (event) => {
+
         setRowsPerPage(+event.target.value);
         setPage(0);
     };
+
 
     return (
         <div className='HA_table_main_add'>
@@ -97,9 +107,9 @@ export default function Tab3() {
                                         return (
                                             <TableCell key={column.id} align={column.align}>
                                                     {column.id === 'density' ? (
-                                                        <button key={columnIndex} onClick={() => console.log('Button clicked')}>
+                                                        <Button  style={buttonStyles} key={columnIndex}>
                                                             Add A Debt Case
-                                                        </button>
+                                                        </Button>
                                                     ) : (
                                                         value
                                                     )}

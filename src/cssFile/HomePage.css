@@ -16,6 +16,7 @@
 .HA_main{
     display: flex;
     width: 100%;
+    background-color: #ebebeb;
     height: 86.9vh;
     /* background-color: aqua; */
 }
@@ -31,12 +32,19 @@
     display: none;  /* Safari and Chrome */
 }
 .HA_main_part2{
-    width:80%;
-    height: 100%;
+    background-color:white;
+    border-radius: 15px;
+    width:76%;
+    height: 97%;
+    padding-left: 20px;
+    padding-right: 20px;
     overflow-y: scroll;
     /* background-color: brown; */
 
 }
 .HA_main_part2::-webkit-scrollbar{
     display: none; 
+}
+.HA_side_bar_btn_check{
+    cursor: pointer;
 }
