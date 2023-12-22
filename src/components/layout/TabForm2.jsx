@@ -1,4 +1,8 @@
+
+// TabFrom2
+
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button, Form, Input, TreeSelect, Checkbox, Row, Col, DatePicker, Radio } from 'antd';
 import '../../cssFile/TabFrom.css'
 
@@ -19,6 +23,7 @@ const TabFrom2 = () => {
         console.log(`checked = ${e.target.checked}`);
     };
 
+    const [t, i18n] = useTranslation("global")
     return (
         <Form
             labelCol={{
@@ -39,12 +44,12 @@ const TabFrom2 = () => {
         >
             <Row gutter={16}>
                 <Col span={12}>
-                    <Form.Item label="Favor Amount:">
+                    <Form.Item label= {t("TabFrom2_1.message")}> {/*Favor Amount:*/}
                         <Input className="my-input"  />
                     </Form.Item>
                 </Col>
                 <Col span={12}>
-                    <Form.Item label="Select Adversary Name:">
+                    <Form.Item label={t("TabFrom2_2.message")}> {/*Select Adversary Name:*/}
                         <Row gutter={8}>
                             <Col span={16}>
                                 <TreeSelect
@@ -63,7 +68,7 @@ const TabFrom2 = () => {
                                 />
                             </Col>
                             <Col span={6}>
-                                <Button style={buttonStyles}>Add New Adversary</Button>
+                                <Button style={buttonStyles}>{t("TabFrom2_3.message")}</Button> {/*Add New Adversary*/}
                             </Col>
                         </Row>
                     </Form.Item>
@@ -71,46 +76,46 @@ const TabFrom2 = () => {
             </Row>
             <Row gutter={16}>
                 <Col span={12}>
-                    <Form.Item label="Adversary Email:">
+                    <Form.Item label={t("TabFrom2_4.message")}> {/*Adversary Email:*/}
                         <Input className="my-input" />
                     </Form.Item>
                 </Col>
                 <Col span={12}>
-                    <Form.Item label="Adversary Facebook Id or Facebook Link:">
+                    <Form.Item label={t("TabFrom2_5.message")}> {/*Adversary Facebook Id or Facebook Link:*/}
                         <Input className="my-input" />
                     </Form.Item>
                 </Col>
             </Row>
             <Row gutter={16}>
             <Col span={12}>
-                <Form.Item label="DatePicker">
+                <Form.Item label={t("TabFrom2_6.message")}> {/*DatePicker*/}
                     <DatePicker className="my-input" />
                 </Form.Item>
             </Col>
             <Col span={12}>
                     {/* New Col for Description Input */}
-                    <Form.Item label="Description">
+                    <Form.Item label={t("TabFrom2_7.message")}> {/*Description*/}
                         <Input.TextArea rows={4} className="my-input" />
                     </Form.Item>
                 </Col>
             </Row>
           
             <Form.Item>
-                <Button style={buttonStyles}>+ Add a Installment</Button>
+                <Button style={buttonStyles}>{t("TabFrom2_8.message")}</Button> {/*+ Add a Installment*/}
             </Form.Item>
             <Form.Item>
-                <Checkbox onChange={onChange}>I accept the terms of use</Checkbox>
+                <Checkbox onChange={onChange}>{t("TabFrom2_9.message")}</Checkbox> {/*I accept the terms of use*/}
             </Form.Item>
-                <Form.Item label="Receive or Pay:">
+                <Form.Item label={t("TabFrom2_10.message")}> {/*Receive or Pay:*/}
                         <Col span={3}>
                             <Radio.Group onChange={onChange} value={undefined}>
-                                <Radio value="receive">Receive</Radio>
-                                <Radio value="pay">Pay</Radio>
+                                <Radio value="receive">{t("TabFrom2_11.message")}</Radio> {/*Receive*/}
+                                <Radio value="pay">{t("TabFrom2_12.message")}</Radio> {/*Pay*/}
                             </Radio.Group>
                         </Col>
                 </Form.Item>
                 <Form.Item>
-                <Button style={buttonStyles}>+ Add Debt Case</Button>
+                <Button style={buttonStyles}>{t("TabFrom2_13.message")}</Button> {/*+ Add Debt Case*/}
             </Form.Item>
         </Form>
     );

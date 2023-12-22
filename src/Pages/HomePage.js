@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import  {useTranslation}  from 'react-i18next';
 import Navbar from '../components/Navbar'
 import '../cssFile/HomePage.css'
 import MenuIcon from '@mui/icons-material/Menu';
@@ -25,6 +26,10 @@ import Tab9 from '../components/Tab9';
 import { Link } from 'react-router-dom';
 import FooterHA from '../components/Footer_HA'
 
+
+
+
+
 const HomePage = () => {
   const btnstyle = {
     backgroundColor: 'black',
@@ -33,10 +38,11 @@ const HomePage = () => {
     width: '100%',
     marginTop: '15px'
   }
-    const [activeTab, setActiveTab] = useState('Tab1'); 
-    const handleTabChange = (tab) => {
-      setActiveTab(tab);
-    };
+  const [activeTab, setActiveTab] = useState('Tab1');
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  };
+  const [t, i18n] = useTranslation("global")
 
   return (
     <>
@@ -45,46 +51,46 @@ const HomePage = () => {
         <div className='HA_main_part1'>
           <div className='HA_side_bar_btn'>
             <MenuIcon color='white' />
-            <span className='HA_side_bar_text'>Repay Menu</span>
+            <span className='HA_side_bar_text'>{t("HA_text.message")}</span>
           </div>
           <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab1')}>
-          <Sidebtn  text='Add Debt Cases' icon={<FolderIcon />} />
+            <Sidebtn text={t("HA_text2.message")} icon={<FolderIcon />} />{/*Add Debt Cases*/}
           </div>
           <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab2')}  >
 
-          <Sidebtn  text='Overview' icon={<BlurCircularIcon />} />
+            <Sidebtn text={t("HA_text3.message")} icon={<BlurCircularIcon />} />{/*Overview*/}
           </div>
           <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab3')}>
-          <Sidebtn text='My Adversaries' icon={<PersonIcon />} />
+            <Sidebtn text={t("HA_text4.message")} icon={<PersonIcon />} />{/*My Adversaries*/}
           </div>
-          <div className='HA_side_bar_btn_check'  onClick={() => handleTabChange('Tab4')}>
-          <Sidebtn text='Requests Sent' icon={<FolderCopyIcon />} />
+          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab4')}>
+            <Sidebtn text={t("HA_text5.message")} icon={<FolderCopyIcon />} />{/*Requests Sent*/}
           </div>
-          <div className='HA_side_bar_btn_check'  onClick={() => handleTabChange('Tab5')}>
-          <Sidebtn text='Offers Recieved' icon={<FavoriteBorderIcon />} />
+          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab5')}>
+            <Sidebtn text={t("HA_text6.message")} icon={<FavoriteBorderIcon />} />{/*Offers Recieved*/}
           </div>
           <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab6')}>
-          <Sidebtn text='Settled Debt Cases' icon={<WidgetsIcon />} />
+            <Sidebtn text={t("HA_text7.message")} icon={<WidgetsIcon />} />{/*Settled Debt Cases*/}
           </div>
-          <div className='HA_side_bar_btn_check'  onClick={() => handleTabChange('Tab7')}>
-          <Sidebtn text='Notification Settings' icon={<SettingsIcon />} />
+          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab7')}>
+            <Sidebtn text={t("HA_text8.message")} icon={<SettingsIcon />} />{/*Notification Settings*/}
           </div>
-          <div className='HA_side_bar_btn_check'  onClick={() => handleTabChange('Tab8')}>
-          <Sidebtn text='Profile' icon={<PersonIcon />} />
+          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab8')}>
+            <Sidebtn text={t("HA_text9.message")} icon={<PersonIcon />} />{/*Profile*/}
           </div>
-          <div className='HA_side_bar_btn_check'  onClick={() => handleTabChange('Tab9')}>
-          <Sidebtn text='Wallet' icon={<AccountBalanceWalletIcon />} />
+          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab9')}>
+            <Sidebtn text={t("HA_text10.message")} icon={<AccountBalanceWalletIcon />} />{/*Wallet*/}
           </div>
           <Link to="/">
-          <Button variant="contained" endIcon={<LogoutIcon />}
-            style={btnstyle}
-          >
-            Logout
-          </Button>
+            <Button variant="contained" endIcon={<LogoutIcon />}
+              style={btnstyle}
+            >
+             {t("HA_text1.message")}{/*sss*/}
+            </Button>
           </Link>
         </div>
         <div className='HA_main_part2'>
-        {activeTab === 'Tab1' && <Tab1 />}
+          {activeTab === 'Tab1' && <Tab1 />}
           {activeTab === 'Tab2' && <Tab2 />}
           {activeTab === 'Tab3' && <Tab3 />}
           {activeTab === 'Tab4' && <Tab4 />}
@@ -95,7 +101,7 @@ const HomePage = () => {
           {activeTab === 'Tab9' && <Tab9 />}
         </div>
       </div>
-    <FooterHA/>
+      <FooterHA />
     </>
   )
 }

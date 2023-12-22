@@ -1,4 +1,7 @@
+// Tab9
+
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button, Form, Input, TreeSelect, Checkbox, Row, Col, DatePicker, Radio, Select } from 'antd';
 import '../cssFile/Tab3.css';
 import Table from '@mui/material/Table';
@@ -30,6 +33,8 @@ const rows = [
 
 
 ];
+
+
 const Tab9 = () => {
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -52,10 +57,12 @@ const Tab9 = () => {
     const onFormLayoutChange = ({ size }) => {
         setComponentSize(size);
     };
+
+    const [t, i18n] = useTranslation("global")
     return (
         <div className='HA_table_main_add'>
             <div className='HA_table_main_add_child'>
-                <p className='HA_table_main_add_child_text'>User Wallet</p>
+                <p className='HA_table_main_add_child_text'>{t("Tab9_1.message")}</p> {/*User Wallet*/}
             </div>
             <Paper elevation={5} style={{ width: '300px', padding: '20px', margin: '0px', borderRadius: '10px', display: 'flex', alignItems: 'center' }}>
                 {/* Icon Section */}
@@ -65,14 +72,14 @@ const Tab9 = () => {
 
                 {/* Text Section */}
                 <Box>
-                    <Typography variant="h5">Total Balance</Typography>
+                    <Typography variant="h5">{t("Tab9_2.message")}</Typography> {/*Total Balance*/}
                     <Typography variant="h4" style={{ fontWeight: 'bold', marginTop: '10px' }}>
-                        100 $
+                        100 $ {/*100 $*/}
                     </Typography>
                 </Box>
             </Paper>
             <div className='HA_table_main_add_child'>
-                <p className='HA_table_main_add_child_text'>Last Transaction</p>
+                <p className='HA_table_main_add_child_text'>{t("Tab9_3.message")}</p> {/*Last Transaction*/}
             </div>
             <Paper sx={{ width: '100%', overflow: 'hidden' }}>
                 <TableContainer sx={{ maxHeight: 140 }}>
@@ -119,7 +126,7 @@ const Tab9 = () => {
                 />
             </Paper>
             <div className='HA_table_main_add_child'>
-                <p className='HA_table_main_add_child_text'>Make a Transaction</p>
+                <p className='HA_table_main_add_child_text'>{t("Tab9_4.message")}</p> {/*Make a Transaction*/}
             </div>
             <Form
                 labelCol={{
@@ -140,15 +147,15 @@ const Tab9 = () => {
             >
                 <Row gutter={16}>
                     <Col span={12}>
-                        <Form.Item label="Amount (REPAYcoins):">
+                        <Form.Item label={t("Tab9_5.message")}> {/*Amount (REPAYcoins):*/}
                             <Input className="my-input" />
                         </Form.Item>
                     </Col>
                     <Col span={12}>
-                        <Form.Item label="Transaction Type:">
-                            <Select placeholder="Full Payment">
-                                <Select.Option value="demo">Full Payment</Select.Option>
-                                <Select.Option value="demo">Installement</Select.Option>
+                        <Form.Item label={t("Tab9_6.message")}> {/*Transaction Type:*/}
+                            <Select placeholder={t("Tab9_7.message")}> {/*Full Payment*/}
+                                <Select.Option value="demo">{t("Tab9_8.message")}</Select.Option> {/*Full Payment*/}
+                                <Select.Option value="demo">{t("Tab9_9.message")}</Select.Option> {/*Installement*/}
                             </Select>
                         </Form.Item>
                     </Col>
@@ -156,7 +163,7 @@ const Tab9 = () => {
 
 
                 <Form.Item>
-                    <Button style={buttonStyles}>Submit</Button>
+                    <Button style={buttonStyles}>{t("Tab9_10.message")}</Button> {/*Submit*/}
                 </Form.Item>
             </Form>
         </div>

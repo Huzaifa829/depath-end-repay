@@ -1,0 +1,582 @@
+{
+    "Tab8_1": {
+        "message": "Nama:"
+    },
+    "Tab8_2": {
+        "message": "Email:"
+    },
+    "Tab8_3": {
+        "message": "Facebook:"
+    },
+    "Tab8_4": {
+        "message": "Batal:"
+    },
+    "Tab8_5": {
+        "message": "Simpan & Ubah:"
+    },
+    "Tab8_6": {
+        "message": "Kata Sandi:"
+    },
+    "Tab8_7": {
+        "message": "Batal"
+    },
+    "Tab8_8": {
+        "message": "Simpan & Ubah"
+    },
+    "Tab8_9": {
+        "message": "Mata Uang:"
+    },
+    "Tab8_10": {
+        "message": "Batal"
+    },
+    "Tab8_11": {
+        "message": "Simpan & Ubah"
+    },
+    "Tab8_12": {
+        "message": "Profil:"
+    },
+    "HA_text": {
+        "message": "Menu Pembayaran"
+    },
+    "HA_text1": {
+        "message": "Keluar"
+    },
+    "HA_text2": {
+        "message": "Tambahkan Kasus Utang"
+    },
+    "HA_text3": {
+        "message": "Ikhtisar"
+    },
+    "HA_text4": {
+        "message": "Lawan-lawan Saya"
+    },
+    "HA_text5": {
+        "message": "Permintaan Dikirim"
+    },
+    "HA_text6": {
+        "message": "Penawaran Diterima"
+    },
+    "HA_text7": {
+        "message": "Kasus Utang Diselesaikan"
+    },
+    "HA_text8": {
+        "message": "Pengaturan Notifikasi"
+    },
+    "HA_text9": {
+        "message": "Profil"
+    },
+    "HA_text10": {
+        "message": "Dompet"
+    },
+    "Tab9_1": {
+        "message": "Dompet Pengguna"
+    },
+    "Tab9_2": {
+        "message": "Saldo Total"
+    },
+    "Tab9_3": {
+        "message": "Transaksi Terakhir"
+    },
+    "Tab9_4": {
+        "message": "Buat Transaksi"
+    },
+    "Tab9_5": {
+        "message": "Jumlah (REPAYcoins):"
+    },
+    "Tab9_6": {
+        "message": "Jenis Transaksi:"
+    },
+    "Tab9_7": {
+        "message": "Pembayaran Penuh"
+    },
+    "Tab9_8": {
+        "message": "Pembayaran Penuh"
+    },
+    "Tab9_9": {
+        "message": "Cicilan"
+    },
+    "Tab9_10": {
+        "message": "Kirim"
+    },
+    "langweg1": {
+        "message": "Pilih Negara"
+    },
+    "langweg2": {
+        "message": "ID"
+    },
+    "text": {
+        "message": "Berbuat Baik, Dan"
+    },
+    "text1": {
+        "message": "Akan Datang"
+    },
+    "text2": {
+        "message": "Organisir dan kirim notifikasi kepada teman-teman yang berutang kepada Anda bir, bantuan, uang, atau permintaan maaf, dan selesaikan dengan cara yang menyenangkan, cepat, dan efektif. Tingkatkan hubungan dan jaringan sosial Anda dalam 3 langkah mudah secara gratis. Mulai sekarang - hanya butuh 5 menit. Login dan lihat siapa yang berutang bir kepada Anda"
+    },
+    "text3": {
+        "message": "Mulai"
+    },
+    "text4": {
+        "message": "Login"
+    },
+    "text5": {
+        "message": "Login"
+    },
+    "text6": {
+        "message": "Daftar"
+    },
+    "text7": {
+        "message": "Belum menjadi anggota?"
+    },
+    "text8": {
+        "message": "Daftar"
+    },
+    "text9": {
+        "message": "Lanjut"
+    },
+    "text10": {
+        "message": "Sudah punya akun?"
+    },
+    "footer1": {
+        "message": "Tentang"
+    },
+    "footer2": {
+        "message": "Privasi & Kebijakan"
+    },
+    "footer3": {
+        "message": "Kontak"
+    },
+    "sign_pop": {
+        "message": "Nama Pengguna"
+    },
+    "sign_pop1": {
+        "message": "Kata Sandi"
+    },
+    "sign_pop2": {
+        "message": "Ingat Saya"
+    },
+    "sign_pop3": {
+        "message": "Daftar"
+    },
+    "sign_pop4": {
+        "message": "Login dengan Facebook"
+    },
+    "sign_pop5": {
+        "message": "Harap masukkan nama Anda!"
+    },
+    "sign_pop6": {
+        "message": "Harap masukkan nama pengguna Anda!"
+    },
+    "sign_pop7": {
+        "message": "Harap masukkan kata sandi Anda!"
+    },
+    "loginpop1": {
+        "message": "Nama Pengguna"
+    },
+    "loginpop2": {
+        "message": "Kata Sandi"
+    },
+    "loginpop3": {
+        "message": "Ingat Saya"
+    },
+    "loginpop4": {
+        "message": "Login"
+    },
+    "loginpop5": {
+        "message": "Login dengan Facebook"
+    },
+    "loginpop6": {
+        "message": "Harap masukkan nama pengguna Anda!"
+    },
+    "loginpop7": {
+        "message": "Harap masukkan kata sandi Anda!"
+    },
+    "HomeTabFrom2": {
+        "message": "Jumlah"
+    },
+    "HomeTabFrom3": {
+        "message": "Masukkan Nama Lawan:"
+    },
+    "HomeTabFrom4": {
+        "message": "Email Lawan:"
+    },
+    "HomeTabFrom5": {
+        "message": "Id Facebook atau Tautan Facebook Lawan:"
+    },
+    "HomeTabFrom6": {
+        "message": "Pemilih Tanggal"
+    },
+    "HomeTabFrom7": {
+        "message": "+ Tambah Angsuran"
+    },
+    "HomeTabFrom8": {
+        "message": "Saya setuju dengan syarat penggunaan"
+    },
+    "HomeTabFrom9": {
+        "message": "Terima atau Bayar:"
+    },
+    "HomeTabFrom10": {
+        "message": "Terima"
+    },
+    "HomeTabFrom11": {
+        "message": "Bayar"
+    },
+    "HomeTabFrom12": {
+        "message": "+ Tambah Kasus Utang"
+    },
+    "HomePageTab1_1": {
+        "message": "Tambah Kasus Utang"
+    },
+    "HomePageTab1_2": {
+        "message": "Dalam hal transaksi apapun, 10% dari koin Repay akan dikurangkan!"
+    },
+    "HomePageTab1_3": {
+        "message": "Uang"
+    },
+    "HomePageTab1_4": {
+        "message": "Bantuan"
+    },
+    "HomePageTab1_5": {
+        "message": "Layanan"
+    },
+    "HomePageTab1_6": {
+        "message": "Makanan"
+    },
+    "HomePageTab1_7": {
+        "message": "Minuman"
+    },
+    "HomePageTab1_8": {
+        "message": "Permintaan Maaf"
+    },
+    "HomePageTab1_9": {
+        "message": "Tantangan"
+    },
+    "Tab2_1": {
+        "message": "Total RepayCoins:"
+    },
+    "Tab2_3": {
+        "message": "Total RepayCoins:"
+    },
+    "Tab2_4": {
+        "message": "Total RepayCoins:"
+    },
+    "Tab3_1": {
+        "message": "Lawan-lawan Saya"
+    },
+    "Tab3_2": {
+        "message": "Tambah Kasus Utang"
+    },
+    "Tab4_1": {
+        "message": "Permintaan Dikirim"
+    },
+    "Tab5_1": {
+        "message": "Penawaran Diterima"
+    },
+    "Tab6_1": {
+        "message": "Kasus Utang Diselesaikan"
+    },
+    "Tab7_1": {
+        "message": "Pengaturan Notifikasi"
+    },
+    "Tab7_2": {
+        "message": "Frekuensi Notifikasi:"
+    },
+    "Tab7_3": {
+        "message": "Mingguan"
+    },
+    "Tab7_4": {
+        "message": "Mingguan"
+    },
+    "Tab7_5": {
+        "message": "Harian"
+    },
+    "Tab7_6": {
+        "message": "Bulanan"
+    },
+    "Tab7_7": {
+        "message": "Saluran Notifikasi:"
+    },
+    "Tab7_8": {
+        "message": "Email"
+    },
+    "Tab7_9": {
+        "message": "Email"
+    },
+    "Tab7_10": {
+        "message": "Facebook"
+    },
+    "Tab7_11": {
+        "message": "Simpan Pengaturan"
+    },
+    "TabFrom1_2": {
+        "message": "Jumlah"
+    },
+    "TabFrom1_3": {
+        "message": "Pilih Nama Lawan:"
+    },
+    "TabFrom1_4": {
+        "message": "Tambah Lawan Baru"
+    },
+    "TabFrom1_5": {
+        "message": "Email Lawan:"
+    },
+    "TabFrom1_6": {
+        "message": "Id Facebook atau Tautan Facebook Lawan:"
+    },
+    "TabFrom1_7": {
+        "message": "Pemilih Tanggal"
+    },
+    "TabFrom1_8": {
+        "message": "+ Tambah Angsuran"
+    },
+    "TabFrom1_9": {
+        "message": "Saya setuju dengan syarat penggunaan"
+    },
+    "TabFrom1_10": {
+        "message": "Terima atau Bayar:"
+    },
+    "TabFrom1_11": {
+        "message": "Terima"
+    },
+    "TabFrom1_12": {
+        "message": "Bayar"
+    },
+    "TabFrom1_13": {
+        "message": "+ Tambah Kasus Utang"
+    },
+    "TabFrom2_1": {
+        "message": "Jumlah Bantuan:"
+    },
+    "TabFrom2_2": {
+        "message": "Pilih Nama Lawan:"
+    },
+    "TabFrom2_3": {
+        "message": "Tambah Lawan Baru"
+    },
+    "TabFrom2_4": {
+        "message": "Email Lawan:"
+    },
+    "TabFrom2_5": {
+        "message": "Id Facebook atau Tautan Facebook Lawan:"
+    },
+    "TabFrom2_6": {
+        "message": "Pemilih Tanggal"
+    },
+    "TabFrom2_7": {
+        "message": "Deskripsi"
+    },
+    "TabFrom2_8": {
+        "message": "+ Tambah Angsuran"
+    },
+    "TabFrom2_9": {
+        "message": "Saya setuju dengan syarat penggunaan"
+    },
+    "TabFrom2_10": {
+        "message": "Terima atau Bayar:"
+    },
+    "TabFrom2_11": {
+        "message": "Terima"
+    },
+    "TabFrom2_12": {
+        "message": "Bayar"
+    },
+    "TabFrom2_13": {
+        "message": "+ Tambah Kasus Utang"
+    },
+    "TabFrom3_1": {
+        "message": "Jumlah Layanan:"
+    },
+    "TabFrom3_2": {
+        "message": "Pilih Nama Lawan:"
+    },
+    "TabFrom3_3": {
+        "message": "Tambah Lawan Baru"
+    },
+    "TabFrom3_4": {
+        "message": "Email Lawan:"
+    },
+    "TabFrom3_5": {
+        "message": "Id Facebook atau Tautan Facebook Lawan:"
+    },
+    "TabFrom3_6": {
+        "message": "Pemilih Tanggal"
+    },
+    "TabFrom3_7": {
+        "message": "Deskripsi"
+    },
+    "TabFrom3_8": {
+        "message": "+ Tambah Angsuran"
+    },
+    "TabFrom3_9": {
+        "message": "Saya setuju dengan syarat penggunaan"
+    },
+    "TabFrom3_10": {
+        "message": "Terima atau Bayar:"
+    },
+    "TabFrom3_11": {
+        "message": "Terima"
+    },
+    "TabFrom3_12": {
+        "message": "Bayar"
+    },
+    "TabFrom3_13": {
+        "message": "+ Tambah Kasus Utang"
+    },
+    "TabFrom4_1": {
+        "message": "Jumlah Makanan:"
+    },
+    "TabFrom4_2": {
+        "message": "Pilih Nama Lawan:"
+    },
+    "TabFrom4_3": {
+        "message": "Tambah Lawan Baru"
+    },
+    "TabFrom4_4": {
+        "message": "Email Lawan:"
+    },
+        "TabFrom4_5": {
+            "message": "ID atau Tautan Facebook Lawan:"
+        },
+        "TabFrom4_6": {
+            "message": "Pemilih Tanggal"
+        },
+        "TabFrom4_7": {
+            "message": "Deskripsi"
+        },
+        "TabFrom4_8": {
+            "message": "+ Tambah Angsuran"
+        },
+        "TabFrom4_9": {
+            "message": "Saya setuju dengan syarat penggunaan"
+        },
+        "TabFrom4_10": {
+            "message": "Terima atau Bayar:"
+        },
+        "TabFrom4_11": {
+            "message": "Terima"
+        },
+        "TabFrom4_12": {
+            "message": "Bayar"
+        },
+        "TabFrom4_13": {
+            "message": "+ Tambah Kasus Utang"
+        },
+        "TabFrom5_1": {
+            "message": "Jumlah untuk Minum:"
+        },
+        "TabFrom5_2": {
+            "message": "Pilih Nama Lawan:"
+        },
+        "TabFrom5_3": {
+            "message": "Tambah Lawan Baru"
+        },
+        "TabFrom5_4": {
+            "message": "Email Lawan:"
+        },
+        "TabFrom5_5": {
+            "message": "ID Facebook atau Tautan Facebook Lawan:"
+        },
+        "TabFrom5_6": {
+            "message": "Pemilih Tanggal"
+        },
+        "TabFrom5_7": {
+            "message": "Deskripsi"
+        },
+        "TabFrom5_8": {
+            "message": "+ Tambah Angsuran"
+        },
+        "TabFrom5_9": {
+            "message": "Saya setuju dengan syarat penggunaan"
+        },
+        "TabFrom5_10": {
+            "message": "Terima atau Bayar:"
+        },
+        "TabFrom5_11": {
+            "message": "Terima"
+        },
+        "TabFrom5_12": {
+            "message": "Bayar"
+        },
+        "TabFrom5_13": {
+            "message": "+ Tambah Kasus Utang"
+        },
+        "TabFrom6_1": {
+            "message": "Jumlah Maaf:"
+        },
+        "TabFrom6_2": {
+            "message": "Pilih Nama Lawan:"
+        },
+        "TabFrom6_3": {
+            "message": "Tambah Lawan Baru"
+        },
+        "TabFrom6_4": {
+            "message": "Email Lawan:"
+        },
+        "TabFrom6_5": {
+            "message": "ID Facebook atau Tautan Facebook Lawan:"
+        },
+        "TabFrom6_6": {
+            "message": "Pemilih Tanggal"
+        },
+        "TabFrom6_7": {
+            "message": "Deskripsi"
+        },
+        "TabFrom6_8": {
+            "message": "+ Tambah Angsuran"
+        },
+        "TabFrom6_9": {
+            "message": "Saya setuju dengan syarat penggunaan"
+        },
+        "TabFrom6_10": {
+            "message": "Terima atau Bayar"
+        },
+        "TabFrom6_11": {
+            "message": "Terima"
+        },
+        "TabFrom6_12": {
+            "message": "Bayar"
+        },
+        "TabFrom6_13": {
+            "message": "+ Tambah Kasus Utang"
+        },
+        "TabFrom7_1": {
+            "message": "Jumlah Tantangan:"
+        },
+        "TabFrom7_2": {
+            "message": "Pilih Nama Lawan:"
+        },
+        "TabFrom7_3": {
+            "message": "Tambah Lawan Baru"
+        },
+        "TabFrom7_4": {
+            "message": "Email Lawan:"
+        },
+        "TabFrom7_5": {
+            "message": "ID Facebook atau Tautan Facebook Lawan:"
+        },
+        "TabFrom7_6": {
+            "message": "Pemilih Tanggal"
+        },
+        "TabFrom7_7": {
+            "message": "Deskripsi"
+        },
+        "TabFrom7_8": {
+            "message": "+ Tambah Angsuran"
+        },
+        "TabFrom7_9": {
+            "message": "Saya setuju dengan syarat penggunaan"
+        },
+        "TabFrom7_10": {
+            "message": "Terima atau Bayar"
+        },
+        "TabFrom7_11": {
+            "message": "Terima"
+        },
+        "TabFrom7_12": {
+            "message": "Bayar"
+        },
+        "TabFrom7_13": {
+            "message": "+ Tambah Kasus Utang"
+        }
+    }
+    

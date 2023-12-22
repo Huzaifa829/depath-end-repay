@@ -1,4 +1,7 @@
+//HomeTabFrom1
+
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button, Form, Input, TreeSelect, Checkbox, Row, Col, DatePicker, Radio } from 'antd';
 import '../../cssFile/TabFrom.css'
 
@@ -19,6 +22,7 @@ const HomeTabFrom1 = ({ openLoginForm }) => {
         console.log(`checked = ${e.target.checked}`);
     };
 
+    const [t, i18n] = useTranslation("global")
     return (
         <Form
             labelCol={{
@@ -39,12 +43,12 @@ const HomeTabFrom1 = ({ openLoginForm }) => {
         >
             <Row gutter={16}>
                 <Col span={12}>
-                    <Form.Item label="Amount">
+                    <Form.Item label={t("HomeTabFrom2.message")}>  {/*Amount*/}
                         <Input className="my-input"  />
                     </Form.Item>
                 </Col>
                 <Col span={12}>
-                    <Form.Item label="Enter Adversary Name:">
+                    <Form.Item label={t("HomeTabFrom3.message")}> {/*Enter Adversary Name:*/}
                             <Input className="my-input" />
                         
                     </Form.Item>
@@ -52,38 +56,38 @@ const HomeTabFrom1 = ({ openLoginForm }) => {
             </Row>
             <Row gutter={16}>
                 <Col span={12}>
-                    <Form.Item label="Adversary Email:">
+                    <Form.Item label={t("HomeTabFrom4.message")}> {/*Adversary Email:*/}
                         <Input className="my-input" />
                     </Form.Item>
                 </Col>
                 <Col span={12}>
-                    <Form.Item label="Adversary Facebook Id or Facebook Link:">
+                    <Form.Item label={t("HomeTabFrom5.message")}> {/*Adversary Facebook Id or Facebook Link:*/}
                         <Input className="my-input" />
                     </Form.Item>
                 </Col>
             </Row>
             <Col span={12}>
-                <Form.Item label="DatePicker">
+                <Form.Item label={t("HomeTabFrom6.message")}> {/*DatePicker*/}
                     <DatePicker className="my-input" />
                 </Form.Item>
             </Col>
             <Form.Item>
-                <Button style={buttonStyles}>+ Add a Installment</Button>
+                <Button style={buttonStyles}>{t("HomeTabFrom7.message")}</Button> {/*+ Add a Installment*/}
             </Form.Item>
             <Form.Item>
-                <Checkbox onChange={onChange}>I accept the terms of use</Checkbox>
+                <Checkbox onChange={onChange}>{t("HomeTabFrom8.message")}</Checkbox> {/*I accept the terms of use*/}
             </Form.Item>
-                <Form.Item label="Receive or Pay:">
+                <Form.Item label={t("HomeTabFrom9.message")}>  {/*Receive or Pay:*/}
                         <Col span={3}>
                             <Radio.Group onChange={onChange} value={undefined}>
-                                <Radio value="receive">Receive</Radio>
-                                <Radio value="pay">Pay</Radio>
+                                <Radio value="receive">{t("HomeTabFrom10.message")}</Radio> {/*Receive*/}
+                                <Radio value="pay">{t("HomeTabFrom11.message")}</Radio> {/*Pay*/}
                             </Radio.Group>
                         </Col>
                 </Form.Item>
                 <Form.Item>
                 <Button style={buttonStyles} onClick={openLoginForm}>
-          + Add Debt Case
+                {t("HomeTabFrom12.message")} {/*+ Add Debt Case */}
         </Button>
             </Form.Item>
         </Form>

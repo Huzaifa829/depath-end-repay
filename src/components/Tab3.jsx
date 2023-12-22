@@ -9,6 +9,7 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import { Button } from 'antd';
+import { useTranslation } from 'react-i18next';
 
 
 const columns = [
@@ -76,11 +77,11 @@ export default function Tab3() {
         setPage(0);
     };
 
-
+    const [t, i18n] = useTranslation("global")
     return (
         <div className='HA_table_main_add'>
             <div className='HA_table_main_add_child'>
-                <p className='HA_table_main_add_child_text'>My Adversaries</p>
+                <p className='HA_table_main_add_child_text'>{t("Tab3_1.message")}</p>{/*My Adversaries*/}
             </div>
         <Paper sx={{ width: '100%', overflow: 'hidden' }}>
             <TableContainer sx={{ maxHeight: 440 }}>
@@ -108,8 +109,8 @@ export default function Tab3() {
                                             <TableCell key={column.id} align={column.align}>
                                                     {column.id === 'density' ? (
                                                         <Button  style={buttonStyles} key={columnIndex}>
-                                                            Add A Debt Case
-                                                        </Button>
+                                                           {t("Tab3_2.message")}
+                                                        </Button>/* Add A Debt Case*/
                                                     ) : (
                                                         value
                                                     )}

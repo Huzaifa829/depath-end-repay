@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import StickyBox from 'react-sticky-box';
 import { Button, Form, Input, TreeSelect, Checkbox, Row, Col, DatePicker, Radio,Tabs, theme } from 'antd';
 import '../cssFile/Tab3.css'
+import { useTranslation } from 'react-i18next';
 
 const { TabPane } = Tabs;
 
 const LoginForm1 = () => {
+  const [t, i18n] = useTranslation("global")
     const buttonStyles = {
       backgroundColor: 'black',
       color: '#ffffff',
@@ -37,31 +39,33 @@ const LoginForm1 = () => {
       >
         <Row gutter={16}>
           <Col span={12}>
-            <Form.Item label="Name:" name="name">
+            <Form.Item label={t("Tab8_1.message")} name="name">{/*Name:*/}
               <Input className="my-input" />
             </Form.Item>
           </Col>
           <Col span={12}>
-            <Form.Item label="Email:" name="email">
+            <Form.Item label={t("Tab8_2.message")} name="email">{/*Email:*/}
               <Input className="my-input" />
             </Form.Item>
           </Col>
         </Row>
         <Row gutter={16}>
           <Col span={12}>
-            <Form.Item label="Facebook" name="facebook">
+            <Form.Item label={t("Tab8_3.message")} name="facebook">{/*Facebook*/}
               <Input className="my-input" />
             </Form.Item>
           </Col>
         </Row>
         <Form.Item>
-          <Button style={{ marginRight: '8px' }}>Cancel</Button>
-          <Button style={buttonStyles}>Save & change</Button>
+          <Button style={{ marginRight: '8px' }}>{t("Tab8_4.message")}</Button>{/*Cancel*/}
+          <Button style={buttonStyles}>{t("Tab8_5.message")}</Button>{/*Save & change*/}
         </Form.Item>
       </Form>
     );
   };
 const LoginForm2 = () => {
+  const [t, i18n] = useTranslation("global")
+
     const buttonStyles = {
       backgroundColor: 'black',
       color: '#ffffff',
@@ -92,20 +96,22 @@ const LoginForm2 = () => {
       >
         <Row gutter={16}>
           <Col span={12}>
-            <Form.Item label="Password:" name="password">
+            <Form.Item label={t("Tab8_6.message")} name="password">{/*Password:*/}
               <Input type='password' className="my-input" />
             </Form.Item>
           </Col>
         </Row>
     
         <Form.Item>
-          <Button style={{ marginRight: '8px' }}>Cancel</Button>
-          <Button style={buttonStyles}>Save & change</Button>
+          <Button style={{ marginRight: '8px' }}>{t("Tab8_7.message")}</Button>{/*Cancel*/}
+          <Button style={buttonStyles}>{t("Tab8_8.message")}</Button>{/*Save & change*/}
         </Form.Item>
       </Form>
     );
   };
 const LoginForm3 = () => {
+  const [t, i18n] = useTranslation("global")
+
     const buttonStyles = {
       backgroundColor: 'black',
       color: '#ffffff',
@@ -135,14 +141,14 @@ const LoginForm3 = () => {
       >
         <Row gutter={16}>
           <Col span={12}>
-            <Form.Item label="Currency:" name="Currency">
+            <Form.Item label={t("Tab8_9.message")} name="Currency">{/*Currency:*/}
               <Input className="my-input" />
             </Form.Item>
           </Col>
         </Row>
         <Form.Item>
-          <Button style={{ marginRight: '8px' }}>Cancel</Button>
-          <Button style={buttonStyles}>Save & change</Button>
+          <Button style={{ marginRight: '8px' }}>{t("Tab8_10.message")}</Button>{/*Cancel*/}
+          <Button style={buttonStyles}>{t("Tab8_11.message")}</Button>{/*Save & change*/}
         </Form.Item>
       </Form>
     );
@@ -151,23 +157,25 @@ const LoginForm3 = () => {
 
 const items = [
   {
-    label: 'Personal Information',
+    label: 'Personal Information',/*Personal Information*/
     key: '1',
     content: <LoginForm1 />,
   },
   {
-    label: 'Security Settings',
+    label: 'Security Settings',/*Security Settings*/
     key: '2',
     content: <LoginForm2 />,
   },
   {
-    label: 'Currency Preferences',
+    label: 'Currency Preferences',/*Currency Preferences*/
     key: '3',
     content: <LoginForm3 />,
   },
 ];
 
 const App = () => {
+  
+  const [t, i18n] = useTranslation("global")
   const {
     token: { colorBgContainer },
   } = theme.useToken();
@@ -194,7 +202,7 @@ const App = () => {
   return (
     <div className='HA_table_main_add'>
     <div className='HA_table_main_add_child'>
-      <p className='HA_table_main_add_child_text'>Profile</p>
+      <p className='HA_table_main_add_child_text'>{t("Tab8_12.message")}</p>{/*Profile*/}
     </div>
     <Tabs defaultActiveKey="1" renderTabBar={renderTabBar}>
       {items.map((item) => (

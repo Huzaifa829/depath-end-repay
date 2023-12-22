@@ -8,14 +8,15 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
+import { useTranslation } from 'react-i18next';
 
 const columns = [
-    { id: 'name', label: 'S.no', minWidth: 30 },
-    { id: 'code', label: 'Adversary Name', minWidth: 100 },
-    { id: 'population', label: 'Category', minWidth: 170, align: 'left', },
-    {id: 'size',label: 'Transaction Direction',minWidth: 170,align: 'left',},
-    {id: 'density',label: 'Due Date',minWidth: 170,align: 'right', },
-    {id: 'Amount',label: 'Amount',minWidth: 170,align: 'right', },
+    { id: 'name', label: 'S.no', minWidth: 30 },/*S.no*/
+    { id: 'code', label: 'Adversary Name', minWidth: 100 },/*Adversary Name*/
+    { id: 'population', label: 'Category', minWidth: 170, align: 'left', },/*Category*/
+    {id: 'size',label: 'Transaction Direction',minWidth: 170,align: 'left',},/*Transaction Direction*/
+    {id: 'density',label: 'Due Date',minWidth: 170,align: 'right', },/*Due Date*/
+    {id: 'Amount',label: 'Amount',minWidth: 170,align: 'right', },/*Amount*/
 ];
 
 function createData(name, code, population, size, density,Amount) {
@@ -52,11 +53,11 @@ export default function Tab4() {
         setRowsPerPage(+event.target.value);
         setPage(0);
     };
-
+    const [t, i18n] = useTranslation("global")
     return (
         <div className='HA_table_main_add'>
             <div className='HA_table_main_add_child'>
-                <p className='HA_table_main_add_child_text'>Requests Sent</p>
+                <p className='HA_table_main_add_child_text'>{t("Tab4_1.message")}</p>{/*Requests Sent*/}
             </div>
         <Paper sx={{ width: '100%', overflow: 'hidden' }}>
             <TableContainer sx={{ maxHeight: 440 }}>

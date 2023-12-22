@@ -1,0 +1,101 @@
+{
+    "HA_text": {
+        "message": "Menú de Repago"
+    },
+    "HA_text1": {
+        "message": "Cerrar sesión"
+    },
+    "langweg1": {
+        "message": "Seleccionar país"
+    },
+    "langweg2": {
+        "message": "ES"
+    },
+    "text": {
+        "message": "Haz el bien, y"
+    },
+    "text1": {
+        "message": "Vendrá"
+    },
+    "text2": {
+        "message": "Organiza y envía notificaciones a amigos que te deben una cerveza, un favor, dinero o una disculpa y resuélvelo de manera divertida, rápida y efectiva. Mejora tus relaciones y redes sociales en solo 3 sencillos pasos de forma gratuita. Comienza ahora, solo lleva 5 minutos. Inicia sesión y mira quién te debe una cerveza."
+    },
+    "text3": {
+        "message": "Empezar"
+    },
+    "text4": {
+        "message": "Iniciar sesión"
+    },
+    "text5": {
+        "message": "Iniciar sesión"
+    },
+    "text6": {
+        "message": "Registrarse"
+    },
+    "text7": {
+        "message": "¿No eres miembro?"
+    },
+    "text8": {
+        "message": "Registrarse"
+    },
+    "text9": {
+        "message": "Continuar"
+    },
+    "text10": {
+        "message": "¿Ya tienes una cuenta?"
+    },
+    "footer1": {
+        "message": "Acerca de"
+    },
+    "footer2": {
+        "message": "Privacidad y política"
+    },
+    "footer3": {
+        "message": "Contacto"
+    },
+    "sign_pop": {
+        "message": "Nombre de usuario"
+    },
+    "sign_pop1": {
+        "message": "Contraseña"
+    },
+    "sign_pop2": {
+        "message": "Recuérdame"
+    },
+    "sign_pop3": {
+        "message": "Registrarse"
+    },
+    "sign_pop4": {
+        "message": "Iniciar sesión con Facebook"
+    },
+    "sign_pop5": {
+        "message": "¡Por favor ingresa tu nombre!"
+    },
+    "sign_pop6": {
+        "message": "¡Por favor ingresa tu nombre de usuario!"
+    },
+    "sign_pop7": {
+        "message": "¡Por favor ingresa tu contraseña!"
+    },
+    "loginpop1": {
+        "message": "Nombre de usuario"
+    },
+    "loginpop2": {
+        "message": "Contraseña"
+    },
+    "loginpop3": {
+        "message": "Recuérdame"
+    },
+    "loginpop4": {
+        "message": "Iniciar sesión"
+    },
+    "loginpop5": {
+        "message": "Iniciar sesión con Facebook"
+    },
+    "loginpop6": {
+        "message": "¡Por favor ingresa tu nombre de usuario!"
+    },
+    "loginpop7": {
+        "message": "¡Por favor ingresa tu contraseña!"
+    }
+}

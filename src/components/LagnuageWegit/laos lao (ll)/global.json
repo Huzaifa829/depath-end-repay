@@ -1,0 +1,471 @@
+{
+    "Tab8_1": {"message": "ຊື່:"},
+    "Tab8_2": {"message": "ອີເມວ:"},
+    "Tab8_3": {"message": "Facebook:"},
+    "Tab8_4": {"message": "ຍົກເລີກ:"},
+    "Tab8_5": {"message": "ບັນທຶກ ແລະ ປ່ຽນ:"},
+    "Tab8_6": {"message": "ລະຫັດຜ່ານ:"},
+    "Tab8_7": {"message": "ຍົກເລີກ"},
+    "Tab8_8": {"message": "ບັນທຶກ ແລະ ປ່ຽນ"},
+    "Tab8_9": {"message": "ເງິນ:"},
+    "Tab8_10": {"message": "ຍົກເລີກ"},
+    "Tab8_11": {"message": "ບັນທຶກ ແລະ ປ່ຽນ"},
+    "Tab8_12": {"message": "ໂປຣໄຟລ:"},
+    "HA_text": {"message": "ເລີບມີຕົວ"},
+    "HA_text1": {"message": "ອອກຈາກລະບົບ"},
+    "HA_text2": {"message": "ເພີ່ມການຊ່ຳລະເງິນປ່ຽນ"},
+    "HA_text3": {"message": "ພາບບໍລິການ"},
+    "HA_text4": {"message": "ຜູ້ຕິດຕໍ່ຂອງຂ້ອຍ"},
+    "HA_text5": {"message": "ຄວາມລົງມຸງທີ່ສົ່ງ"},
+    "HA_text6": {"message": "ແຈ້ງຕື່ມຮຽບຮ້ອຍ"},
+    "HA_text7": {"message": "ຕັດເງິນສົບຜົນໄດ້"},
+    "HA_text8": {"message": "ການຕັ້ງຄ່າແຈ້ງຕື່ມ"},
+    "HA_text9": {"message": "ໂປຣໄຟລ"},
+    "HA_text10": {"message": "ຕອນນຳເຂົ້າ"},
+    "Tab9_1": {"message": "ບັນຊີຜູ້ໃຊ້"},
+    "Tab9_2": {"message": "ຍອດລວມ"},
+    "Tab9_3": {"message": "ການເຮັດວຽກຫຼ້າສຸດ"},
+    "Tab9_4": {"message": "ສໍາຄັນການເຮັດວຽກ"},
+    "Tab9_5": {"message": "ຈຳນວນ (REPAYcoins):"},
+    "Tab9_6": {"message": "ປະເພດການເຮັດວຽກ:"},
+    "Tab9_7": {"message": "ການຈ່າຍຕົວເລືອກ"},
+    "Tab9_8": {"message": "ການຈ່າຍຕົວເລືອກ"},
+    "Tab9_9": {"message": "ການຈ່າຍບໍລິການ"},
+    "Tab9_10": {"message": "ສົ່ງ"},
+    "langweg1": {"message": "ເລືອກປະເທດ"},
+    "langweg2": {"message": "ສາມາດ"},
+    "text": {"message": "ບໍ່ຢາກ, ຈົ່ງ"},
+    "text1": {"message": "ຈົ່ງຈາກ"},
+    "text2": {"message": "ຈັດຕັ້ງຄໍາເຫັນໄວ້ກັບນັກສຶກ, ເພດ, ຈໍ, ຫາຍຫາກຄືນເຈັບ ແລະ ການປະຕິເສດຄັນຄວາມໂລບໃນຮູບແບບສຳຄັນ, ເພື່ອການປະຕິເສດແລະລົງຊື່ໃນການໄດ້ຈາກນັກສຶກຄວາມເປັນ. ເລີຍຕົວເອງໄດ້ຕ້ອງ 3 ສິ່ງຮຽບຮ້ອຍ ເພື່ອຟັງຊັນ. ຕົວເອງລົງຊື່ແລະສຳຫຼັບທຸກຄົນທີ່ໄວ້ຈາກນັກສຶກ"},
+    "text3": {"message": "ເລີ່ມຕົ້ນ"},
+    "text4": {"message": "ເຂົ້າສູ່ລະບົບ"},
+    "text5": {"message": "ເຂົ້າສູ່ລະບົບ"},
+    "text6": {"message": "ລົງທະບຽນ"},
+    "text7": {"message": "ບໍ່ແມ່ນສະມາຊິກ ?"},
+    "text8": {"message": "ລົງທະບຽນ"},
+    "text9": {"message": "ກົດທີ່ນີ້"},
+    "text10": {"message": "ມີບັນຊີ໌ບໍ່ ?"},
+    "footer1": {"message": "ກ່ຽວກັບ"},
+    "footer2": {"message": "ລະດັບການຕໍ່ທ່ຽວ"},
+    "footer3": {"message": "ຕິດຕໍ່"},
+    "sign_pop": {"message": "ຊື່ຜູ້ໃຊ້"},
+    "sign_pop1": {"message": "ລະຫັດຜ່ານ"},
+    "sign_pop2": {"message": "ຈືນການຈັດການຂ້ອຍ"},
+    "sign_pop3": {"message": "ລົງທະບຽນ"},
+    "sign_pop4": {"message": "ລົງທະບຽນໂຕະເວັບ"},
+    "sign_pop5": {"message": "ກະລຸນາປ້ອນຊື່ຂອງທ່ານ!"},
+    "sign_pop6": {"message": "ກະລຸນາປ້ອນຊື່ຜູ້ໃຊ້!"},
+    "sign_pop7": {"message": "ກະລຸນາປ້ອນລະຫັດຜ່ານ!"},
+    "loginpop1": {"message": "ຊື່ຜູ້ໃຊ້"},
+    "loginpop2": {"message": "ລະຫັດຜ່ານ"},
+    "loginpop3": {"message": "ຈືນການຈັດການຂ້ອຍ"},
+    "loginpop4": {"message": "ລົງທະບຽນ"},
+    "loginpop5": {"message": "ລົງທະບຽນໂຕະເວັບ"},
+    "loginpop6": {"message": "ກະລຸນາປ້ອນຊື່ຜູ້ໃຊ້!"},
+    "loginpop7": {"message": "ກະລຸນາປ້ອນລະຫັດຜ່ານ!"},
+    "HomeTabFrom2": {"message": "ຈຳນວນ"},
+    "HomeTabFrom3": {"message": "ເລືອກຊື່ຜູ້ຕິດຕໍ່:"},
+    "HomeTabFrom4": {"message": "ອີເມວຜູ້ຕິດຕໍ່:"},
+    "HomeTabFrom5": {"message": "ID ຫຼັກຜູ້ຕິດຕໍ່ຫຼືລິ້ງ Facebook ຜູ້ຕິດຕໍ່:"},
+    "HomeTabFrom6": {"message": "ວັນທີເລືອກ"},
+    "HomeTabFrom7": {"message": "+ ເພີ່ມບັນຊີປະຈໍາ"},
+    "HomeTabFrom8": {
+        "message": "ຂໍຂອບໃຈເລີຍ"
+    },
+    "HomeTabFrom9": {
+        "message": "ຮັບຫຼືຈ່າຍ:"
+    },
+    "HomeTabFrom10": {
+        "message": "ຮັບ"
+    },
+    "HomeTabFrom11": {
+        "message": "ຈ່າຍ"
+    },
+    "HomeTabFrom12": {
+        "message": "+ ເພີ່ມການສະຫຼຸບ"
+    },
+    "HomePageTab1_1": {
+        "message": "ເພີ່ມການສະຫຼຸບ"
+    },
+    "HomePageTab1_2": {
+        "message": "ທາງເລືອກການເຮັດບັນຊີ, 10% ຂະນະ Repay coins ໄດ້ຮັບການຫັກສູນ!"
+    },
+    "HomePageTab1_3": {
+        "message": "ເງິນ"
+    }
+    ,
+    "HomePageTab1_4": {
+        "message": "ບຸກ"
+    }
+    ,
+    "HomePageTab1_5": {
+        "message": "ບໍລິການ"
+    }
+    ,
+    "HomePageTab1_6": {
+        "message": "ອາຫານ"
+    }
+    ,
+    "HomePageTab1_7": {
+        "message": "ເຄື່ອງດື່ມ"
+    }
+    ,
+    "HomePageTab1_8": {
+        "message": "ຂອບໃຈ"
+    }
+    ,
+    "HomePageTab1_9": {
+        "message": "ສົມບູນ"
+    }
+    ,
+    "Tab2_1": {
+        "message": "ຈຳນວນທັງ RepayCoins:"
+    }
+    ,
+    "Tab2_3": {
+        "message": "ຈຳນວນທັງ RepayCoins:"
+    }
+    ,
+    "Tab2_4": {
+        "message": "ຈຳນວນທັງ RepayCoins:"
+    }
+    ,
+    "Tab3_1": {
+        "message": "ຜູ້ເບີກຂອງຂ້ອຍ"
+    }
+    ,
+    "Tab3_2": {
+        "message": "ເພີ່ມການສະຫຼຸບປະມານ"
+    }
+    ,
+    "Tab4_1": {
+        "message": "ການຮ້ອງຂໍຢືມ"
+    }
+    ,
+    "Tab5_1": {
+        "message": "ການຮ້ອງຢືມ"
+    }
+    ,
+    "Tab6_1": {
+        "message": "ການຄ່າຊົນນິຊົນ"
+    }
+    ,
+    "Tab7_1": {
+        "message": "ການຕັ້ງຄ່າແຈ້ງເຕືອນ"
+    }
+    
+    ,
+    "Tab7_2": {
+        "message": "ຕັ້ງຄ່າການແຈ້ງເຕືອນ:"
+    }
+    
+    ,
+    "Tab7_3": {
+        "message": "ປາຍຕາມ"
+    }
+    
+    ,
+    "Tab7_4": {
+        "message": "ປາຍຕາມ"
+    }
+    
+    ,
+    "Tab7_5": {
+        "message": "ບໍ່ຢູ່"
+    }
+    
+    ,
+    "Tab7_6": {
+        "message": "ບໍ່ຢູ່"
+    }
+    
+    ,
+    "Tab7_7": {
+        "message": "ຄຳສັ່ງແຈ້ງ:"
+    }
+    
+    ,
+    "Tab7_8": {
+        "message": "ອີເມວ"
+    }
+    
+    ,
+    "Tab7_9": {
+        "message": "ອີເມວ"
+    }
+    
+    ,
+    "Tab7_10": {
+        "message": "Facebook"
+    }
+    
+    ,
+    "Tab7_11": {
+        "message": "ບັນທືກການຕັ້ງຄ່າ"
+    }
+    ,
+    "TabFrom1_2": {
+        "message": "ຈຳນວນ"
+    },
+    "TabFrom1_3": {
+        "message": "ເລືອກຊື່ຜູ້ຜ່ານ:"
+    },
+    "TabFrom1_4": {
+        "message": "ເພີ່ມເພດຜູ້ຜ່ານໃຫມ່"
+    },
+    "TabFrom1_5": {
+        "message": "ອີເມວຜູ້ຜ່ານ:"
+    },
+    "TabFrom1_6": {
+        "message": "ID ຜູ້ຜ່ານທີ່ກ່ຽວຂ້ອຍຫລືລິງ Facebook:"
+    },
+    "TabFrom1_7": {
+        "message": "ເລືອກວັນທີ"
+    },
+    "TabFrom1_8": {
+        "message": "+ ເພີ່ມການຄຳຕອບ"
+    },
+    "TabFrom1_9": {
+        "message": "ຂໍຂອບໃຈການຈ່າຍຫຼືຮັບເງິນ"
+    },
+    "TabFrom1_10": {
+        "message": "ຮັບ"
+    },
+    "TabFrom1_11": {
+        "message": "ຈ່າຍ"
+    },
+    "TabFrom1_12": {
+        "message": "+ ເພີ່ມການສະຫຼຸບ"
+    },
+    "TabFrom2_1": {
+        "message": "ຈຳນວນ Favor:"
+    },
+    "TabFrom2_2": {
+        "message": "ເລືອກຊື່ຜູ້ຜ່ານ:"
+    },
+    "TabFrom2_3": {
+        "message": "ເພີ່ມເພດຜູ້ຜ່ານໃຫມ່"
+    },
+    "TabFrom2_4": {
+        "message": "ອີເມວຜູ້ຜ່ານ:"
+    },
+    "TabFrom2_5": {
+        "message": "ID ຜູ້ຜ່ານທີ່ກ່ຽວຂ້ອຍຫລືລິງ Facebook:"
+    },
+    "TabFrom2_6": {
+        "message": "ເລືອກວັນທີ"
+    },
+    "TabFrom2_7": {
+        "message": "ລາຍລະອຽດ"
+    },
+    "TabFrom2_8": {
+        "message": "+ ເພີ່ມການຄຳຕອບ"
+    },
+    "TabFrom2_9": {
+        "message": "ຂໍຂອບໃຈການຈ່າຍຫຼືຮັບເງິນ"
+    },
+    "TabFrom2_10": {
+        "message": "ຮັບ"
+    },
+    "TabFrom2_11": {
+        "message": "ຈ່າຍ"
+    },
+    "TabFrom2_12": {
+        "message": "+ ເພີ່ມການສະຫຼຸບ"
+    },
+    "TabFrom3_1": {
+        "message": "ຈຳນວນບໍ່ແມ່ນກ່ອນ:"
+    },
+    "TabFrom3_2": {
+        "message": "ເລືອກຊື່ຜູ້ຜ່ານ:"
+    },
+    "TabFrom3_3": {
+        "message": "ເພີ່ມເພດຜູ້ຜ່ານໃຫມ່"
+    },
+    "TabFrom3_4": {
+        "message": "ອີເມວຜູ້ຜ່ານ:"
+    },
+    "TabFrom3_5": {
+        "message": "ID ຜູ້ຜ່ານທີ່ກ່ຽວຂ້ອຍຫລືລິງ Facebook:"
+    },
+    "TabFrom3_6": {
+        "message": "ເລືອກວັນທີ"
+    },
+    "TabFrom3_7": {
+        "message": "ລາຍລະອຽດ"
+    },
+    "TabFrom3_8": {
+        "message": "+ ເພີ່ມການຄຳຕອບ"
+    },
+    "TabFrom3_9": {
+        "message": "ຂໍຂອບໃຈການຈ່າຍຫຼືຮັບເງິນ"
+    },
+    "TabFrom3_10": {
+        "message": "ຮັບ"
+    },
+    "TabFrom3_11": {
+        "message": "ຈ່າຍ"
+    },
+    "TabFrom3_12": {
+        "message": "+ ເພີ່ມການສະຫຼຸບ"
+    },
+    "TabFrom4_1": {
+        "message": "ຈຳນວນອາຫານ:"
+    },
+    "TabFrom4_2": {
+        "message": "ເລືອກຊື່ຜູ້ຜ່ານ:"
+    },
+    "TabFrom4_3": {
+        "message": "ເພີ່ມເພດຜູ້ຜ່ານໃຫມ່"
+    },
+    "TabFrom4_4": {
+        "message": "ອີເມວຜູ້ຜ່ານ:"
+    },
+    "TabFrom4_5": {
+        "message": "ID ຜູ້ຜ່ານທີ່ກ່ຽວຂ້ອຍຫລືລິງ Facebook:"
+    },
+    "TabFrom4_6": {
+        "message": "ເລືອກວັນທີ"
+    },
+    "TabFrom4_7": {
+        "message": "ລາຍລະອຽດ"
+    },
+    "TabFrom4_8": {
+        "message": "+ ເພີ່ມຕື່ມການຊຳລະ"
+    },
+    "TabFrom4_9": {
+        "message": "ຂໍອະໄພຍອດນີ້"
+    },
+    "TabFrom4_10": {
+        "message": "ຮັບຫຼາຍ ຫຼື ຈ່າຍ:"
+    },
+    "TabFrom4_11": {
+        "message": "ຮັບ"
+    },
+    "TabFrom4_12": {
+        "message": "ຈ່າຍ"
+    },
+    "TabFrom4_13": {
+        "message": "+ ເພີ່ມການຊຳລະ"
+    },
+    "TabFrom5_1": {
+        "message": "ຈ່າຍສ່ວນອາຫານ:"
+    },
+    "TabFrom5_2": {
+        "message": "ເລືອກຊື່ພະນັກງານ:"
+    },
+    "TabFrom5_3": {
+        "message": "ເພີ່ມພະນັກງານໃໝ່"
+    },
+    "TabFrom5_4": {
+        "message": "ອີເມວພະນັກງານ:"
+    },
+    "TabFrom5_5": {
+        "message": "ລະຫັດ Facebook ຫຼື ລິ້ງ Facebook ຂອງພະນັກງານ:"
+    },
+    "TabFrom5_6": {
+        "message": "ວັນທີ"
+    },
+    "TabFrom5_7": {
+        "message": "ລາຍລະອຽດ"
+    },
+    "TabFrom5_8": {
+        "message": "+ ເພີ່ມຕື່ມການຊຳລະ"
+    },
+    "TabFrom5_9": {
+        "message": "ຂໍອະໄພຍອດນີ້"
+    },
+    "TabFrom5_10": {
+        "message": "ຮັບຫຼາຍ ຫຼື ຈ່າຍ:"
+    },
+    "TabFrom5_11": {
+        "message": "ຮັບ"
+    },
+    "TabFrom5_12": {
+        "message": "ຈ່າຍ"
+    },
+    "TabFrom5_13": {
+        "message": "+ ເພີ່ມການຊຳລະ"
+    },
+    "TabFrom6_1": {
+        "message": "ຈ່າຍເລືອດ:"
+    },
+    "TabFrom6_2": {
+        "message": "ເລືອກຊື່ພະນັກງານ:"
+    },
+    "TabFrom6_3": {
+        "message": "ເພີ່ມພະນັກງານໃໝ່"
+    },
+    "TabFrom6_4": {
+        "message": "ອີເມວພະນັກງານ:"
+    },
+    "TabFrom6_5": {
+        "message": "ລະຫັດ Facebook ຫຼື ລິ້ງ Facebook ຂອງພະນັກງານ:"
+    },
+    "TabFrom6_6": {
+        "message": "ວັນທີ"
+    },
+    "TabFrom6_7": {
+        "message": "ລາຍລະອຽດ"
+    },
+    "TabFrom6_8": {
+        "message": "+ ເພີ່ມຕື່ມການຊຳລະ"
+    },
+    "TabFrom6_9": {
+        "message": "ຂໍອະໄພຍອດນີ້"
+    },
+    "TabFrom6_10": {
+        "message": "ຮັບຫຼາຍ ຫຼື ຈ່າຍ:"
+    },
+    "TabFrom6_11": {
+        "message": "ຮັບ"
+    },
+    "TabFrom6_12": {
+        "message": "ຈ່າຍ"
+    },
+    "TabFrom6_13": {
+        "message": "+ ເພີ່ມການຊຳລະ"
+    },
+    "TabFrom7_1": {
+        "message": "ຈ່າຍຄຳ:"
+    },
+    "TabFrom7_2": {
+        "message": "ເລືອກຊື່ພະນັກງານ:"
+    },
+    "TabFrom7_3": {
+        "message": "ເພີ່ມພະນັກງານໃໝ່"
+    },
+    "TabFrom7_4": {
+        "message": "ອີເມວພະນັກງານ:"
+    },
+    "TabFrom7_5": {
+        "message": "ລະຫັດ Facebook ຫຼື ລິ້ງ Facebook ຂອງພະນັກງານ:"
+    },
+    "TabFrom7_6": {
+        "message": "ວັນທີ"
+    },
+    "TabFrom7_7": {
+        "message": "ລາຍລະອຽດ"
+    },
+    "TabFrom7_8": {
+        "message": "+ ເພີ່ມຕື່ມການຊຳລະ"
+    },
+    "TabFrom7_9": {
+        "message": "ຂໍອະໄພຍອດນີ້"
+    },
+    "TabFrom7_10": {
+        "message": "ຮັບຫຼາຍ ຫຼື ຈ່າຍ:"
+    },
+    "TabFrom7_11": {
+        "message": "ຮັບ"
+    },
+    "TabFrom7_12": {
+        "message": "ຈ່າຍ"
+    },
+    "TabFrom7_13": {
+        "message": "+ ເພີ່ມການຊຳລະ"
+    }
+}
+    
+    
+   

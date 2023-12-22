@@ -1,4 +1,7 @@
+// login popup page
+
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button, Checkbox, Form, Input } from 'antd';
 import FacebookLogin from 'react-facebook-login';
 import { FacebookOutlined } from '@ant-design/icons';
@@ -23,6 +26,7 @@ const LoginPage = () => {
     // Handle Facebook login response here, e.g., send data to server or update state
   };
 
+  const [t, i18n] = useTranslation("global")
   return (
     <Form
       name="basic"
@@ -47,11 +51,11 @@ const LoginPage = () => {
         rules={[
           {
             required: true,
-            message: 'Please input your username!',
+            message: t("loginpop6.message"), //Please input your username!
           },
         ]}
       >
-        <Input className='my-input' placeholder="Username" style={{ width: '30vmax' }} />
+        <Input className='my-input' placeholder={t("loginpop1.message")} style={{ width: '30vmax' }} /> {/*Username*/}
       </Form.Item>
 
       <Form.Item
@@ -59,11 +63,11 @@ const LoginPage = () => {
         rules={[
           {
             required: true,
-            message: 'Please input your password!',
+            message: t("loginpop7.message"), //Please input your password!
           },
         ]}
       >
-        <Input.Password className='my-input'   placeholder="Password" style={{ width: '30vmax' }} />
+        <Input.Password className='my-input'   placeholder={t("loginpop2.message")} style={{ width: '30vmax' }} /> {/*Password*/}
       </Form.Item>
 
       <Form.Item
@@ -74,7 +78,7 @@ const LoginPage = () => {
           span: 16,
         }}
       >
-        <Checkbox>Remember me</Checkbox>
+        <Checkbox>{t("loginpop3.message")}</Checkbox> {/*Remember me*/}
       </Form.Item>
 
       <Form.Item
@@ -85,7 +89,7 @@ const LoginPage = () => {
       >
          <Link to="/home">
         <Button style={{width:"100%"}} type="primary" htmlType="submit">
-          Login
+        {t("loginpop4.message")} {/*Login*/}
         </Button>
         </Link>
       </Form.Item>
@@ -97,7 +101,7 @@ const LoginPage = () => {
         }}
       >
         <Button style={{width:"100%",backgroundColor:'#4c69ba'}} type="primary" htmlType="submit">
-        Login with Facebook
+        {t("loginpop5.message")} {/*Login with Facebook*/}
         </Button>
       </Form.Item>
 
@@ -109,5 +113,3 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
-
-

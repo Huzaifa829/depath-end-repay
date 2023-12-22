@@ -4,3 +4,14 @@ ul.ReactFlagsSelect-module_selectOptions__3LNBJ.ReactFlagsSelect-module_fullWidt
 .ReactFlagsSelect-module_flagsSelect__2pfa2{
     padding: 0px;
 }
+.flag-widget-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .selected-flag-icon img {
+    width: 20px; 
+    height: 14px;
+    margin-left: 8px; 
+  }
+  

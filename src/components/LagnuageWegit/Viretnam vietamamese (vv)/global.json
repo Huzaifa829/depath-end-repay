@@ -1,0 +1,585 @@
+{
+    "Tab8_1": {
+        "message": "Tên:"
+    },
+    "Tab8_2": {
+        "message": "Email:"
+    },
+    "Tab8_3": {
+        "message": "Facebook:"
+    },
+    "Tab8_4": {
+        "message": "Hủy bỏ:"
+    },
+    "Tab8_5": {
+        "message": "Lưu & Thay đổi:"
+    },
+    "Tab8_6": {
+        "message": "Mật khẩu:"
+    },
+    "Tab8_7": {
+        "message": "Hủy bỏ"
+    },
+    "Tab8_8": {
+        "message": "Lưu & Thay đổi"
+    },
+    "Tab8_9": {
+        "message": "Tiền tệ:"
+    },
+    "Tab8_10": {
+        "message": "Hủy bỏ"
+    },
+    "Tab8_11": {
+        "message": "Lưu & Thay đổi"
+    },
+    "Tab8_12": {
+        "message": "Hồ sơ:"
+    },
+    "HA_text": {
+        "message": "Menu Thanh Toán"
+    },
+    "HA_text1": {
+        "message": "Đăng Xuất"
+    },
+    "HA_text2": {
+        "message": "Thêm Vụ Nợ"
+    },
+    "HA_text3": {
+        "message": "Tổng Quan"
+    },
+    "HA_text4": {
+        "message": "Đối Thủ Của Tôi"
+    },
+    "HA_text5": {
+        "message": "Yêu Cầu Đã Gửi"
+    },
+    "HA_text6": {
+        "message": "Ưu Đãi Nhận Được"
+    },
+    "HA_text7": {
+        "message": "Các Vụ Nợ Đã Giải Quyết"
+    },
+    "HA_text8": {
+        "message": "Cài Đặt Thông Báo"
+    },
+    "HA_text9": {
+        "message": "Hồ Sơ"
+    },
+    "HA_text10": {
+        "message": "Ví"
+    },
+    "Tab9_1": {
+        "message": "Ví Người Dùng"
+    },
+    "Tab9_2": {
+        "message": "Tổng Số Dư"
+    },
+    "Tab9_3": {
+        "message": "Giao Dịch Gần Đây"
+    },
+    "Tab9_4": {
+        "message": "Thực Hiện Giao Dịch"
+    },
+    "Tab9_5": {
+        "message": "Số Tiền (REPAYcoins):"
+    },
+    "Tab9_6": {
+        "message": "Loại Giao Dịch:"
+    },
+    "Tab9_7": {
+        "message": "Thanh Toán Đầy Đủ"
+    },
+    "Tab9_8": {
+        "message": "Thanh Toán Đầy Đủ"
+    },
+    "Tab9_9": {
+        "message": "Trả Góp"
+    },
+    "Tab9_10": {
+        "message": "Gửi"
+    }
+    ,
+
+
+
+    "langweg1": {
+        "message": "Chọn quốc gia"
+    },
+    "langweg2": {
+        "message": "ES"
+    },
+    "text": {
+        "message": "Làm điều tốt, và"
+    },
+    "text1": {
+        "message": "Sẽ đến"
+    },
+    "text2": {
+        "message": "Tổ chức và gửi thông báo cho bạn bè nợ bạn một cốc bia, một ân huệ, tiền, hoặc một lời xin lỗi và giải quyết nó một cách vui vẻ, nhanh chóng và hiệu quả. Cải thiện mối quan hệ và mạng xã hội của bạn chỉ trong 3 bước đơn giản miễn phí. Bắt đầu ngay bây giờ - chỉ mất 5 phút. Đăng nhập và xem ai đang nợ bạn một cốc bia."
+    },
+    "text3": {
+        "message": "Bắt đầu"
+    },
+    "text4": {
+        "message": "Đăng nhập"
+    },
+    "text5": {
+        "message": "Đăng nhập"
+    },
+    "text6": {
+        "message": "Đăng ký"
+    },
+    "text7": {
+        "message": "Chưa là thành viên?"
+    },
+    "text8": {
+        "message": "Đăng ký"
+    },
+    "text9": {
+        "message": "Tiếp tục"
+    },
+    "text10": {
+        "message": "Đã có tài khoản?"
+    },
+    "footer1": {
+        "message": "Về chúng tôi"
+    },
+    "footer2": {
+        "message": "Quyền riêng tư & chính sách"
+    },
+    "footer3": {
+        "message": "Liên hệ"
+    },
+    "sign_pop": {
+        "message": "Tên đăng nhập"
+    },
+    "sign_pop1": {
+        "message": "Mật khẩu"
+    },
+    "sign_pop2": {
+        "message": "Nhớ tôi"
+    },
+    "sign_pop3": {
+        "message": "Đăng ký"
+    },
+    "sign_pop4": {
+        "message": "Đăng nhập bằng Facebook"
+    },
+    "sign_pop5": {
+        "message": "Vui lòng nhập tên của bạn!"
+    },
+    "sign_pop6": {
+        "message": "Vui lòng nhập tên đăng nhập của bạn!"
+    },
+    "sign_pop7": {
+        "message": "Vui lòng nhập mật khẩu của bạn!"
+    },
+    "loginpop1": {
+        "message": "Tên đăng nhập"
+    },
+    "loginpop2": {
+        "message": "Mật khẩu"
+    },
+    "loginpop3": {
+        "message": "Nhớ tôi"
+    },
+    "loginpop4": {
+        "message": "Đăng nhập"
+    },
+    "loginpop5": {
+        "message": "Đăng nhập bằng Facebook"
+    },
+    "loginpop6": {
+        "message": "Vui lòng nhập tên đăng nhập của bạn!"
+    },
+    "loginpop7": {
+        "message": "Vui lòng nhập mật khẩu của bạn!"
+    },
+    "HomeTabFrom2": {
+        "message": "Số tiền"
+    },
+    "HomeTabFrom3": {
+        "message": "Nhập tên đối phương:"
+    },
+    "HomeTabFrom4": {
+        "message": "Email đối phương:"
+    },
+    "HomeTabFrom5": {
+        "message": "Facebook Id hoặc Liên kết Facebook của đối phương:"
+    },
+    "HomeTabFrom6": {
+        "message": "Ngày chọn"
+    },
+    "HomeTabFrom7": {
+        "message": "+ Thêm Kỳ trả nợ"
+    },
+    "HomeTabFrom8": {
+        "message": "Tôi chấp nhận các điều khoản sử dụng"
+    },
+    "HomeTabFrom9": {
+        "message": "Nhận hoặc Trả:"
+    },
+    "HomeTabFrom10": {
+        "message": "Nhận"
+    },
+    "HomeTabFrom11": {
+        "message": "Trả"
+    },
+    "HomeTabFrom12": {
+        "message": "+ Thêm Trường hợp nợ"
+    },
+    "HomePageTab1_1": {
+        "message": "Thêm Trường hợp nợ"
+    },
+    "HomePageTab1_2": {
+        "message": "Trong trường hợp giao dịch nào, 10% số Repay coins sẽ bị trừ!"
+    },
+    "HomePageTab1_3": {
+        "message": "Tiền"
+    },
+    "HomePageTab1_4": {
+        "message": "Ân huệ"
+    },
+    "HomePageTab1_5": {
+        "message": "Dịch vụ"
+    },
+    "HomePageTab1_6": {
+        "message": "Bữa ăn"
+    },
+    "HomePageTab1_7": {
+        "message": "Đồ uống"
+    },
+    "HomePageTab1_8": {
+        "message": "Lời xin lỗi"
+    },
+    "HomePageTab1_9": {
+        "message": "Thách thức"
+    },
+    "Tab2_1": {
+        "message": "Tổng số RepayCoins:"
+    },
+    "Tab2_3": {
+        "message": "Tổng số RepayCoins:"
+    },
+    "Tab2_4": {
+        "message": "Tổng số RepayCoins:"
+    },
+    "Tab3_1": {
+        "message": "Đối thủ của tôi"
+    },
+    "Tab3_2": {
+        "message": "Thêm Một Trường hợp nợ"
+    },
+    "Tab4_1": {
+        "message": "Yêu cầu đã gửi"
+    },
+    "Tab5_1": {
+        "message": "Các đề nghị đã nhận"
+    },
+    "Tab6_1": {
+        "message": "Các Trường hợp nợ đã giải quyết"
+    },
+    "Tab7_1": {
+        "message": "Cài đặt Thông báo"
+    },
+    "Tab7_2": {
+        "message": "Tần suất Thông báo:"
+    },
+    "Tab7_3": {
+        "message": "Hàng tuần"
+    },
+    "Tab7_4": {
+        "message": "Hàng tuần"
+    },
+    "Tab7_5": {
+        "message": "Hàng ngày"
+    },
+    "Tab7_6": {
+        "message": "Hàng tháng"
+    },
+    "Tab7_7": {
+        "message": "Kênh Thông báo:"
+    },
+    "Tab7_8": {
+        "message": "Email"
+    },
+    "Tab7_9": {
+        "message": "Email"
+    },
+    "Tab7_10": {
+        "message": "Facebook"
+    },
+    "Tab7_11": {
+        "message": "Lưu cài đặt"
+    },
+    "TabFrom1_2": {
+        "message": "Số tiền"
+    },
+    "TabFrom1_3": {
+        "message": "Chọn tên đối thủ:"
+    },
+    "TabFrom1_4": {
+        "message": "Thêm Đối thủ mới"
+    },
+    "TabFrom1_5": {
+        "message": "Email đối thủ:"
+    },
+    "TabFrom1_6": {
+        "message": "Facebook Id hoặc Liên kết Facebook của đối thủ:"
+    },
+    "TabFrom1_7": {
+        "message": "Ngày chọn"
+    },
+    "TabFrom1_8": {
+        "message": "+ Thêm Kỳ trả nợ"
+    },
+    "TabFrom1_9": {
+        "message": "Tôi chấp nhận các điều khoản sử dụng"
+    },
+    "TabFrom1_10": {
+        "message": "Nhận hoặc Trả:"
+    },
+    "TabFrom1_11": {
+        "message": "Nhận"
+    },
+    "TabFrom1_12": {
+        "message": "Trả"
+    },
+    "TabFrom1_13": {
+        "message": "+ Thêm Trường hợp nợ"
+    },
+    "TabFrom2_1": {
+        "message": "Số tiền Ân huệ:"
+    },
+    "TabFrom2_2": {
+        "message": "Chọn tên đối thủ:"
+    },
+    "TabFrom2_3": {
+        "message": "Thêm Đối thủ mới"
+    },
+    "TabFrom2_4": {
+        "message": "Email đối thủ:"
+    },
+    "TabFrom2_5": {
+        "message": "Facebook Id hoặc Liên kết Facebook của đối thủ:"
+    },
+    "TabFrom2_6": {
+        "message": "Ngày chọn"
+    },
+    "TabFrom2_7": {
+        "message": "Mô tả"
+    },
+    "TabFrom2_8": {
+        "message": "+ Thêm Kỳ trả nợ"
+    },
+    "TabFrom2_9": {
+        "message": "Tôi chấp nhận các điều khoản sử dụng"
+    },
+    "TabFrom2_10": {
+        "message": "Nhận hoặc Trả:"
+    },
+    "TabFrom2_11": {
+        "message": "Nhận"
+    },
+    "TabFrom2_12": {
+        "message": "Trả"
+    },
+    "TabFrom2_13": {
+        "message": "+ Thêm Trường hợp nợ"
+    },
+    "TabFrom3_1": {
+        "message": "Số tiền Dịch vụ:"
+    },
+    "TabFrom3_2": {
+        "message": "Chọn tên đối thủ:"
+    },
+    "TabFrom3_3": {
+        "message": "Thêm Đối thủ mới"
+    },
+    "TabFrom3_4": {
+        "message": "Email đối thủ:"
+    },
+    "TabFrom3_5": {
+        "message": "Facebook Id hoặc Liên kết Facebook của đối thủ:"
+    },
+    "TabFrom3_6": {
+        "message": "Ngày chọn"
+    },
+    "TabFrom3_7": {
+        "message": "Mô tả"
+    },
+    "TabFrom3_8": {
+        "message": "+ Thêm Kỳ trả nợ"
+    },
+    "TabFrom3_9": {
+        "message": "Tôi chấp nhận các điều khoản sử dụng"
+    },
+    "TabFrom3_10": {
+        "message": "Nhận hoặc Trả:"
+    },
+    "TabFrom3_11": {
+        "message": "Nhận"
+    },
+    "TabFrom3_12": {
+        "message": "Trả"
+    },
+    "TabFrom3_13": {
+        "message": "+ Thêm Trường hợp nợ"
+    },
+    "TabFrom4_1": {
+        "message": "Số tiền Bữa ăn:"
+    },
+    "TabFrom4_2": {
+        "message": "Chọn tên đối thủ:"
+    },
+    "TabFrom4_3": {
+        "message": "Thêm Đối thủ mới"
+    },
+    "TabFrom4_4": {
+        "message": "Email đối thủ:"
+    },
+    "TabFrom4_5": {
+        "message": "Facebook Id hoặc Liên kết Facebook của đối thủ:"
+    },
+    "TabFrom4_6": {
+        "message": "Ngày chọn"
+    },
+    "TabFrom4_7": {
+        "message": "Mô tả"
+    },
+    "TabFrom4_8": {
+        "message": "+ Thêm Kỳ trả nợ"
+    },
+    "TabFrom4_9": {
+        "message": "Tôi chấp nhận các điều khoản sử dụng"
+    },
+    "TabFrom4_10": {
+        "message": "Nhận hoặc Trả:"
+    },
+    "TabFrom4_11": {
+        "message": "Nhận"
+    },
+    "TabFrom4_12": {
+        "message": "Trả"
+    },
+    "TabFrom4_13": {
+        "message": "+ Thêm Trường hợp nợ"
+    },
+    "TabFrom5_1": {
+        "message": "Số tiền cho Đồ uống:"
+    },
+    "TabFrom5_2": {
+        "message": "Chọn tên đối thủ:"
+    },
+    "TabFrom5_3": {
+        "message": "Thêm Đối thủ mới"
+    },
+    "TabFrom5_4": {
+        "message": "Email Đối thủ:"
+    },
+    "TabFrom5_5": {
+        "message": "Facebook Id hoặc Liên kết Facebook của Đối thủ:"
+    },
+    "TabFrom5_6": {
+        "message": "Chọn ngày"
+    },
+    "TabFrom5_7": {
+        "message": "Mô tả"
+    },
+    "TabFrom5_8": {
+        "message": "+ Thêm Đợt trả góp"
+    },
+    "TabFrom5_9": {
+        "message": "Tôi chấp nhận các điều khoản sử dụng"
+    },
+    "TabFrom5_10": {
+        "message": "Nhận hoặc Trả:"
+    },
+    "TabFrom5_11": {
+        "message": "Nhận"
+    },
+    "TabFrom5_12": {
+        "message": "Trả"
+    },
+    "TabFrom5_13": {
+        "message": "+ Thêm Trường hợp nợ"
+    },
+    "TabFrom6_1": {
+        "message": "Số tiền xin lỗi:"
+    },
+    "TabFrom6_2": {
+        "message": "Chọn Tên Đối thủ:"
+    },
+    "TabFrom6_3": {
+        "message": "Thêm Đối thủ mới"
+    },
+    "TabFrom6_4": {
+        "message": "Email Đối thủ:"
+    },
+    "TabFrom6_5": {
+        "message": "Facebook Id hoặc Liên kết Facebook của Đối thủ:"
+    },
+    "TabFrom6_6": {
+        "message": "Chọn ngày"
+    },
+    "TabFrom6_7": {
+        "message": "Mô tả"
+    },
+    "TabFrom6_8": {
+        "message": "+ Thêm Đợt trả góp"
+    },
+    "TabFrom6_9": {
+        "message": "Tôi chấp nhận các điều khoản sử dụng"
+    },
+    "TabFrom6_10": {
+        "message": "Nhận hoặc Trả"
+    },
+    "TabFrom6_11": {
+        "message": "Nhận"
+    },
+    "TabFrom6_12": {
+        "message": "Trả"
+    },
+    "TabFrom6_13": {
+        "message": "+ Thêm Trường hợp nợ"
+    },
+    "TabFrom7_1": {
+        "message": "Số tiền Thách thức:"
+    },
+    "TabFrom7_2": {
+        "message": "Chọn Tên Đối thủ:"
+    },
+    "TabFrom7_3": {
+        "message": "Thêm Đối thủ mới"
+    },
+    "TabFrom7_4": {
+        "message": "Email Đối thủ:"
+    },
+    "TabFrom7_5": {
+        "message": "Facebook Id hoặc Liên kết Facebook của Đối thủ:"
+    },
+    "TabFrom7_6": {
+        "message": "Chọn ngày"
+    },
+    "TabFrom7_7": {
+        "message": "Mô tả"
+    },
+    "TabFrom7_8": {
+        "message": "+ Thêm Đợt trả góp"
+    },
+    "TabFrom7_9": {
+        "message": "Tôi chấp nhận các điều khoản sử dụng"
+    },
+    "TabFrom7_10": {
+        "message": "Nhận hoặc Trả"
+    },
+    "TabFrom7_11": {
+        "message": "Nhận"
+    },
+    "TabFrom7_12": {
+        "message": "Trả"
+    },
+    "TabFrom7_13": {
+        "message": "+ Thêm Trường hợp nợ"
+    }
+}    

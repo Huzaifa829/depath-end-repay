@@ -1,0 +1,618 @@
+{
+    "Tab8_1":{
+        "message":"Name:"
+    },
+    "Tab8_2":{
+        "message":"Email:"
+    },
+    "Tab8_3":{
+        "message":"Facebook:"
+    },
+    "Tab8_4":{
+        "message":"Cancel:"
+    },
+    "Tab8_5":{
+        "message":"Save & change:"
+    },
+    "Tab8_6":{
+        "message":"Password:"
+    },
+    "Tab8_7":{
+        "message":"Cancel"
+    },
+    "Tab8_8":{
+        "message":"Save & change"
+    },
+    "Tab8_9":{
+        "message":"Currency:"
+    },
+    "Tab8_10":{
+        "message":"Cancel"
+    },
+    "Tab8_11":{
+        "message":"Save & change"
+    },
+    "Tab8_12":{
+        "message":"Profile:"
+    },
+    "HA_text":{
+        "message":"Repay Menu"
+    },
+    "HA_text1":{
+        "message":"Logout"
+    },
+    "HA_text2":{
+        "message":"Add Debt Cases"
+    },
+    "HA_text3":{
+        "message":"Overview"
+    },
+    "HA_text4":{
+        "message":"My Adversaries"
+    },
+    "HA_text5":{
+        "message":"Requests Sent"
+    },
+    "HA_text6":{
+        "message":"Offers Recieved"
+    },
+    "HA_text7":{
+        "message":"Settled Debt Cases"
+    },
+    "HA_text8":{
+        "message":"Notification Settings"
+    },
+    "HA_text9":{
+        "message":"Profile"
+    },
+    "HA_text10":{
+        "message":"Wallet"
+    },
+    "Tab9_1":{
+        "message":"User Wallet"
+    },
+    "Tab9_2":{
+        "message":"Total Balance"
+    },
+    "Tab9_3":{
+        "message":"Last Transaction"
+    },
+    "Tab9_4":{
+        "message":"Make a Transaction"
+    },
+    "Tab9_5":{
+        "message":"Amount (REPAYcoins):"
+    },
+    "Tab9_6":{
+        "message":"Transaction Type:"
+    },
+    "Tab9_7":{
+        "message":"Full Payment"
+    },
+    "Tab9_8":{
+        "message":"Full Payment"
+    },
+    "Tab9_9":{
+        "message":"Installement"
+    },
+    "Tab9_10":{
+        "message":"Submit"
+    },
+    "langweg1":{
+        "message":"Select Country"
+    },
+    "langweg2":{
+        "message":"ES"
+    },
+    "text":{
+        "message":"Do Good, And"
+    },
+    "text1":{
+        "message":"Will Come"
+    },
+    "text2":{
+        "message":"Organize and send notifications to friends that owe you a beer, a favor, money, or an apology and settle it in a fun, fast, and effective way. Improve your relations and social networks in just 3 easy steps for free. Start now - it only takes 5 minutes. Login and see who owes you a beer"
+    },
+    "text3":{
+        "message":"Get Started"
+    },
+    "text4":{
+        "message":"Login"
+    },
+    "text5":{
+        "message":"Login"
+    },
+    "text6":{
+        "message":"Sign Up"
+    },
+    "text7":{
+        "message":"Not a member ?"
+    },
+    "text8":{
+        "message":"Sign up"
+    },
+    "text9":{
+        "message":"Proceed"
+    },
+    "text10":{
+        "message":"Already have account?"
+    },"footer1":{
+        "message":"About"
+    },
+    "footer2":{
+        "message":"Privacy & policy"
+    },
+    "footer3":{
+        "message":"Contact"
+    },
+    "sign_pop":{
+        "message":"Username"
+    },
+    "sign_pop1":{
+        "message":"Password"
+    },
+    "sign_pop2":{
+        "message":"Remember me"
+    },
+    "sign_pop3":{
+        "message":"Sign up"
+    },
+    "sign_pop4":{
+        "message":"Login with Facebook"
+    },
+    "sign_pop5":{
+        "message":"Please input your name!"
+    },
+    "sign_pop6":{
+        "message":"Please input your username!"
+    },
+    "sign_pop7":{
+        "message":"Please input your password!"
+    },
+    "loginpop1":{
+        "message":"Username"
+    },
+    "loginpop2":{
+        "message":"Password"
+    },
+    "loginpop3":{
+        "message":"Remember me"
+    },
+    "loginpop4":{
+        "message":"Login"
+    },
+    "loginpop5":{
+        "message":"Login with Facebook"
+    },
+    "loginpop6":{
+        "message":"Please input your username!"
+    },
+    "loginpop7":{
+        "message":"Please input your password!"
+    },   
+     "HomeTabFrom2":{
+        "message":"Amount"
+    },
+    "HomeTabFrom3":{
+        "message":"Enter Adversary Name:"
+    },
+    "HomeTabFrom4":{
+        "message":"Adversary Email:"
+    },
+    "HomeTabFrom5":{
+        "message":"Adversary Facebook Id or Facebook Link:"
+    },
+    "HomeTabFrom6":{
+        "message":"DatePicker"
+    },
+    "HomeTabFrom7":{
+        "message":"+ Add a Installment"
+    },
+    "HomeTabFrom8":{
+        "message":"I accept the terms of use"
+    },
+    "HomeTabFrom9":{
+        "message":"Receive or Pay:"
+    },
+    "HomeTabFrom10":{
+        "message":"Receive"
+    },
+    "HomeTabFrom11":{
+        "message":"Pay"
+    },
+    "HomeTabFrom12":{
+        "message":"+ Add Debt Case"
+    },
+    "HomePageTab1_1":{
+        "message":"Add Debt Case"
+    },
+    "HomePageTab1_2":{
+        "message":"In case of any transaction, 10% of the Repay coins will be deducted!"
+    },
+    "HomePageTab1_3":{
+        "message":"Money"
+    }
+    ,
+    "HomePageTab1_4":{
+        "message":"Favor"
+    }
+    ,
+    "HomePageTab1_5":{
+        "message":"Service"
+    }
+    ,
+    "HomePageTab1_6":{
+        "message":"Meal"
+    }
+    ,
+    "HomePageTab1_7":{
+        "message":"Drink"
+    }
+    ,
+    "HomePageTab1_8":{
+        "message":"Apology"
+    }
+    ,
+    "HomePageTab1_9":{
+        "message":"Challenge"
+    }
+    ,
+    "Tab2_1":{
+        "message":"Total RepayCoins:"
+    }
+    ,
+    "Tab2_3":{
+        "message":"Total RepayCoins:"
+    }
+    ,
+    "Tab2_4":{
+        "message":"Total RepayCoins:"
+    }
+    ,
+    "Tab3_1":{
+        "message":"My Adversaries"
+    }
+    ,
+    "Tab3_2":{
+        "message":"Add A Debt Case"
+    }
+    ,
+    "Tab4_1":{
+        "message":"Requests Sent"
+    }
+    ,
+    "Tab5_1":{
+        "message":"Offers Recieved"
+    }
+    ,
+    "Tab6_1":{
+        "message":"Setteled Debt Cases"
+    }
+    ,
+    "Tab7_1":{
+        "message":"Notification Settings"
+    }
+    
+    ,
+    "Tab7_2":{
+        "message":"Notification Frequency:"
+    }
+    
+    ,
+    "Tab7_3":{
+        "message":"Weekly"
+    }
+    
+    ,
+    "Tab7_4":{
+        "message":"Weekly"
+    }
+    
+    ,
+    "Tab7_5":{
+        "message":"Daily"
+    }
+    
+    ,
+    "Tab7_6":{
+        "message":"Monthly"
+    }
+    
+    ,
+    "Tab7_7":{
+        "message":"Notification Channel:"
+    }
+    
+    ,
+    "Tab7_8":{
+        "message":"Email"
+    }
+    
+    ,
+    "Tab7_9":{
+        "message":"Email"
+    }
+    
+    ,
+    "Tab7_10":{
+        "message":"Facebook"
+    }
+    
+    ,
+    "Tab7_11":{
+        "message":"Save Settings"
+    }
+    ,
+    "TabFrom1_2":{
+        "message":"Amount"
+    },
+    "TabFrom1_3":{
+        "message":"Select Adversary Name:"
+    },
+    "TabFrom1_4":{
+        "message":"Add New Adversary"
+    },
+    "TabFrom1_5":{
+        "message":"Adversary Email:"
+    },
+    "TabFrom1_6":{
+        "message":"Adversary Facebook Id or Facebook Link:"
+    },
+    "TabFrom1_7":{
+        "message":"DatePicker"
+    },
+    "TabFrom1_8":{
+        "message":"+ Add a Installment"
+    },
+    "TabFrom1_9":{
+        "message":"I accept the terms of use"
+    },
+    "TabFrom1_10":{
+        "message":"Receive or Pay:"
+    },
+    "TabFrom1_11":{
+        "message":"Receive"
+    },
+    "TabFrom1_12":{
+        "message":"Pay"
+    },
+    "TabFrom1_13":{
+        "message":"+ Add Debt Case"
+    },
+    "TabFrom2_1":{
+        "message":"Favor Amount:"
+    },
+    "TabFrom2_2":{
+        "message":"Select Adversary Name:"
+    },
+    "TabFrom2_3":{
+        "message":"Add New Adversary"
+    },
+    "TabFrom2_4":{
+        "message":"Adversary Email:"
+    },
+    "TabFrom2_5":{
+        "message":"Adversary Facebook Id or Facebook Link:"
+    },
+    "TabFrom2_6":{
+        "message":"DatePicker"
+    },
+    "TabFrom2_7":{
+        "message":"Description"
+    },
+    "TabFrom2_8":{
+        "message":"+ Add a Installment"
+    },
+    "TabFrom2_9":{
+        "message":"I accept the terms of use"
+    },
+    "TabFrom2_10":{
+        "message":"Receive or Pay:"
+    },
+    "TabFrom2_11":{
+        "message":"Receive"
+    },
+    "TabFrom2_12":{
+        "message":"Pay"
+    },
+    "TabFrom2_13":{
+        "message":"+ Add Debt Case"
+    },
+    "TabFrom3_1":{
+        "message":"Service Amount:"
+    },
+    "TabFrom3_2":{
+        "message":"Select Adversary Name:"
+    },
+    "TabFrom3_3":{
+        "message":"Add New Adversary"
+    },
+    "TabFrom3_4":{
+        "message":"Adversary Email:"
+    },
+    "TabFrom3_5":{
+        "message":"Adversary Facebook Id or Facebook Link:"
+    },
+    "TabFrom3_6":{
+        "message":"DatePicker"
+    },
+    "TabFrom3_7":{
+        "message":"Description"
+    },
+    "TabFrom3_8":{
+        "message":"+ Add a Installment"
+    },
+    "TabFrom3_9":{
+        "message":"I accept the terms of use"
+    },
+    "TabFrom3_10":{
+        "message":"Receive or Pay:"
+    },
+    "TabFrom3_11":{
+        "message":"Receive"
+    },
+    "TabFrom3_12":{
+        "message":"Pay"
+    },
+    "TabFrom3_13":{
+        "message":"+ Add Debt Case"
+    },
+    "TabFrom4_1":{
+        "message":"Meal Amount:"
+    },
+    "TabFrom4_2":{
+        "message":"Select Adversary Name:"
+    },
+    "TabFrom4_3":{
+        "message":"Add New Adversary"
+    },
+    "TabFrom4_4":{
+        "message":"Adversary Email:"
+    },
+    "TabFrom4_5":{
+        "message":"Adversary Facebook Id or Facebook Link:"
+    },
+    "TabFrom4_6":{
+        "message":"DatePicker"
+    },
+    "TabFrom4_7":{
+        "message":"Description"
+    },
+    "TabFrom4_8":{
+        "message":"+ Add a Installment"
+    },
+    "TabFrom4_9":{
+        "message":"I accept the terms of use"
+    },
+    "TabFrom4_10":{
+        "message":"Receive or Pay:"
+    },
+    "TabFrom4_11":{
+        "message":"Receive"
+    },
+    "TabFrom4_12":{
+        "message":"Pay"
+    },
+    "TabFrom4_13":{
+        "message":"+ Add Debt Case"
+    },
+    "TabFrom5_1":{
+        "message":"Amount For Drink:"
+    },
+    "TabFrom5_2":{
+        "message":"Select Adversary Name:"
+    },
+    "TabFrom5_3":{
+        "message":"Add New Adversary"
+    },
+    "TabFrom5_4":{
+        "message":"Adversary Email:"
+    },
+    "TabFrom5_5":{
+        "message":"Adversary Facebook Id or Facebook Link:"
+    },
+    "TabFrom5_6":{
+        "message":"DatePicker"
+    },
+    "TabFrom5_7":{
+        "message":"Description"
+    },
+    "TabFrom5_8":{
+        "message":"+ Add a Installment"
+    },
+    "TabFrom5_9":{
+        "message":"I accept the terms of use"
+    },
+    "TabFrom5_10":{
+        "message":"Receive or Pay:"
+    },
+    "TabFrom5_11":{
+        "message":"Receive"
+    },
+    "TabFrom5_12":{
+        "message":"Pay"
+    },
+    "TabFrom5_13":{
+        "message":"+ Add Debt Case"
+    }, 
+    "TabFrom6_1":{
+        "message":"Appology Amount:"
+    },
+    "TabFrom6_2":{
+        "message":"Select Adversary Name:"
+    },
+    "TabFrom6_3":{
+        "message":"Add New Adversary"
+    },
+    "TabFrom6_4":{
+        "message":"Adversary Email:"
+    },
+    "TabFrom6_5":{
+        "message":"Adversary Facebook Id or Facebook Link:"
+    },
+    "TabFrom6_6":{
+        "message":"DatePicker"
+    },
+    "TabFrom6_7":{
+        "message":"Description"
+    },
+    "TabFrom6_8":{
+        "message":"+ Add a Installment"
+    },
+    "TabFrom6_9":{
+        "message":"I accept the terms of use"
+    },
+    "TabFrom6_10":{
+        "message":"Receive or Pay"
+    },
+    "TabFrom6_11":{
+        "message":"Receive"
+    },
+    "TabFrom6_12":{
+        "message":"Pay"
+    },
+    "TabFrom6_13":{
+        "message":"+ Add Debt Case"
+    },
+    "TabFrom7_1":{
+        "message":"Challenge Amount:"
+    },
+    "TabFrom7_2":{
+        "message":"Select Adversary Name:"
+    },
+    "TabFrom7_3":{
+        "message":"Add New Adversary"
+    },
+    "TabFrom7_4":{
+        "message":"Adversary Email:"
+    },
+    "TabFrom7_5":{
+        "message":"Adversary Facebook Id or Facebook Link:"
+    },
+    "TabFrom7_6":{
+        "message":"DatePicker"
+    },
+    "TabFrom7_7":{
+        "message":"Description"
+    },
+    "TabFrom7_8":{
+        "message":"+ Add a Installment"
+    },
+    "TabFrom7_9":{
+        "message":"I accept the terms of use"
+    },
+    "TabFrom7_10":{
+        "message":"Receive or Pay"
+    },
+    "TabFrom7_11":{
+        "message":"Receive"
+    },
+    "TabFrom7_12":{
+        "message":"Pay"
+    },
+    "TabFrom7_13":{
+        "message":"+ Add Debt Case"
+    }
+    
+   
+}

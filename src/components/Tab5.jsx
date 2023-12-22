@@ -9,6 +9,7 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import { Button } from 'antd';
+import { useTranslation } from 'react-i18next';
 
 const columns = [
     { id: 'name', label: 'S.no', minWidth: 30 },
@@ -52,11 +53,11 @@ export default function Tab3() {
         setRowsPerPage(+event.target.value);
         setPage(0);
     };
-
+    const [t, i18n] = useTranslation("global")
     return (
         <div className='HA_table_main_add'>
             <div className='HA_table_main_add_child'>
-                <p className='HA_table_main_add_child_text'>Offers Recieved</p>
+                <p className='HA_table_main_add_child_text'>{t("Tab5_1.message")}</p>{/*Offers Recieved*/}
             </div>
             <Paper sx={{ width: '100%', overflow: 'hidden' }}>
                 <TableContainer sx={{ maxHeight: 440 }}>

@@ -2,7 +2,7 @@ import React from 'react';
 import { VictoryChart, VictoryLine, VictoryScatter } from 'victory';
 import styled from 'styled-components';
 import '../cssFile/Tab2.css'
-
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -43,20 +43,20 @@ const App = () => {
   const temperatures = data.map(({ y }) => y);
   const min = Math.min(...temperatures);
   const max = Math.max(...temperatures);
-
+  const [t, i18n] = useTranslation("global")
   return (
     <div className='HA_tab2_main_top'>
       <div className='HA_tab2_main'>
       <div className='HA_tab2_main_text'>
-        <p className='HA_tab2_main_para'>Total RepayCoins:</p>
-        <p className='HA_tab2_main_para1'>45,562 coins</p>
+        <p className='HA_tab2_main_para'>{t("Tab2_1.message")}</p>{/*Total RepayCoins:*/}
+        <p className='HA_tab2_main_para1'>45,562 coins</p>{/*45,562 coins*/}
       </div>
       <div className='HA_tab2_main_text'>
-        <p>Total RepayCoins:</p>
+        <p>{t("Tab2_3.message")}</p>{/*Total RepayCoins:*/}
         <p>45,562 coins</p>
       </div>
       <div className='HA_tab2_main_text'>
-        <p>Total RepayCoins:</p>
+        <p>{t("Tab2_4.message")}</p>{/*Total RepayCoins:*/}
         <p>45,562 coins</p>
       </div>
       </div>
