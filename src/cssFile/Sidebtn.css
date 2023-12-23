@@ -8,7 +8,7 @@
         /* border: 1px solid black; */
     }
     .HA_side_btn_main:hover{
-        background-color: rgb(202, 202, 202);
+        background-color: rgb(202, 202, 202) !important ;
         transition: 0.5s;
     }
     .HA_side_btn_text{

@@ -1,101 +1,581 @@
 {
+    "Tab8_1": {
+        "message": "အမည်:"
+    },
+    "Tab8_2": {
+        "message": "အီးမေးလ်:"
+    },
+    "Tab8_3": {
+        "message": "Facebook:"
+    },
+    "Tab8_4": {
+        "message": "ပယ်ဖျက်:"
+    },
+    "Tab8_5": {
+        "message": "သိမ်းဆည်းနှင့် ပြောင်းလဲ:"
+    },
+    "Tab8_6": {
+        "message": "စကားဝှက်:"
+    },
+    "Tab8_7": {
+        "message": "ပယ်ဖျက်"
+    },
+    "Tab8_8": {
+        "message": "သိမ်းဆည်းနှင့် ပြောင်းလဲ"
+    },
+    "Tab8_9": {
+        "message": "ငွေကြေး:"
+    },
+    "Tab8_10": {
+        "message": "ပယ်ဖျက်"
+    },
+    "Tab8_11": {
+        "message": "သိမ်းဆည်းနှင့် ပြောင်းလဲ"
+    },
+    "Tab8_12": {
+        "message": "ပရိုဖိုင်:"
+    },
     "HA_text": {
-        "message": "Menú de Repago"
+        "message": "ပြင်ပလိုအပ်သည်"
     },
     "HA_text1": {
-        "message": "Cerrar sesión"
+        "message": "အကြွေးဆပ်"
+    },
+    "HA_text2": {
+        "message": "အကောင့်လုပ်ရန်"
+    },
+    "HA_text3": {
+        "message": "အကြောင်း"
+    },
+    "HA_text4": {
+        "message": "ကျွန်ုပ်တို့အား"
+    },
+    "HA_text5": {
+        "message": "ပိုပြားပြင်နေပိုင်း"
+    },
+    "HA_text6": {
+        "message": "လက်မှတ်များပြင်နေပိုင်း"
+    },
+    "HA_text7": {
+        "message": "ငွေကောင်းသားပြင်နေပိုင်း"
+    },
+    "HA_text8": {
+        "message": "အသိပေးချက် ဆက်တင်များ"
+    },
+    "HA_text9": {
+        "message": "ပရိုဖိုင်"
+    },
+    "HA_text10": {
+        "message": "အရင်းဝယ်"
+    },
+    "Tab9_1": {
+        "message": "အသုံးပြုသူ ကျေးဇူးတင်"
+    },
+    "Tab9_2": {
+        "message": "စုစုပေါင်း လက်ရှိလက်ကျန်"
+    },
+    "Tab9_3": {
+        "message": "နောက်သည် စာမျက်နှာ"
+    },
+    "Tab9_4": {
+        "message": "ငွေကြေးလုပ်ရန်"
+    },
+    "Tab9_5": {
+        "message": "ပမာဏ (REPAYcoins):"
+    },
+    "Tab9_6": {
+        "message": "ငွေကြေးပုံစံ:"
+    },
+    "Tab9_7": {
+        "message": "အပြင်ကျတော့်"
+    },
+    "Tab9_8": {
+        "message": "အပြင်ကျတော့်"
+    },
+    "Tab9_9": {
+        "message": "ယူနစ်"
+    },
+    "Tab9_10": {
+        "message": "တင်သွင်းပါ"
     },
     "langweg1": {
-        "message": "Seleccionar país"
+        "message": "နိုင်ငံရွေးပါ"
     },
     "langweg2": {
         "message": "ES"
     },
     "text": {
-        "message": "Haz el bien, y"
+        "message": "ကုဒ်နှင့်"
     },
     "text1": {
-        "message": "Vendrá"
+        "message": "မေးလ်ဆားသွင်းပါ"
     },
     "text2": {
-        "message": "Organiza y envía notificaciones a amigos que te deben una cerveza, un favor, dinero o una disculpa y resuélvelo de manera divertida, rápida y efectiva. Mejora tus relaciones y redes sociales en solo 3 sencillos pasos de forma gratuita. Comienza ahora, solo lleva 5 minutos. Inicia sesión y mira quién te debe una cerveza."
+        "message": "သင်တစ်ယောက် ဘယ်သူမျှတမှန်ကြားသော သို့မဟုတ် ငွေ၊ လုပ်ငန်း၊ ငွေသည်များသော သင့်အတွက် သို့မဟုတ် အသက်တာနှင့် စိတ်တိုင်း စကားဝှက်ကို လက်ခံလည်း ဖြစ်စေ၊ အသင်းအတင်းတစ်ယောက်အား အသိပေးပါ။ အသစ်လုပ်မည် - ၃ ချက်အတွင်းတွင် လက်ရှိ ၅ မိနစ်လိုက်ပါက။ ဝင်ထားသူအား ဘယ်သူသို့မဟုတ် သင့်အားကို ကြည့်ပါ"
     },
     "text3": {
-        "message": "Empezar"
+        "message": "စတင်ပါ"
     },
     "text4": {
-        "message": "Iniciar sesión"
+        "message": "ဝင်ရန်"
     },
     "text5": {
-        "message": "Iniciar sesión"
+        "message": "ဝင်ရန်"
     },
     "text6": {
-        "message": "Registrarse"
+        "message": "အကောင့်ဖွင့်ရန်"
     },
     "text7": {
-        "message": "¿No eres miembro?"
+        "message": "မန်ဘာဖြစ်သလဲ။"
     },
     "text8": {
-        "message": "Registrarse"
+        "message": "အကောင့်ဖွင့်ပါ"
     },
     "text9": {
-        "message": "Continuar"
+        "message": "ယခုဖြည့်ပါ"
     },
     "text10": {
-        "message": "¿Ya tienes una cuenta?"
+        "message": "စတင်ပါသို့မဟုတ်"
     },
     "footer1": {
-        "message": "Acerca de"
+        "message": "အကြောင်း"
     },
     "footer2": {
-        "message": "Privacidad y política"
+        "message": "လူမှုနှင့် စီးပွား"
     },
     "footer3": {
-        "message": "Contacto"
+        "message": "ဆက်သွယ်ပါ"
     },
     "sign_pop": {
-        "message": "Nombre de usuario"
+        "message": "အသုံးပြုသူအမည်"
     },
     "sign_pop1": {
-        "message": "Contraseña"
+        "message": "စကားဝှက်"
     },
     "sign_pop2": {
-        "message": "Recuérdame"
+        "message": "မြန်မာကြောင်းမှ စက်မှာဆက်လက် ဖြစ်ရန်"
     },
     "sign_pop3": {
-        "message": "Registrarse"
+        "message": "အကောင့်ဖွင့်ပါ"
     },
     "sign_pop4": {
-        "message": "Iniciar sesión con Facebook"
+        "message": "Facebook နှင့်ဝင်ရန်"
     },
     "sign_pop5": {
-        "message": "¡Por favor ingresa tu nombre!"
+        "message": "သင့်အမည်ကို ထည့်ပါ!"
     },
     "sign_pop6": {
-        "message": "¡Por favor ingresa tu nombre de usuario!"
+        "message": "သင့်အမည်ကို ထည့်ပါ!"
     },
     "sign_pop7": {
-        "message": "¡Por favor ingresa tu contraseña!"
+        "message": "သင့်စကားဝှက်ကို ထည့်ပါ!"
     },
     "loginpop1": {
-        "message": "Nombre de usuario"
+        "message": "အသုံးပြုသူအမည်"
     },
     "loginpop2": {
-        "message": "Contraseña"
+        "message": "စကားဝှက်"
     },
     "loginpop3": {
-        "message": "Recuérdame"
+        "message": "မြန်မာကြောင်းမှ စက်မှာဆက်လက် ဖြစ်ရန်"
     },
     "loginpop4": {
-        "message": "Iniciar sesión"
+        "message": "ဝင်ရန်"
     },
     "loginpop5": {
-        "message": "Iniciar sesión con Facebook"
+        "message": "Facebook နှင့်ဝင်ရောက်ရန်"
     },
     "loginpop6": {
-        "message": "¡Por favor ingresa tu nombre de usuario!"
+        "message": "သင့်အသုံးပြုသူအမည်ကို ထည့်ပါ။"
     },
     "loginpop7": {
-        "message": "¡Por favor ingresa tu contraseña!"
+        "message": "သင့်စကားဝှက်ကို ထည့်ပါ။"
+    },
+    "HomeTabFrom2": {
+        "message": "ငွေကြေး"
+    },
+    "HomeTabFrom3": {
+        "message": "အထူးသည်းနာမည် ထည့်ပါ:"
+    },
+    "HomeTabFrom4": {
+        "message": "အထူးသည်းအီးမေးလ်:"
+    },
+    "HomeTabFrom5": {
+        "message": "အထူးသည်းဖော်ပြချက် သို့မဟုတ် Facebook လင့်:"
+    },
+    "HomeTabFrom6": {
+        "message": "နေ့စွဲရွေးချယ်ပါ"
+    },
+    "HomeTabFrom7": {
+        "message": "+ ငွေကြေးထည့်ပါ"
+    },
+    "HomeTabFrom8": {
+        "message": "သုံးသပ်ပါမည်းသည့် စားလှယ်ကို အတည်ပြုပါ"
+    },
+    "HomeTabFrom9": {
+        "message": "လက်ကျန် သို့မဟုတ် ပေးရန်:"
+    },
+    "HomeTabFrom10": {
+        "message": "လက်ကျန်"
+    },
+    "HomeTabFrom11": {
+        "message": "ပေးရန်"
+    },
+    "HomeTabFrom12": {
+        "message": "+ ငွေကြေးထည့်ပါ"
+    },
+    "HomePageTab1_1": {
+        "message": "ပို့ခဲ့သည့် အမျိုးအမည်ထည့်ပါ"
+    },
+    "HomePageTab1_2": {
+        "message": "အကြောင်းကို လက်ပတ်များအတွက် ကျောင်းသားမီးများအတွက် ၁၀% အာမခံပြီးဖြစ်သည်!"
+    },
+    "HomePageTab1_3": {
+        "message": "ငွေ"
+    },
+    "HomePageTab1_4": {
+        "message": "လှယ်အမျိုးအစား"
+    },
+    "HomePageTab1_5": {
+        "message": "ဝန်ဆောင်မှု"
+    },
+    "HomePageTab1_6": {
+        "message": "အစားအစာ"
+    },
+    "HomePageTab1_7": {
+        "message": "အိတ်"
+    },
+    "HomePageTab1_8": {
+        "message": "အိတ်ရွာ"
+    },
+    "HomePageTab1_9": {
+        "message": "အသုံးပြုသည့်အခြေအနေ"
+    },
+    "Tab2_1": {
+        "message": "စုစုပေါင်း ပရေနှင့်လက်ကျန်များ:"
+    },
+    "Tab2_3": {
+        "message": "စုစုပေါင်း ပရေနှင့်လက်ကျန်များ:"
+    },
+    "Tab2_4": {
+        "message": "စုစုပေါင်း ပရေနှင့်လက်ကျန်များ:"
+    },
+    "Tab3_1": {
+        "message": "ကျွန်တော်များ"
+    },
+    "Tab3_2": {
+        "message": "ပေးပို့ခဲ့သည့်အမျိုးအမည်ထည့်ပါ"
+    },
+    "Tab4_1": {
+        "message": "တွေ့ဆုံခြင်းဖြစ်သော လက်ခံမှုများ"
+    },
+    "Tab5_1": {
+        "message": "ရရှိထားသော ပြဿနာများ"
+    },
+    "Tab6_1": {
+        "message": "ငွေကြေးပေးသည့် အလိုအကောင်းများ"
+    },
+    "Tab7_1": {
+        "message": "သတိပေးချက် စတင်မည်"
+    },
+    "Tab7_2": {
+        "message": "သတိပေးချက် အသုံးပြုခြင်း:"
+    },
+    "Tab7_3": {
+        "message": "ရှေ့နေ့"
+    },
+    "Tab7_4": {
+        "message": "ရှေ့နေ့"
+    },
+    "Tab7_5": {
+        "message": "နေ့လည်း"
+    },
+    "Tab7_6": {
+        "message": "လည်းနေ့"
+    },
+    "Tab7_7": {
+        "message": "သတိပေးချက် အသုံးပြုခြင်း:"
+    },
+    "Tab7_8": {
+        "message": "အီးမေး"
+    },
+    "Tab7_9": {
+        "message": "အီးမေး"
+    },
+    "Tab7_10": {
+        "message": "Facebook"
+    },
+    "Tab7_11": {
+        "message": "သတိပေးချက်များ သိမ်းဆည်းမှုတည်ဆည်ရန်"
+    },
+    "TabFrom1_2": {
+        "message": "ငွေကြေး"
+    },
+    "TabFrom1_3": {
+        "message": "အထူးသည်းအမည်ရွေးချယ်ပါ:"
+    },
+    "TabFrom1_4": {
+        "message": "အထူးသည်းအီးမေးလ် အသစ်ထည့်ပါ"
+    },
+    "TabFrom1_5": {
+        "message": "အထူးသည်းအီးမေးလ်:"
+    },
+    "TabFrom1_6": {
+        "message": "အထူးသည်းဖော်ပြချက် သို့မဟုတ် Facebook လင့်:"
+    },
+    "TabFrom1_7": {
+        "message": "နေ့စွဲရွေးချယ်ပါ"
+    },
+    "TabFrom1_8": {
+        "message": "+ ငွေကြေးထည့်ပါ"
+    },
+    "TabFrom1_9": {
+        "message": "သုံးသပ်ပါမည်းသည့် စားလှယ်ကို အတည်ပြုပါ"
+    },
+    "TabFrom1_10": {
+        "message": "လက်ကျန် သို့မဟုတ် ပေးရန်:"
+    },
+    "TabFrom1_11": {
+        "message": "လက်ကျန်"
+    },
+    "TabFrom1_12": {
+        "message": "ပေးရန်"
+    },
+    "TabFrom1_13": {
+        "message": "+ ငွေကြေးထည့်ပါ"
+    },
+    "TabFrom2_1": {
+        "message": "လက်တွေ့ချိန် ငွေ:"
+    },
+    "TabFrom2_2": {
+        "message": "အထူးသည်းအမည်ရွေးချယ်ပါ:"
+    },
+    "TabFrom2_3": {
+        "message": "အထူးသည်းအီးမေးလ် အသစ်ထည့်ပါ"
+    },
+    "TabFrom2_4": {
+        "message": "အထူးသည်းအီးမေးလ်:"
+    },
+    "TabFrom2_5": {
+        "message": "အထူးသည်းဖော်ပြချက် သို့မဟုတ် Facebook လင့်:"
+    },
+    "TabFrom2_6": {
+        "message": "နေ့စွဲရွေးချယ်ပါ"
+    },
+    "TabFrom2_7": {
+        "message": "အကြောင်း"
+    },
+    "TabFrom2_8": {
+        "message": "+ ထည့်သွင်းရန်အပိတ်"
+    },
+    "TabFrom2_9": {
+        "message": "သုံးစွဲသူမှ သဘောတရား ထပ်ကြိုးစားမှု လက်မှတ်ရှိသည်"
+    },
+    "TabFrom2_10": {
+        "message": "ရရှိသည့် သင်္ကြန်ရှိသည် သို့မဟုတ် ငွေပေးရန်:"
+    },
+    "TabFrom2_11": {
+        "message": "ငွေပေးသည်"
+    },
+    "TabFrom2_12": {
+        "message": "ငွေပေးရန်"
+    },
+    "TabFrom2_13": {
+        "message": "+ အကြောင်းကြောင်းအတွက် အကြောင်းထည့်ပါ"
+    },
+    "TabFrom3_1": {
+        "message": "ဝန်ဆောင်မှု ပမာဏ:"
+    },
+    "TabFrom3_2": {
+        "message": "ရွေးချယ်ရန် အစီအစဉ ရွေးချယ်ပါ:"
+    },
+    "TabFrom3_3": {
+        "message": "အသစ် ဝင်ပါ"
+    },
+    "TabFrom3_4": {
+        "message": "ဝန်ဆောင်မှု အီးမေး:"
+    },
+    "TabFrom3_5": {
+        "message": "ဝန်ဆောင်မှု Facebook အိတ် သို့မဟုတ် Facebook လင်မယာ:"
+    },
+    "TabFrom3_6": {
+        "message": "ရွေးချယ်ရန်နေ့:"
+    },
+    "TabFrom3_7": {
+        "message": "ဖော်ပြချက်"
+    },
+    "TabFrom3_8": {
+        "message": "+ ထည့်သွင်းရန်အပိတ်"
+    },
+    "TabFrom3_9": {
+        "message": "သုံးစွဲသူမှ သဘောတရား ထပ်ကြိုးစားမှု လက်မှတ်ရှိသည်"
+    },
+    "TabFrom3_10": {
+        "message": "ရရှိသည့် သင်္ကြန်ရှိသည် သို့မဟုတ် ငွေပေးရန်:"
+    },
+    "TabFrom3_11": {
+        "message": "ငွေပေးသည်"
+    },
+    "TabFrom3_12": {
+        "message": "ငွေပေးရန်"
+    },
+    "TabFrom3_13": {
+        "message": "+ အကြောင်းကြောင်းအတွက် အကြောင်းထည့်ပါ"
+    },
+    "TabFrom4_1": {
+        "message": "အစားအသောက် ပမာဏ:"
+    },
+    "TabFrom4_2": {
+        "message": "ရွေးချယ်ရန် အစီအစဉ ရွေးချယ်ပါ:"
+    },
+    "TabFrom4_3": {
+        "message": "အသစ် ဝင်ပါ"
+    },
+    "TabFrom4_4": {
+        "message": "အစားအသောက် အီးမေး:"
+    },
+    "TabFrom4_5": {
+        "message": "အစားအသောက် Facebook အိတ် သို့မဟုတ် Facebook လင်မယာ:"
+    },
+    "TabFrom4_6": {
+        "message": "ရွေးချယ်ရန်နေ့:"
+    },
+    "TabFrom4_7": {
+        "message": "ဖော်ပြချက်"
+    },
+    "TabFrom4_8": {
+        "message": "+ ထည့်သွင်းရန်အပိတ်"
+    },
+    "TabFrom4_9": {
+        "message": "သုံးစွဲသူမှ သဘောတရား ထပ်ကြိုးစားမှု လက်မှတ်ရှိသည်"
+    },
+    "TabFrom4_10": {
+        "message": "ရရှိသည့် သင်္ကြန်ရှိသည် သို့မဟုတ် ငွေပေးရန်:"
+    },
+    "TabFrom4_11": {
+        "message": "ငွေပေးသည်"
+    },
+    "TabFrom4_12": {
+        "message": "ငွေပေးရန်"
+    },
+    "TabFrom4_13": {
+        "message": "+ အကြောင်းကြောင်းအတွက် အကြောင်းထည့်ပါ"
+    },
+    "TabFrom5_1": {
+        "message": "အစားအသောက် ပမာဏ အတွက်:"
+    },
+    "TabFrom5_2": {
+        "message": "ရွေးချယ်ရန် အစီအစဉ ရွေးချယ်ပါ:"
+    },
+    "TabFrom5_3": {
+        "message": "အသစ် ဝင်ပါ"
+    },
+    "TabFrom5_4": {
+        "message": "အစားအသောက် အီးမေး:"
+    },
+    "TabFrom5_5": {
+        "message": "အစားအသောက် Facebook အိတ် သို့မဟုတ် Facebook လင်မယာ:"
+    },
+    "TabFrom5_6": {
+        "message": "ရွေးချယ်ရန်နေ့:"
+    },
+    "TabFrom5_7": {
+        "message": "ဖော်ပြချက်"
+    },
+    "TabFrom5_8": {
+        "message": "+ ထည့်သွင်းရန်အပိတ်"
+    },
+    "TabFrom5_9": {
+        "message": "သုံးစွဲသူမှ သဘောတရား ထပ်ကြိုးစားမှု လက်မှတ်ရှိသည်"
+    },
+    "TabFrom5_10": {
+        "message": "ရရှိသည့် သင်္ကြန်ရှိသည် သို့မဟုတ် ငွေပေးရန်:"
+    },
+    "TabFrom5_11": {
+        "message": "ငွေပေးသည်"
+    },
+    "TabFrom5_12": {
+        "message": "ငွေပေးရန်"
+    },
+    "TabFrom5_13": {
+        "message": "+ အကြောင်းကြောင်းအတွက် အကြောင်းထည့်ပါ"
+    },
+    "TabFrom6_1": {
+        "message": "အကြောင်းပေးပစ္စည် ပမာဏ:"
+    },
+    "TabFrom6_2": {
+        "message": "ရွေးချယ်ရန် အစီအစဉ ရွေးချယ်ပါ:"
+    },
+    "TabFrom6_3": {
+        "message": "အသစ် ဝင်ပါ"
+    },
+    "TabFrom6_4": {
+        "message": "အကြောင်းပေးပစ္စည် အီးမေး:"
+    },
+    "TabFrom6_5": {
+        "message": "အကြောင်းပေးပစ္စည် Facebook အိတ် သို့မဟုတ် Facebook လင်မယာ:"
+    },
+    "TabFrom6_6": {
+        "message": "ရွေးချယ်ရန်နေ့:"
+    },
+    "TabFrom6_7": {
+        "message": "ဖော်ပြချက်"
+    },
+    "TabFrom6_8": {
+        "message": "+ အကြောင်းလျှောက်ပါ"
+    },
+    "TabFrom6_9": {
+        "message": "သဘောတရားသောအသုံးပြုပါသည်"
+    },
+    "TabFrom6_10": {
+        "message": "လက်ကျန်သို့မဟုတ် ငွေပေးချေ"
+    },
+    "TabFrom6_11": {
+        "message": "လက်ကျန်"
+    },
+    "TabFrom6_12": {
+        "message": "ငွေပေးချေ"
+    },
+    "TabFrom6_13": {
+        "message": "+ အကြောင်းလျှောက်ပါ"
+    },
+    "TabFrom7_1": {
+        "message": "ထောက်ပံ့ပေးသော ငွေ:"
+    },
+    "TabFrom7_2": {
+        "message": "လျှို့ဝှက်နာမည် ရွေးပါ:"
+    },
+    "TabFrom7_3": {
+        "message": "တိတ်ဆိုမည့် လူကြိုက် အသစ်ထည့်ပါ"
+    },
+    "TabFrom7_4": {
+        "message": "လူကြိုက် အီးမေး:"
+    },
+    "TabFrom7_5": {
+        "message": "လူကြိုက် Facebook အီးမေး သို့မဟုတ် Facebook လင့်ခ္ ရွေးပါ:"
+    },
+    "TabFrom7_6": {
+        "message": "နေ့စွဲရွေးပါ"
+    },
+    "TabFrom7_7": {
+        "message": "ဖော်ပြချက်"
+    },
+    "TabFrom7_8": {
+        "message": "+ အကြောင်းလျှောက်ပါ"
+    },
+    "TabFrom7_9": {
+        "message": "သဘောတရားသောအသုံးပြုပါသည်"
+    },
+    "TabFrom7_10": {
+        "message": "လက်ကျန်သို့မဟုတ် ငွေပေးချေ"
+    },
+    "TabFrom7_11": {
+        "message": "လက်ကျန်"
+    },
+    "TabFrom7_12": {
+        "message": "ငွေပေးချေ"
+    },
+    "TabFrom7_13": {
+        "message": "+ အကြောင်းလျှောက်ပါ"
     }
 }

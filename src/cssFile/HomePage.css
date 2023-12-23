@@ -47,4 +47,8 @@
 }
 .HA_side_bar_btn_check{
     cursor: pointer;
+    /* background-color: aqua; */
+}
+.HA_side_bar_btn_check:hover{
+    /* background-color: aqua; */
 }

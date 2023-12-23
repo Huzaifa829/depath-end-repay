@@ -43,6 +43,11 @@ const HomePage = () => {
     setActiveTab(tab);
   };
   const [t, i18n] = useTranslation("global")
+  const renderSidebtn = (tab, text, icon) => (
+    <div className={`HA_side_bar_btn_check ${activeTab === tab ? 'selected' : ''}`} onClick={() => handleTabChange(tab)}>
+        <Sidebtn text={text} icon={icon} selected={activeTab === tab} />
+    </div>
+);
 
   return (
     <>
@@ -53,34 +58,16 @@ const HomePage = () => {
             <MenuIcon color='white' />
             <span className='HA_side_bar_text'>{t("HA_text.message")}</span>
           </div>
-          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab1')}>
-            <Sidebtn text={t("HA_text2.message")} icon={<FolderIcon />} />{/*Add Debt Cases*/}
-          </div>
-          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab2')}  >
+          {renderSidebtn('Tab1', t("HA_text2.message"), <FolderIcon />)}{/*Add Debt Cases*/}
 
-            <Sidebtn text={t("HA_text3.message")} icon={<BlurCircularIcon />} />{/*Overview*/}
-          </div>
-          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab3')}>
-            <Sidebtn text={t("HA_text4.message")} icon={<PersonIcon />} />{/*My Adversaries*/}
-          </div>
-          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab4')}>
-            <Sidebtn text={t("HA_text5.message")} icon={<FolderCopyIcon />} />{/*Requests Sent*/}
-          </div>
-          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab5')}>
-            <Sidebtn text={t("HA_text6.message")} icon={<FavoriteBorderIcon />} />{/*Offers Recieved*/}
-          </div>
-          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab6')}>
-            <Sidebtn text={t("HA_text7.message")} icon={<WidgetsIcon />} />{/*Settled Debt Cases*/}
-          </div>
-          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab7')}>
-            <Sidebtn text={t("HA_text8.message")} icon={<SettingsIcon />} />{/*Notification Settings*/}
-          </div>
-          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab8')}>
-            <Sidebtn text={t("HA_text9.message")} icon={<PersonIcon />} />{/*Profile*/}
-          </div>
-          <div className='HA_side_bar_btn_check' onClick={() => handleTabChange('Tab9')}>
-            <Sidebtn text={t("HA_text10.message")} icon={<AccountBalanceWalletIcon />} />{/*Wallet*/}
-          </div>
+          {renderSidebtn('Tab2', t("HA_text3.message"), <BlurCircularIcon />)}{/*Overview*/}
+          {renderSidebtn('Tab3', t("HA_text4.message"), <PersonIcon />)}{/*My Adversaries*/}
+          {renderSidebtn('Tab4', t("HA_text5.message"), <FolderCopyIcon />)}{/*Requests Sent*/}
+          {renderSidebtn('Tab5', t("HA_text6.message"), <FavoriteBorderIcon />)}{/*Offers Recieved*/}
+          {renderSidebtn('Tab6', t("HA_text7.message"), <WidgetsIcon />)}{/*Settled Debt Cases*/}
+          {renderSidebtn('Tab7', t("HA_text8.message"), <SettingsIcon />)}{/*Notification Settings*/}
+          {renderSidebtn('Tab8', t("HA_text9.message"), <PersonIcon />)}{/*Profile*/}
+          {renderSidebtn('Tab9', t("HA_text10.message"), <AccountBalanceWalletIcon />)}{/*Wallet*/}
           <Link to="/">
             <Button variant="contained" endIcon={<LogoutIcon />}
               style={btnstyle}

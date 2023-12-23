@@ -55,7 +55,7 @@ const LoginPage = () => {
           },
         ]}
       >
-        <Input className='my-input' placeholder={t("loginpop1.message")} style={{ width: '30vmax' }} /> {/*Username*/}
+        <Input className='my-input' placeholder={t("loginpop1.message")} style={{ width: '30vmax',height:'40px' }} /> {/*Username*/}
       </Form.Item>
 
       <Form.Item
@@ -67,7 +67,7 @@ const LoginPage = () => {
           },
         ]}
       >
-        <Input.Password className='my-input'   placeholder={t("loginpop2.message")} style={{ width: '30vmax' }} /> {/*Password*/}
+        <Input.Password className='my-input'   placeholder={t("loginpop2.message")} style={{ width: '30vmax',height:'40px' }} /> {/*Password*/}
       </Form.Item>
 
       <Form.Item

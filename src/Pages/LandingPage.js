@@ -76,10 +76,10 @@ const LoginPage = () => {
                         </p>
                         <div className='HA_main_bn_1_btn'>
                             <Button variant="contained" endIcon={<ArrowForwardIcon />} onClick={() => TabChange('HA2')} sx={buttonStyles}>
-                            {t("text3.message")}
+                                {t("text3.message")}
                             </Button>
                             <Button variant="contained" endIcon={<LoginIcon />} sx={buttonStyles1} onClick={openLoginForm}>
-                            {t("text4.message")}
+                                {t("text4.message")}
                             </Button>
                         </div>
                     </div>
@@ -98,9 +98,9 @@ const LoginPage = () => {
 
             <Dialog open={isLoginFormOpen} onClose={closeLoginForm} aria-labelledby="login-form-dialog">
 
-                {activeTab === 'Tab1' && <DialogTitle className='HA_check_text' id="login-form-dialog">{t("text5.message")}</DialogTitle>}
+                {activeTab === 'Tab1' && <DialogTitle className='HA_check_text' id="login-form-dialog">{t("text5.message")}</DialogTitle>}{/*Login */}
 
-                {activeTab === 'Tab2' && <DialogTitle className='HA_check_text' id="login-form-dialog">{t("text6.message")}</DialogTitle>}
+                {activeTab === 'Tab2' && <DialogTitle className='HA_check_text' id="login-form-dialog">{t("text6.message")}</DialogTitle>}{/*SignUp */}
                 <DialogContent>
 
                     {activeTab === 'Tab1' && <Popupform />}
@@ -110,7 +110,7 @@ const LoginPage = () => {
                             <p className='HA_create_acount' onClick={() => handleTabChange('Tab2')}> <span className='HA_create_acount_span'>{t("text7.message")}</span> {t("text8.message")} </p>
                             <Link to="/home">
                                 <Button style={{ backgroundColor: 'black', color: "white", fontWeight: "500", padding: "5px 15px", lineHeight: "2", fontSize: "10px" }} >
-                                {t("text9.message")}
+                                    {t("text9.message")}
                                 </Button>
                             </Link>
                         </div>

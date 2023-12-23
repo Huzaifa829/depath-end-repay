@@ -1,6 +1,6 @@
 // Tab9
 
-import React, { useState } from 'react';
+import React, { useState,useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button, Form, Input, TreeSelect, Checkbox, Row, Col, DatePicker, Radio, Select } from 'antd';
 import '../cssFile/Tab3.css';
@@ -12,7 +12,8 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import { Paper, Typography, Box, Icon } from '@mui/material';
-import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet'; // Import the wallet icon
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet'; 
+import noteContext from '../context/check/NoteContext';
 
 const columns = [
     { id: 'name', label: 'S.no', minWidth: 30 },
@@ -36,13 +37,16 @@ const rows = [
 
 
 const Tab9 = () => {
+const nam=useContext(noteContext)
+
+useEffect(()=>{
+    nam.update();
+})
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
-
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
     };
-
     const handleChangeRowsPerPage = (event) => {
         setRowsPerPage(+event.target.value);
         setPage(0);
@@ -74,7 +78,7 @@ const Tab9 = () => {
                 <Box>
                     <Typography variant="h5">{t("Tab9_2.message")}</Typography> {/*Total Balance*/}
                     <Typography variant="h4" style={{ fontWeight: 'bold', marginTop: '10px' }}>
-                        100 $ {/*100 $*/}
+                       100 $ {/*100 $*/}
                     </Typography>
                 </Box>
             </Paper>

@@ -1,14 +1,19 @@
+import React from 'react';
+import '../cssFile/Sidebtn.css';
 
-import '../cssFile/Sidebtn.css'
+function Sidebtn(props) {
+    const { icon, text, onClick, selected } = props;
 
+    const buttonStyle = {
+        backgroundColor: selected ? 'gray' : 'initial', // Change 'blue' to the desired color
+    };
 
-function Sidebtn(props){
-    const {icon,text}=props
-    return(
-        <div className="HA_side_btn_main">
+    return (
+        <div className="HA_side_btn_main" style={buttonStyle} onClick={onClick}>
             {icon}
             <span className='HA_side_btn_text'>{text}</span>
         </div>
-    )
+    );
 }
-export default Sidebtn
+
+export default Sidebtn;

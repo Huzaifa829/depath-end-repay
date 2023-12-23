@@ -52,7 +52,7 @@ const SignupPage = () => {
           },
         ]}
       >
-        <Input placeholder="Full Name" style={{ width: '30vmax' }} />
+        <Input placeholder="Full Name" style={{ width: '30vmax',height:'40px' }} />
       </Form.Item>
       <Form.Item
         name="username"
@@ -63,7 +63,7 @@ const SignupPage = () => {
           },
         ]}
       >
-        <Input placeholder={t("sign_pop.message")} style={{ width: '30vmax' }} />{/*Username*/}
+        <Input placeholder={t("sign_pop.message")} style={{ width: '30vmax',height:'40px' }} />{/*Username*/}
       </Form.Item>
 
       <Form.Item
@@ -75,7 +75,7 @@ const SignupPage = () => {
           },
         ]}
       >
-        <Input.Password placeholder={t("sign_pop1.message")} style={{ width: '30vmax' }} />{/*Password*/}
+        <Input.Password placeholder={t("sign_pop1.message")} style={{ width: '30vmax',height:'40px' }} />{/*Password*/}
       </Form.Item>
 
       <Form.Item

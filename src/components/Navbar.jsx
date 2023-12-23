@@ -11,6 +11,7 @@ import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import GoogleTranslate from './LagnuageWegit/LangWeg';
+import { Link } from 'react-router-dom';
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -65,7 +66,9 @@ export default function SearchAppBar() {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}
           >
+             <Link to="/">
             <img className="navabr_logo" src={img1} alt="" />
+            </Link>
           </Typography>
           <Search style={{ backgroundColor: '#b9b8b8', color: 'black' }}>
             <SearchIconWrapper>

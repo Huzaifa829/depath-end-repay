@@ -1,536 +1,582 @@
 {
-    "HA_text":{
-        "message":"Repay Menu"
+    "Tab8_1": {
+        "message": "Nama:"
     },
-    "HA_text1":{
-        "message":"Logout"
+    "Tab8_2": {
+        "message": "Emel:"
     },
-    "langweg1":{
-        "message":"Select Country"
+    "Tab8_3": {
+        "message": "Facebook:"
     },
-    "langweg2":{
-        "message":"ES"
+    "Tab8_4": {
+        "message": "Batal:"
     },
-    "text":{
-        "message":"Do Good, And"
+    "Tab8_5": {
+        "message": "Simpan & tukar:"
     },
-    "text1":{
-        "message":"Will Come"
+    "Tab8_6": {
+        "message": "Kata Laluan:"
     },
-    "text2":{
-        "message":"Organize and send notifications to friends that owe you a beer, a favor, money, or an apology and settle it in a fun, fast, and effective way. Improve your relations and social networks in just 3 easy steps for free. Start now - it only takes 5 minutes. Login and see who owes you a beer"
+    "Tab8_7": {
+        "message": "Batal"
     },
-    "text3":{
-        "message":"Get Started"
+    "Tab8_8": {
+        "message": "Simpan & tukar"
     },
-    "text4":{
-        "message":"Login"
+    "Tab8_9": {
+        "message": "Mata Wang:"
     },
-    "text5":{
-        "message":"Login"
+    "Tab8_10": {
+        "message": "Batal"
     },
-    "text6":{
-        "message":"Sign Up"
+    "Tab8_11": {
+        "message": "Simpan & tukar"
     },
-    "text7":{
-        "message":"Not a member ?"
+    "Tab8_12": {
+        "message": "Profil:"
     },
-    "text8":{
-        "message":"Sign up"
+    "HA_text": {
+        "message": "Menu Bayar Balik"
     },
-    "text9":{
-        "message":"Proceed"
+    "HA_text1": {
+        "message": "Log Keluar"
     },
-    "text10":{
-        "message":"Already have account?"
-    },"footer1":{
-        "message":"About"
+    "HA_text2": {
+        "message": "Tambah Kes Hutang"
     },
-    "footer2":{
-        "message":"Privacy & policy"
+    "HA_text3": {
+        "message": "Gambaran Keseluruhan"
     },
-    "footer3":{
-        "message":"Contact"
+    "HA_text4": {
+        "message": "Musuh-musuh Saya"
     },
-    "sign_pop":{
-        "message":"Username"
+    "HA_text5": {
+        "message": "Permintaan Dihantar"
     },
-    "sign_pop1":{
-        "message":"Password"
+    "HA_text6": {
+        "message": "Tawaran Diterima"
     },
-    "sign_pop2":{
-        "message":"Remember me"
+    "HA_text7": {
+        "message": "Kes Hutang Diselesaikan"
     },
-    "sign_pop3":{
-        "message":"Sign up"
+    "HA_text8": {
+        "message": "Tetapan Pemberitahuan"
     },
-    "sign_pop4":{
-        "message":"Login with Facebook"
+    "HA_text9": {
+        "message": "Profil"
     },
-    "sign_pop5":{
-        "message":"Please input your name!"
+    "HA_text10": {
+        "message": "Dompet"
     },
-    "sign_pop6":{
-        "message":"Please input your username!"
+    "Tab9_1": {
+        "message": "Dompet Pengguna"
     },
-    "sign_pop7":{
-        "message":"Please input your password!"
+    "Tab9_2": {
+        "message": "Baki Keseluruhan"
     },
-    "loginpop1":{
-        "message":"Username"
+    "Tab9_3": {
+        "message": "Transaksi Terakhir"
     },
-    "loginpop2":{
-        "message":"Password"
+    "Tab9_4": {
+        "message": "Buat Transaksi"
     },
-    "loginpop3":{
-        "message":"Remember me"
+    "Tab9_5": {
+        "message": "Jumlah (REPAYcoins):"
     },
-    "loginpop4":{
-        "message":"Login"
+    "Tab9_6": {
+        "message": "Jenis Transaksi:"
     },
-    "loginpop5":{
-        "message":"Login with Facebook"
+    "Tab9_7": {
+        "message": "Bayaran Penuh"
     },
-    "loginpop6":{
-        "message":"Please input your username!"
+    "Tab9_8": {
+        "message": "Bayaran Penuh"
     },
-    "loginpop7":{
-        "message":"Please input your password!"
-    },   
-     "HomeTabFrom2":{
-        "message":"Amount"
+    "Tab9_9": {
+        "message": "Ansuran"
     },
-    "HomeTabFrom3":{
-        "message":"Enter Adversary Name:"
+    "Tab9_10": {
+        "message": "Hantar"
     },
-    "HomeTabFrom4":{
-        "message":"Adversary Email:"
+    "langweg1": {
+        "message": "Pilih Negara"
     },
-    "HomeTabFrom5":{
-        "message":"Adversary Facebook Id or Facebook Link:"
+    "langweg2": {
+        "message": "BM"
     },
-    "HomeTabFrom6":{
-        "message":"DatePicker"
+    "text": {
+        "message": "Berbuat Baik, Dan"
     },
-    "HomeTabFrom7":{
-        "message":"+ Add a Installment"
+    "text1": {
+        "message": "Akan Datang"
     },
-    "HomeTabFrom8":{
-        "message":"I accept the terms of use"
+    "text2": {
+        "message": "Organize dan hantar pemberitahuan kepada rakan yang berhutang bir, budi baik, wang, atau permintaan maaf dan selesaikan dengan cara yang menyeronokkan, cepat, dan berkesan. Tingkatkan hubungan dan rangkaian sosial anda dalam hanya 3 langkah mudah secara percuma. Mula sekarang - hanya mengambil 5 minit. Log masuk dan lihat siapa yang berhutang bir kepada anda"
     },
-    "HomeTabFrom9":{
-        "message":"Receive or Pay:"
+    "text3": {
+        "message": "Mula"
     },
-    "HomeTabFrom10":{
-        "message":"Receive"
+    "text4": {
+        "message": "Log Masuk"
     },
-    "HomeTabFrom11":{
-        "message":"Pay"
+    "text5": {
+        "message": "Log Masuk"
     },
-    "HomeTabFrom12":{
-        "message":"+ Add Debt Case"
+    "text6": {
+        "message": "Daftar"
     },
-    "HomePageTab1_1":{
-        "message":"Add Debt Case"
+    "text7": {
+        "message": "Bukan ahli?"
     },
-    "HomePageTab1_2":{
-        "message":"In case of any transaction, 10% of the Repay coins will be deducted!"
+    "text8": {
+        "message": "Daftar"
     },
-    "HomePageTab1_3":{
-        "message":"Money"
+    "text9": {
+        "message": "Teruskan"
+    },
+    "text10": {
+        "message": "Sudah ada akaun?"
+    },
+    "footer1": {
+        "message": "Mengenai"
+    },
+    "footer2": {
+        "message": "Privasi & Dasar"
+    },
+    "footer3": {
+        "message": "Hubungi"
+    },
+    "sign_pop": {
+        "message": "Nama Pengguna"
+    },
+    "sign_pop1": {
+        "message": "Kata Laluan"
+    },
+    "sign_pop2": {
+        "message": "Ingat saya"
+    },
+    "sign_pop3": {
+        "message": "Daftar"
+    },
+    "sign_pop4": {
+        "message": "Log Masuk dengan Facebook"
+    },
+    "sign_pop5": {
+        "message": "Sila masukkan nama anda!"
+    },
+    "sign_pop6": {
+        "message": "Sila masukkan nama pengguna anda!"
+    },
+    "sign_pop7": {
+        "message": "Sila masukkan kata laluan anda!"
+    },
+    "loginpop1": {
+        "message": "Nama Pengguna"
+    },
+    "loginpop2": {
+        "message": "Kata Laluan"
+    },
+    "loginpop3": {
+        "message": "Ingat saya"
+    },
+    "loginpop4": {
+        "message": "Log Masuk"
+    },
+    "loginpop5": {
+        "message": "Log Masuk dengan Facebook"
+    },
+    "loginpop6": {
+        "message": "Sila masukkan nama pengguna anda!"
+    },
+    "loginpop7": {
+        "message": "Sila masukkan kata laluan anda!"
+    },
+    "HomeTabFrom2": {
+        "message": "Jumlah"
+    },
+    "HomeTabFrom3": {
+        "message": "Masukkan Nama Musuh:"
+    },
+    "HomeTabFrom4": {
+        "message": "Emel Musuh:"
+    },
+    "HomeTabFrom5": {
+        "message": "Id atau Pautan Facebook Musuh:"
+    },
+    "HomeTabFrom6": {
+        "message": "Pemilih Tarikh"
+    },
+    "HomeTabFrom7": {
+        "message": "+ Tambah Ansuran"
+    },
+    "HomeTabFrom8": {
+        "message": "Saya terima syarat penggunaan"
+    },
+    "HomeTabFrom9": {
+        "message": "Terima atau Bayar:"
+    },
+    "HomeTabFrom10": {
+        "message": "Terima"
+    },
+    "HomeTabFrom11": {
+        "message": "Bayar"
+    },
+    "HomeTabFrom12": {
+        "message": "+ Tambah Kes Hutang"
+    },
+    "HomePageTab1_1": {
+        "message": "Tambah Kes Hutang"
+    },
+    "HomePageTab1_2": {
+        "message": "Dalam kes mana-mana transaksi, 10% dari Repay coins akan dipotong!"
+    },
+    "HomePageTab1_3": {
+        "message": "Wang"
+    },
+    "HomePageTab1_4": {
+        "message": "Budi Baik"
+    },
+    "HomePageTab1_5": {
+        "message": "Perkhidmatan"
+    },
+    "HomePageTab1_6": {
+        "message": "Makanan"
+    },
+    "HomePageTab1_7": {
+        "message": "Minuman"
+    },
+    "HomePageTab1_8": {
+        "message": "Permintaan Maaf"
+    },
+    "HomePageTab1_9": {
+        "message": "Cabaran"
+    },
+    "Tab2_1": {
+        "message": "Jumlah RepayCoins:"
+    },
+    "Tab2_3": {
+        "message": "Jumlah RepayCoins:"
+    },
+    "Tab2_4": {
+        "message": "Jumlah RepayCoins:"
+    },
+    "Tab3_1": {
+        "message": "Musuh-musuh Saya"
+    },
+    "Tab3_2": {
+        "message": "Tambah Kes Hutang"
+    },
+    "Tab4_1": {
+        "message": "Permintaan Dihantar"
+    },
+    "Tab5_1": {
+        "message": "Tawaran Diterima"
+    },
+    "Tab6_1": {
+        "message": "Kes Hutang Diselesaikan"
+    },
+    "Tab7_1": {
+        "message": "Tetapan Pemberitahuan"
+    },
+    "Tab7_2": {
+        "message": "Frekuensi Pemberitahuan:"
+    },
+    "Tab7_3": {
+        "message": "Sekali Seminggu"
+    },
+    "Tab7_4": {
+        "message": "Sekali Seminggu"
+    },
+    "Tab7_5": {
+        "message": "Harian"
+    },
+    "Tab7_6": {
+        "message": "Bulanan"
+    },
+    "Tab7_7": {
+        "message": "Saluran Pemberitahuan:"
+    },
+    "Tab7_8": {
+        "message": "Emel"
+    },
+    "Tab7_9": {
+        "message": "Emel"
+    },
+    "Tab7_10": {
+        "message": "Facebook"
+    },
+    "Tab7_11": {
+        "message": "Simpan Tetapan"
+    },
+    "TabFrom1_2": {
+        "message": "Jumlah"
+    },
+    "TabFrom1_3": {
+        "message": "Pilih Nama Musuh:"
+    },
+    "TabFrom1_4": {
+        "message": "Tambah Musuh Baru"
+    },
+    "TabFrom1_5": {
+        "message": "Emel Musuh:"
+    },
+    "TabFrom1_6": {
+        "message": "Id atau Pautan Facebook Musuh:"
+    },
+    "TabFrom1_7": {
+        "message": "Pemilih Tarikh"
+    },
+    "TabFrom1_8": {
+        "message": "+ Tambah Ansuran"
+    },
+    "TabFrom1_9": {
+        "message": "Saya terima syarat penggunaan"
+    },
+    "TabFrom1_10": {
+        "message": "Terima atau Bayar:"
+    },
+    "TabFrom1_11": {
+        "message": "Terima"
+    },
+    "TabFrom1_12": {
+        "message": "Bayar"
+    },
+    "TabFrom1_13": {
+        "message": "+ Tambah Kes Hutang"
+    },
+    "TabFrom2_1": {
+        "message": "Jumlah Budi Baik:"
+    },
+    "TabFrom2_2": {
+        "message": "Pilih Nama Musuh:"
+    },
+    "TabFrom2_3": {
+        "message": "Tambah Musuh Baru"
+    },
+    "TabFrom2_4": {
+        "message": "Emel Musuh:"
+    },
+    "TabFrom2_5": {
+        "message": "Id atau Pautan Facebook Musuh:"
+    },
+    "TabFrom2_6": {
+        "message": "Pemilih Tarikh"
+    },
+    "TabFrom2_7": {
+        "message": "Penerangan"
+    },
+    "TabFrom2_8": {
+        "message": "+ Tambah Ansuran"
+    },
+    "TabFrom2_9": {
+        "message": "Saya terima syarat penggunaan"
+    },
+    "TabFrom2_10": {
+        "message": "Terima atau Bayar:"
+    },
+    "TabFrom2_11": {
+        "message": "Terima"
+    },
+    "TabFrom2_12": {
+        "message": "Bayar"
+    },
+    "TabFrom2_13": {
+        "message": "+ Tambah Kes Hutang"
+    },
+    "TabFrom3_1": {
+        "message": "Jumlah Perkhidmatan:"
+    },
+    "TabFrom3_2": {
+        "message": "Pilih Nama Musuh:"
+    },
+    "TabFrom3_3": {
+        "message": "Tambah Musuh Baru"
+    },
+    "TabFrom3_4": {
+        "message": "Emel Musuh:"
+    },
+    "TabFrom3_5": {
+        "message": "Id atau Pautan Facebook Musuh:"
+    },
+    "TabFrom3_6": {
+        "message": "Pemilih Tarikh"
+    },
+    "TabFrom3_7": {
+        "message": "Penerangan"
+    },
+    "TabFrom3_8": {
+        "message": "+ Tambah Ansuran"
+    },
+    "TabFrom3_9": {
+        "message": "Saya terima syarat penggunaan"
+    },
+    "TabFrom3_10": {
+        "message": "Terima atau Bayar:"
+    },
+    "TabFrom3_11": {
+        "message": "Terima"
+    },
+    "TabFrom3_12": {
+        "message": "Bayar"
+    },
+    "TabFrom3_13": {
+        "message": "+ Tambah Kes Hutang"
+    },
+    "TabFrom4_1": {
+        "message": "Jumlah Makanan:"
+    },
+    "TabFrom4_2": {
+        "message": "Pilih Nama Musuh:"
+    },
+    "TabFrom4_3": {
+        "message": "Tambah Pihak Lawan Baru"
+    },
+    "TabFrom4_4": {
+        "message": "Emel Pihak Lawan:"
+    },
+    "TabFrom4_5": {
+        "message": "ID Facebook atau Pautan Facebook Pihak Lawan:"
+    },
+    "TabFrom4_6": {
+        "message": "Pemilih Tarikh"
+    },
+    "TabFrom4_7": {
+        "message": "Keterangan"
+    },
+    "TabFrom4_8": {
+        "message": "+ Tambah Bayaran Ansuran"
+    },
+    "TabFrom4_9": {
+        "message": "Saya terima syarat penggunaan"
+    },
+    "TabFrom4_10": {
+        "message": "Terima atau Bayar:"
+    },
+    "TabFrom4_11": {
+        "message": "Terima"
+    },
+    "TabFrom4_12": {
+        "message": "Bayar"
+    },
+    "TabFrom4_13": {
+        "message": "+ Tambah Kes Hutang"
+    },
+    "TabFrom5_1": {
+        "message": "Jumlah Untuk Minum:"
+    },
+    "TabFrom5_2": {
+        "message": "Pilih Nama Pihak Lawan:"
+    },
+    "TabFrom5_3": {
+        "message": "Tambah Pihak Lawan Baru"
+    },
+    "TabFrom5_4": {
+        "message": "Emel Pihak Lawan:"
+    },
+    "TabFrom5_5": {
+        "message": "ID Facebook atau Pautan Facebook Pihak Lawan:"
+    },
+    "TabFrom5_6": {
+        "message": "Pemilih Tarikh"
+    },
+    "TabFrom5_7": {
+        "message": "Keterangan"
+    },
+    "TabFrom5_8": {
+        "message": "+ Tambah Bayaran Ansuran"
+    },
+    "TabFrom5_9": {
+        "message": "Saya terima syarat penggunaan"
+    },
+    "TabFrom5_10": {
+        "message": "Terima atau Bayar:"
+    },
+    "TabFrom5_11": {
+        "message": "Terima"
+    },
+    "TabFrom5_12": {
+        "message": "Bayar"
+    },
+    "TabFrom5_13": {
+        "message": "+ Tambah Kes Hutang"
+    },
+    "TabFrom6_1": {
+        "message": "Jumlah Maaf:"
+    },
+    "TabFrom6_2": {
+        "message": "Pilih Nama Pihak Lawan:"
+    },
+    "TabFrom6_3": {
+        "message": "Tambah Pihak Lawan Baru"
+    },
+    "TabFrom6_4": {
+        "message": "Emel Pihak Lawan:"
+    },
+    "TabFrom6_5": {
+        "message": "ID Facebook atau Pautan Facebook Pihak Lawan:"
+    },
+    "TabFrom6_6": {
+        "message": "Pemilih Tarikh"
+    },
+    "TabFrom6_7": {
+        "message": "Keterangan"
+    },
+    "TabFrom6_8": {
+        "message": "+ Tambah Bayaran Ansuran"
+    },
+    "TabFrom6_9": {
+        "message": "Saya terima syarat penggunaan"
+    },
+    "TabFrom6_10": {
+        "message": "Terima atau Bayar"
+    },
+    "TabFrom6_11": {
+        "message": "Terima"
+    },
+    "TabFrom6_12": {
+        "message": "Bayar"
+    },
+    "TabFrom6_13": {
+        "message": "+ Tambah Kes Hutang"
+    },
+    "TabFrom7_1": {
+        "message": "Jumlah Cabaran:"
+    },
+    "TabFrom7_2": {
+        "message": "Pilih Nama Pihak Lawan:"
+    },
+    "TabFrom7_3": {
+        "message": "Tambah Pihak Lawan Baru"
+    },
+    "TabFrom7_4": {
+        "message": "Emel Pihak Lawan:"
+    },
+    "TabFrom7_5": {
+        "message": "ID Facebook atau Pautan Facebook Pihak Lawan:"
+    },
+    "TabFrom7_6": {
+        "message": "Pemilih Tarikh"
+    },
+    "TabFrom7_7": {
+        "message": "Keterangan"
+    },
+    "TabFrom7_8": {
+        "message": "+ Tambah Bayaran Ansuran"
+    },
+    "TabFrom7_9": {
+        "message": "Saya terima syarat penggunaan"
+    },
+    "TabFrom7_10": {
+        "message": "Terima atau Bayar"
+    },
+    "TabFrom7_11": {
+        "message": "Terima"
+    },
+    "TabFrom7_12": {
+        "message": "Bayar"
+    },
+    "TabFrom7_13": {
+        "message": "+ Tambah Kes Hutang"
     }
-    ,
-    "HomePageTab1_4":{
-        "message":"Favor"
-    }
-    ,
-    "HomePageTab1_5":{
-        "message":"Service"
-    }
-    ,
-    "HomePageTab1_6":{
-        "message":"Meal"
-    }
-    ,
-    "HomePageTab1_7":{
-        "message":"Drink"
-    }
-    ,
-    "HomePageTab1_8":{
-        "message":"Apology"
-    }
-    ,
-    "HomePageTab1_9":{
-        "message":"Challenge"
-    }
-    ,
-    "Tab2_1":{
-        "message":"Total RepayCoins:"
-    }
-    ,
-    "Tab2_3":{
-        "message":"Total RepayCoins:"
-    }
-    ,
-    "Tab2_4":{
-        "message":"Total RepayCoins:"
-    }
-    ,
-    "Tab3_1":{
-        "message":"My Adversaries"
-    }
-    ,
-    "Tab3_2":{
-        "message":"Add A Debt Case"
-    }
-    ,
-    "Tab4_1":{
-        "message":"Requests Sent"
-    }
-    ,
-    "Tab5_1":{
-        "message":"Offers Recieved"
-    }
-    ,
-    "Tab6_1":{
-        "message":"Setteled Debt Cases"
-    }
-    ,
-    "Tab7_1":{
-        "message":"Notification Settings"
-    }
-    
-    ,
-    "Tab7_2":{
-        "message":"Notification Frequency:"
-    }
-    
-    ,
-    "Tab7_3":{
-        "message":"Weekly"
-    }
-    
-    ,
-    "Tab7_4":{
-        "message":"Weekly"
-    }
-    
-    ,
-    "Tab7_5":{
-        "message":"Daily"
-    }
-    
-    ,
-    "Tab7_6":{
-        "message":"Monthly"
-    }
-    
-    ,
-    "Tab7_7":{
-        "message":"Notification Channel:"
-    }
-    
-    ,
-    "Tab7_8":{
-        "message":"Email"
-    }
-    
-    ,
-    "Tab7_9":{
-        "message":"Email"
-    }
-    
-    ,
-    "Tab7_10":{
-        "message":"Facebook"
-    }
-    
-    ,
-    "Tab7_11":{
-        "message":"Save Settings"
-    }
-    ,
-    "TabFrom1_2":{
-        "message":"Amount"
-    },
-    "TabFrom1_3":{
-        "message":"Select Adversary Name:"
-    },
-    "TabFrom1_4":{
-        "message":"Add New Adversary"
-    },
-    "TabFrom1_5":{
-        "message":"Adversary Email:"
-    },
-    "TabFrom1_6":{
-        "message":"Adversary Facebook Id or Facebook Link:"
-    },
-    "TabFrom1_7":{
-        "message":"DatePicker"
-    },
-    "TabFrom1_8":{
-        "message":"+ Add a Installment"
-    },
-    "TabFrom1_9":{
-        "message":"I accept the terms of use"
-    },
-    "TabFrom1_10":{
-        "message":"Receive or Pay:"
-    },
-    "TabFrom1_11":{
-        "message":"Receive"
-    },
-    "TabFrom1_12":{
-        "message":"Pay"
-    },
-    "TabFrom1_13":{
-        "message":"+ Add Debt Case"
-    },
-
-
-    "TabFrom2_1":{
-        "message":"Favor Amount:"
-    },
-    "TabFrom2_2":{
-        "message":"Select Adversary Name:"
-    },
-    "TabFrom2_3":{
-        "message":"Add New Adversary"
-    },
-    "TabFrom2_4":{
-        "message":"Adversary Email:"
-    },
-    "TabFrom2_5":{
-        "message":"Adversary Facebook Id or Facebook Link:"
-    },
-    "TabFrom2_6":{
-        "message":"DatePicker"
-    },
-    "TabFrom2_7":{
-        "message":"Description"
-    },
-    "TabFrom2_8":{
-        "message":"+ Add a Installment"
-    },
-    "TabFrom2_9":{
-        "message":"I accept the terms of use"
-    },
-    "TabFrom2_10":{
-        "message":"Receive or Pay:"
-    },
-    "TabFrom2_11":{
-        "message":"Receive"
-    },
-    "TabFrom2_12":{
-        "message":"Pay"
-    },
-    "TabFrom2_13":{
-        "message":"+ Add Debt Case"
-    },
-
-
-    "TabFrom3_1":{
-        "message":"Service Amount:"
-    },
-    "TabFrom3_2":{
-        "message":"Select Adversary Name:"
-    },
-    "TabFrom3_3":{
-        "message":"Add New Adversary"
-    },
-    "TabFrom3_4":{
-        "message":"Adversary Email:"
-    },
-    "TabFrom3_5":{
-        "message":"Adversary Facebook Id or Facebook Link:"
-    },
-    "TabFrom3_6":{
-        "message":"DatePicker"
-    },
-    "TabFrom3_7":{
-        "message":"Description"
-    },
-    "TabFrom3_8":{
-        "message":"+ Add a Installment"
-    },
-    "TabFrom3_9":{
-        "message":"I accept the terms of use"
-    },
-    "TabFrom3_10":{
-        "message":"Receive or Pay:"
-    },
-    "TabFrom3_11":{
-        "message":"Receive"
-    },
-    "TabFrom3_12":{
-        "message":"Pay"
-    },
-    "TabFrom3_13":{
-        "message":"+ Add Debt Case"
-    },
-
-
-    "TabFrom4_1":{
-        "message":"Meal Amount:"
-    },
-    "TabFrom4_2":{
-        "message":"Select Adversary Name:"
-    },
-    "TabFrom4_3":{
-        "message":"Add New Adversary"
-    },
-    "TabFrom4_4":{
-        "message":"Adversary Email:"
-    },
-    "TabFrom4_5":{
-        "message":"Adversary Facebook Id or Facebook Link:"
-    },
-    "TabFrom4_6":{
-        "message":"DatePicker"
-    },
-    "TabFrom4_7":{
-        "message":"Description"
-    },
-    "TabFrom4_8":{
-        "message":"+ Add a Installment"
-    },
-    "TabFrom4_9":{
-        "message":"I accept the terms of use"
-    },
-    "TabFrom4_10":{
-        "message":"Receive or Pay:"
-    },
-    "TabFrom4_11":{
-        "message":"Receive"
-    },
-    "TabFrom4_12":{
-        "message":"Pay"
-    },
-    "TabFrom4_13":{
-        "message":"+ Add Debt Case"
-    },
-
-    
-    "TabFrom5_1":{
-        "message":"Amount For Drink:"
-    },
-    "TabFrom5_2":{
-        "message":"Select Adversary Name:"
-    },
-    "TabFrom5_3":{
-        "message":"Add New Adversary"
-    },
-    "TabFrom5_4":{
-        "message":"Adversary Email:"
-    },
-    "TabFrom5_5":{
-        "message":"Adversary Facebook Id or Facebook Link:"
-    },
-    "TabFrom5_6":{
-        "message":"DatePicker"
-    },
-    "TabFrom5_7":{
-        "message":"Description"
-    },
-    "TabFrom5_8":{
-        "message":"+ Add a Installment"
-    },
-    "TabFrom5_9":{
-        "message":"I accept the terms of use"
-    },
-    "TabFrom5_10":{
-        "message":"Receive or Pay:"
-    },
-    "TabFrom5_11":{
-        "message":"Receive"
-    },
-    "TabFrom5_12":{
-        "message":"Pay"
-    },
-    "TabFrom5_13":{
-        "message":"+ Add Debt Case"
-    },
-
-    
-    "TabFrom6_1":{
-        "message":"Appology Amount:"
-    },
-    "TabFrom6_2":{
-        "message":"Select Adversary Name:"
-    },
-    "TabFrom6_3":{
-        "message":"Add New Adversary"
-    },
-    "TabFrom6_4":{
-        "message":"Adversary Email:"
-    },
-    "TabFrom6_5":{
-        "message":"Adversary Facebook Id or Facebook Link:"
-    },
-    "TabFrom6_6":{
-        "message":"DatePicker"
-    },
-    "TabFrom6_7":{
-        "message":"Description"
-    },
-    "TabFrom6_8":{
-        "message":"+ Add a Installment"
-    },
-    "TabFrom6_9":{
-        "message":"I accept the terms of use"
-    },
-    "TabFrom6_10":{
-        "message":"Receive or Pay"
-    },
-    "TabFrom6_11":{
-        "message":"Receive"
-    },
-    "TabFrom6_12":{
-        "message":"Pay"
-    },
-    "TabFrom6_13":{
-        "message":"+ Add Debt Case"
-    },
-
-    "TabFrom7_1":{
-        "message":"Challenge Amount:"
-    },
-    "TabFrom7_2":{
-        "message":"Select Adversary Name:"
-    },
-    "TabFrom7_3":{
-        "message":"Add New Adversary"
-    },
-    "TabFrom7_4":{
-        "message":"Adversary Email:"
-    },
-    "TabFrom7_5":{
-        "message":"Adversary Facebook Id or Facebook Link:"
-    },
-    "TabFrom7_6":{
-        "message":"DatePicker"
-    },
-    "TabFrom7_7":{
-        "message":"Description"
-    },
-    "TabFrom7_8":{
-        "message":"+ Add a Installment"
-    },
-    "TabFrom7_9":{
-        "message":"I accept the terms of use"
-    },
-    "TabFrom7_10":{
-        "message":"Receive or Pay"
-    },
-    "TabFrom7_11":{
-        "message":"Receive"
-    },
-    "TabFrom7_12":{
-        "message":"Pay"
-    },
-    "TabFrom7_13":{
-        "message":"+ Add Debt Case"
-    }
-    
-   
 }
+

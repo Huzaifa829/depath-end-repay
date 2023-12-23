@@ -1,44 +1,81 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Select from 'react-select';
-import  {useTranslation}  from 'react-i18next';
-import cb from '../../assets/images/icons8-cambodia-flag-48.png'
-import ii from '../../assets/images/icons8-indonesia-48.png'
-import vv from '../../assets/images/icons8-vietnam-flag-48.png'
-import en from '../../assets/images/icons8-usa-flag-48.png'
-
-
-
+import { useTranslation } from 'react-i18next';
+import cb from '../../assets/images/icons8-cambodia-flag-48.png';
+import ii from '../../assets/images/icons8-indonesia-48.png';
+import vv from '../../assets/images/icons8-vietnam-flag-48.png';
+import en from '../../assets/images/icons8-usa-flag-48.png';
+import ll from '../../assets/images/icons8-laos-48.png';
+import mm from '../../assets/images/icons8-malaysia-flag-48.png';
+import mb from '../../assets/images/icons8-myanmar-48.png';
 
 const ImageDropdown = () => {
-  const [t, i18n] = useTranslation("global")
+  const navigate = useNavigate();
+  const [t, i18n] = useTranslation('global');
   const options = [
-    { value: 'cb', label: <img src={cb} alt="Indonesia" /> },
+    { value: 'en', label: <img src={en} alt="myanmar" /> },
+    { value: 'cb', label: <img src={cb} alt="cambodia" /> },
     { value: 'ii', label: <img src={ii} alt="Indonesia" /> },
-    { value: 'vv', label: <img src={vv} alt="Indonesia" /> },
-    // { value: 'en', label: <img src={en} alt="Indonesia" /> },
-  
+    { value: 'vv', label: <img src={vv} alt="vietnam" /> },
+    { value: 'll', label: <img src={ll} alt="laos" /> },
+    { value: 'mm', label: <img src={mm} alt="malaysia" /> },
+    { value: 'mb', label: <img src={mb} alt="myanmar" /> },
   ];
 
   const customStyles = {
     control: (base) => ({
       ...base,
-      height: '48px', // Adjust the height as needed
+      height: '48px',
+      zIndex: 4,
+    }),
+    menu: (base) => ({
+      ...base,
+      zIndex: 4, // Set the z-index for the options dropdown
     }),
   };
-  const handleSelectChange = (selectedOption) => {
-        const lowerCountryCode = selectedOption.value
 
-    
-    
+  const handleSelectChange = (selectedOption) => {
+    const lowerCountryCode = selectedOption.value;
     i18n.changeLanguage(lowerCountryCode);
     console.log('Selected Value:', lowerCountryCode);
   };
-  const defaultOption = { value: 'en', label: <img src={en} alt="Default" /> };
+
+  const defaultOption = {
+    value: i18n.language, // Use the current language or default to 'en'
+    label: <img src={en} alt="Default" />,
+  };
+  
+  useEffect(() => {
+    // Update the default flag based on the current language when the component mounts
+    defaultOption.label = <img src={getFlagImage(i18n.language)} alt="Default" />;
+  }, [i18n.language]);
+
+  const getFlagImage = (language) => {
+    switch (language) {
+      case 'cb':
+        return cb;
+      case 'ii':
+        return ii;
+      // case 'en':
+      //   return en;
+      case 'vv':
+        return vv;
+      case 'll':
+        return ll;
+      case 'mm':
+        return mm;
+      case 'mb':
+        return mb;
+      default:
+        return en; // Default to 'en' if the language is not found
+    }
+  };
 
   return (
     <div>
-    <Select
-        options={[defaultOption, ...options]}
+      <Select
+        options={[...options]}
         defaultValue={defaultOption}
         styles={customStyles}
         isSearchable={false}
@@ -49,6 +86,7 @@ const ImageDropdown = () => {
 };
 
 export default ImageDropdown;
+
 
 
 

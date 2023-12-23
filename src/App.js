@@ -9,7 +9,11 @@ import global_vv from './components/LagnuageWegit/Viretnam vietamamese (vv)/glob
 import global_cb from './components/LagnuageWegit/cambodia Burma (cb)/global.json'
 import global_ii from './components/LagnuageWegit/indonesia idonesian (ii)/global.json'
 import global_ll from './components/LagnuageWegit/laos lao (ll)/global.json'
+import global_mm from './components/LagnuageWegit/malaysia malay (mm)/global.json'
+import global_mb from './components/LagnuageWegit/myanmar Burmese(mb)/global.json'
+
 import i18next from 'i18next';
+import NoteState from './context/check/NoteState.js';
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -30,11 +34,18 @@ i18next.init({
     ll: {
       global: global_ll, // Fix key name to 'global'
     },
+    mm: {
+      global: global_mm, // Fix key name to 'global'
+    },
+    mb: {
+      global: global_mb, // Fix key name to 'global'
+    },
   },
 });
 
 function App() {
   return (
+    <NoteState>
     <Router>
       <I18nextProvider i18n={i18next}> {/* Provide the i18n instance to I18nextProvider */}
         <Routes>
@@ -43,6 +54,7 @@ function App() {
         </Routes>
       </I18nextProvider>
     </Router>
+    </NoteState>
   );
 }
 
