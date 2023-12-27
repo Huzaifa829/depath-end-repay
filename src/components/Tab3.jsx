@@ -10,54 +10,41 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import { Button } from 'antd';
 import { useTranslation } from 'react-i18next';
+import { useDispatch, useSelector } from 'react-redux';
+import {actionCreators} from '../state/index'
+
 
 
 const columns = [
-    { id: 'name', label: 'S.no', minWidth: 30 },
-    { id: 'code', label: 'Adversary Name', minWidth: 100 },
+    { id: 'index', label: 'S.no', minWidth: 30 },
+    { id: 'name', label: 'Adversary Name', minWidth: 100 },
+    { id: 'email', label: 'Gmail', minWidth: 170, align: 'left' },
+    { id: 'facebookLink', label: 'Facebook Link', minWidth: 170, align: 'left' },
     {
-        id: 'population',
-        label: 'Facebook Link',
-        minWidth: 170,
-        align: 'left',
-    },
-    {
-        id: 'size',
-        label: 'Gmail',
-        minWidth: 170,
-        align: 'left',
-
-    },
-    {
-        id: 'density',
+        id: 'actions',
         label: 'Add A Debt Case',
         minWidth: 170,
         align: 'right',
     },
 ];
 
-function createData(name, code, population, size) {
-    const density = population / size;
-    return { name, code, population, size, density };
+// function createData(name, code, population, size) {
+//     const density = population / size;
+//     return { name, code, population, size, density };
+// }
+function createData(index, name, email, facebookLink) {
+    return { index, name, email, facebookLink };
 }
 
-const rows = [
-    createData('1', 'john', "abc", "john121@gmail.com"),
-    createData('1', 'john', "abc", "john121@gmail.com"),
-    createData('1', 'john', "abc", "john121@gmail.com"),
-    createData('1', 'john', "abc", "john121@gmail.com"),
-    createData('1', 'john', "abc", "john121@gmail.com"),
-    createData('1', 'john', "abc", "john121@gmail.com"),
-    createData('1', 'john', "abc", "john121@gmail.com"),
-    createData('1', 'john', "abc", "john121@gmail.com"),
-    createData('1', 'john', "abc", "john121@gmail.com"),
-    createData('1', 'john', "abc", "john121@gmail.com"),
-
-  
-];
 
 
 export default function Tab3() {
+    const dispatch = useDispatch();
+    const users  = useSelector((state) => state.UserData); 
+    console.log(users)
+        const handleOpen = () => {
+            dispatch(actionCreators.openModal(true));
+          };
     const buttonStyles = {
         backgroundColor: 'black',
         color: '#ffffff',
@@ -70,6 +57,7 @@ export default function Tab3() {
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
     };
+    
 
     const handleChangeRowsPerPage = (event) => {
 
@@ -82,57 +70,60 @@ export default function Tab3() {
         <div className='HA_table_main_add'>
             <div className='HA_table_main_add_child'>
                 <p className='HA_table_main_add_child_text'>{t("Tab3_1.message")}</p>{/*My Adversaries*/}
+                <Button  onClick={handleOpen} style={buttonStyles}>{t("TabFrom1_4.message")}</Button> {/*Add New Adversary*/}
             </div>
-        <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-            <TableContainer sx={{ maxHeight: 440 }}>
-                <Table stickyHeader aria-label="sticky table">
-                    <TableHead>
-                        <TableRow>
-                            {columns.map((column) => (
-                                <TableCell
-                                    key={column.id}
-                                    align={column.align}
-                                    style={{ minWidth: column.minWidth }}
-                                >
-                                    {column.label}
-                                </TableCell>
-                            ))}
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
-                            return (
-                                <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-                                    {columns.map((column, columnIndex) => {
-                                        const value = row[column.id];
-                                        return (
-                                            <TableCell key={column.id} align={column.align}>
-                                                    {column.id === 'density' ? (
-                                                        <Button  style={buttonStyles} key={columnIndex}>
-                                                           {t("Tab3_2.message")}
-                                                        </Button>/* Add A Debt Case*/
+            <Paper sx={{ width: '100%', overflow: 'hidden' }}>
+                <TableContainer sx={{ maxHeight: 440 }}>
+                    <Table stickyHeader aria-label="sticky table">
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>S.no</TableCell>
+                                {columns.slice(1).map((column) => (
+                                    <TableCell
+                                        key={column.id}
+                                        align={column.align}
+                                        style={{ minWidth: column.minWidth }}
+                                    >
+                                        {column.label}
+                                    </TableCell>
+                                ))}
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {users.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, rowIndex) => {
+                                return (
+                                    <TableRow hover role="checkbox" tabIndex={-1} key={rowIndex}>
+                                        <TableCell>{rowIndex + 1}</TableCell>
+                                        {columns.slice(1).map((column, columnIndex) => {
+                                            const value = row[column.id];
+                                            return (
+                                                <TableCell key={column.id} align={column.align}>
+                                                    {column.id === 'actions' ? (
+                                                        <Button style={buttonStyles} key={columnIndex}>
+                                                            {t("Tab3_2.message")}
+                                                        </Button>
                                                     ) : (
                                                         value
                                                     )}
-                                            </TableCell>
-                                        );
-                                    })}
-                                </TableRow>
-                            );
-                        })}
-                    </TableBody>
-                </Table>
-            </TableContainer>
-            <TablePagination
-                rowsPerPageOptions={[10, 25, 100]}
-                component="div"
-                count={rows.length}
-                rowsPerPage={rowsPerPage}
-                page={page}
-                onPageChange={handleChangePage}
-                onRowsPerPageChange={handleChangeRowsPerPage}
-            />
-        </Paper>
+                                                </TableCell>
+                                            );
+                                        })}
+                                    </TableRow>
+                                );
+                            })}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+                <TablePagination
+                    rowsPerPageOptions={[10, 25, 100]}
+                    component="div"
+                    count={users.length}
+                    rowsPerPage={rowsPerPage}
+                    page={page}
+                    onPageChange={handleChangePage}
+                    onRowsPerPageChange={handleChangeRowsPerPage}
+                />
+            </Paper>
         </div>
     );
 }

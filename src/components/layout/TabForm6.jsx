@@ -5,8 +5,59 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button, Form, Input, TreeSelect, Checkbox, Row, Col, DatePicker, Radio } from 'antd';
 import '../../cssFile/TabFrom.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { actionCreators } from '../../state/index'
 
 const TabFrom6 = () => {
+    const dispatch = useDispatch();
+    const open = useSelector((state) => state.amount);
+    const users = useSelector((state) => state.UserData);
+    const [selectedValue, setSelectedValue] = useState(null);
+    const [selectedEmail, setSelectedEmail] = useState('');
+    const [selectedFacebok, setSelectedFacebok] = useState('');
+    const [selectedAmount, setSelectedAmount] = useState('');
+
+    const treeData = users.map((row, index) => {
+        // Add a condition to check if the type is "Money"
+        if (row.type === "Apology") {
+          return {
+            title: row.name,
+            value: row.email,
+          };
+        }
+        // If the type is not "Money", return null or an empty object
+        return null;
+      }).filter(item => item !== null);
+
+    const handleTreeSelectChange = (value) => {
+        setSelectedValue(value);
+        console.log('Selected Value:', value);
+        console.log('USERS:', users);
+
+        users.map((user) => {
+            if (value == user.email) {
+
+                console.log('confirm', user)
+                setSelectedEmail(user.email)
+                setSelectedFacebok(user.facebookLink)
+                setSelectedAmount(user.amount)
+
+            }
+            else {
+
+                return null;
+            }
+        });
+
+    };
+    
+        const handleOpen = () => {
+            dispatch(actionCreators.openModal(true));
+            console.log(open)
+        };
+        const handleClose = () => {
+            dispatch(actionCreators.closeModal());
+        };
 
     const buttonStyles = {
         backgroundColor: 'black',
@@ -45,30 +96,24 @@ const TabFrom6 = () => {
             <Row gutter={16}>
                 <Col span={12}>
                     <Form.Item label={t("TabFrom6_1.message")}> {/*Appology Amount:*/}
-                        <Input className="my-input"  />
+                        <Input className="my-input"   readOnly  value={selectedAmount}/>
                     </Form.Item>
                 </Col>
                 <Col span={12}>
                     <Form.Item label={t("TabFrom6_2.message")}> {/*Select Adversary Name:*/}
                         <Row gutter={8}>
                             <Col span={16}>
-                                <TreeSelect
-                                    treeData={[
-                                        {
-                                            title: 'Light',
-                                            value: 'light',
-                                            children: [
-                                                {
-                                                    title: 'Bamboo',
-                                                    value: 'bamboo',
-                                                },
-                                            ],
-                                        },
-                                    ]}
-                                />
+                            <TreeSelect
+                                        readOnly
+                                        style={{ width: '100%' }}
+                                        dropdownStyle={{ maxHeight: 400, overflow: 'auto' }}
+                                        treeData={treeData}
+                                        placeholder="Select a value"
+                                        onChange={handleTreeSelectChange}
+                                    />
                             </Col>
                             <Col span={6}>
-                                <Button style={buttonStyles}>{t("TabFrom6_3.message")}</Button> {/*Add New Adversary*/}
+                            <Button onClick={handleOpen} style={buttonStyles}>{t("TabFrom1_4.message")}</Button> {/*Add New Adversary*/}
                             </Col>
                         </Row>
                     </Form.Item>
@@ -77,12 +122,12 @@ const TabFrom6 = () => {
             <Row gutter={16}>
                 <Col span={12}>
                     <Form.Item label={t("TabFrom6_4.message")}> {/*Adversary Email:*/}
-                        <Input className="my-input" />
+                        <Input className="my-input" readOnly value={selectedEmail} />
                     </Form.Item>
                 </Col>
                 <Col span={12}>
                     <Form.Item label={t("TabFrom6_5.message")}> {/*Adversary Facebook Id or Facebook Link:*/}
-                        <Input className="my-input" />
+                        <Input className="my-input" readOnly  value={selectedFacebok} />
                     </Form.Item>
                 </Col>
             </Row>

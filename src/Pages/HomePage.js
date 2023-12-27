@@ -25,7 +25,10 @@ import Tab8 from '../components/Tab8';
 import Tab9 from '../components/Tab9';
 import { Link } from 'react-router-dom';
 import FooterHA from '../components/Footer_HA'
-
+import PopupForm from '../components/PopupForm/PopupForm1';
+import { useDispatch, useSelector } from 'react-redux';
+// import { bindActionCreators } from 'redux';
+import {actionCreators} from '../state/index'
 
 
 
@@ -48,9 +51,19 @@ const HomePage = () => {
         <Sidebtn text={text} icon={icon} selected={activeTab === tab} />
     </div>
 );
+    const dispatch = useDispatch();
+    const open  = useSelector((state) => state.amount); 
+    // const { openModal, closeModal } = bindActionCreators(actionCreators, dispatch);
+    
+    
+
+      const handleClose = () => {
+        dispatch(actionCreators.closeModal());
+      };
 
   return (
     <>
+    <PopupForm open={open} onClose={handleClose} />
       <Navbar />
       <div className='HA_main'>
         <div className='HA_main_part1'>

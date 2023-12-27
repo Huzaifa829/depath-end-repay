@@ -14,6 +14,8 @@ import global_mb from './components/LagnuageWegit/myanmar Burmese(mb)/global.jso
 
 import i18next from 'i18next';
 import NoteState from './context/check/NoteState.js';
+import { Provider } from 'react-redux';
+import { store } from './state/store.js';
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -47,12 +49,14 @@ function App() {
   return (
     <NoteState>
     <Router>
+      <Provider store={store}>
       <I18nextProvider i18n={i18next}> {/* Provide the i18n instance to I18nextProvider */}
         <Routes>
           <Route path='/' element={<LandingPage />} />
           <Route path='/home' element={<HomePage />} />
         </Routes>
       </I18nextProvider>
+      </Provider>
     </Router>
     </NoteState>
   );

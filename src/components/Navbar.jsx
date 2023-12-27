@@ -12,6 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import GoogleTranslate from './LagnuageWegit/LangWeg';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -56,6 +57,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 
 export default function SearchAppBar() {
+
+  const amount = useSelector(state =>state.amount)
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ backgroundColor: '#ebebeb' }}>

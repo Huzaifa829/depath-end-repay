@@ -18,6 +18,12 @@ const Tab1 = () => {
         color: 'black',
         fontWeight: '500',
     };
+    const selectedButtonStyles = {
+        backgroundColor: 'gray', // Change this to the desired color
+        borderColor: 'black',
+        color: 'white',
+        fontWeight: '500',
+    };
 
     const [activeForm, setActiveForm] = useState(1);
 
@@ -33,13 +39,25 @@ const Tab1 = () => {
             </div>
             <div className='HA_tab1_btn_main'>
                 <Flex gap="small" wrap="wrap">
-                <Button style={buttonStyles} onClick={() => handleButtonClick(1)}>{t("HomePageTab1_3.message")}</Button>{/*Money*/}
-                    <Button style={buttonStyles} onClick={() => handleButtonClick(2)}>{t("HomePageTab1_4.message")}</Button>{/*Favor*/}
-                    <Button style={buttonStyles} onClick={() => handleButtonClick(3)}>{t("HomePageTab1_5.message")}</Button>{/*Service*/}
-                    <Button style={buttonStyles} onClick={() => handleButtonClick(4)}>{t("HomePageTab1_6.message")}</Button>{/*Meal*/}
-                    <Button style={buttonStyles} onClick={() => handleButtonClick(5)}>{t("HomePageTab1_7.message")}</Button>{/*Drink*/}
-                    <Button style={buttonStyles} onClick={() => handleButtonClick(6)}>{t("HomePageTab1_8.message")}</Button>{/*Apology*/}
-                    <Button style={buttonStyles} onClick={() => handleButtonClick(7)}>{t("HomePageTab1_9.message")}</Button>{/*Challenge*/}
+                {[1, 2, 3, 4, 5, 6, 7].map((formNumber) => (
+                        <Button
+                            key={formNumber}
+                            style={activeForm === formNumber ? selectedButtonStyles : buttonStyles}
+                            onClick={() => handleButtonClick(formNumber)}
+                        >
+                            {t(`HomePageTab1_${formNumber + 2}.message`)}
+                        </Button>
+                    ))}
+                    
+                {/* <Button style={buttonStyles} onClick={() => handleButtonClick(1)}>{t("HomePageTab1_3.message")}</Button>Money
+                    <Button style={buttonStyles} onClick={() => handleButtonClick(2)}>{t("HomePageTab1_4.message")}</Button>Favor
+                    <Button style={buttonStyles} onClick={() => handleButtonClick(3)}>{t("HomePageTab1_5.message")}</Button>Service
+                    <Button style={buttonStyles} onClick={() => handleButtonClick(4)}>{t("HomePageTab1_6.message")}</Button>Meal
+                    <Button style={buttonStyles} onClick={() => handleButtonClick(5)}>{t("HomePageTab1_7.message")}</Button>Drink
+                    <Button style={buttonStyles} onClick={() => handleButtonClick(6)}>{t("HomePageTab1_8.message")}</Button>Apology
+                    <Button style={buttonStyles} onClick={() => handleButtonClick(7)}>{t("HomePageTab1_9.message")}</Button>Challenge */}
+
+
                 </Flex>
             </div>
             <div className='HA_tab1_form_main'>

@@ -10,6 +10,7 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import { Button } from 'antd';
 import { useTranslation } from 'react-i18next';
+// import { useDispatch } from 'react-redux';
 
 const columns = [
     { id: 'name', label: 'S.no', minWidth: 30 },
@@ -45,8 +46,16 @@ const rows = [
   
 
 ];
-
+// console.log(rows)
 export default function Tab6() {
+
+    const buttonStyles = {
+        backgroundColor: 'black',
+        color: '#ffffff',
+        borderColor: 'black',
+        transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',
+      };
+     
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -63,6 +72,7 @@ export default function Tab6() {
         <div className='HA_table_main_add'>
             <div className='HA_table_main_add_child'>
                 <p className='HA_table_main_add_child_text'>{t("Tab6_1.message")}</p>{/*Setteled Debt Cases*/}
+               
             </div>
             <Paper sx={{ width: '100%', overflow: 'hidden' }}>
                 <TableContainer sx={{ maxHeight: 440 }}>
