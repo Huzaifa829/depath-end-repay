@@ -49,6 +49,15 @@ export const adduser = (userdata)=>{
         });
     }
 }
+export const addAdversaries = (Adversaries)=>{
+    console.log("working 1")
+    return(dispatch)=>{
+        dispatch({
+            type:'Add_Adversaries',
+            data:Adversaries,
+        });
+    }
+}
 // export const closeModal = () => ({
 //   type: CLOSE_MODAL,
 // });

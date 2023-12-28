@@ -41,7 +41,7 @@ function createData(index, name, email, facebookLink) {
 export default function Tab3() {
     const dispatch = useDispatch();
     const users  = useSelector((state) => state.UserData); 
-    console.log(users)
+    // console.log(users)
         const handleOpen = () => {
             dispatch(actionCreators.openModal(true));
           };

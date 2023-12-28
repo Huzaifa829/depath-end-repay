@@ -15,19 +15,28 @@ const TabFrom6 = () => {
     const [selectedValue, setSelectedValue] = useState(null);
     const [selectedEmail, setSelectedEmail] = useState('');
     const [selectedFacebok, setSelectedFacebok] = useState('');
-    const [selectedAmount, setSelectedAmount] = useState('');
+    
 
-    const treeData = users.map((row, index) => {
-        // Add a condition to check if the type is "Money"
-        if (row.type === "Apology") {
-          return {
-            title: row.name,
-            value: row.email,
-          };
-        }
-        // If the type is not "Money", return null or an empty object
-        return null;
-      }).filter(item => item !== null);
+
+    const treeData = users.map((row, index) => ({
+        title: row.name,
+        value: row.email,
+    }));
+
+
+
+
+
+    // const [selectedAmount, setSelectedAmount] = useState('');
+    // const treeData = users.map((row, index) => {
+    //     if (row.type === "Apology") {
+    //       return {
+    //         title: row.name,
+    //         value: row.email,
+    //       };
+    //     }
+    //     return null;
+    //   }).filter(item => item !== null);
 
     const handleTreeSelectChange = (value) => {
         setSelectedValue(value);
@@ -40,7 +49,7 @@ const TabFrom6 = () => {
                 console.log('confirm', user)
                 setSelectedEmail(user.email)
                 setSelectedFacebok(user.facebookLink)
-                setSelectedAmount(user.amount)
+                // setSelectedAmount(user.amount)
 
             }
             else {
@@ -96,7 +105,7 @@ const TabFrom6 = () => {
             <Row gutter={16}>
                 <Col span={12}>
                     <Form.Item label={t("TabFrom6_1.message")}> {/*Appology Amount:*/}
-                        <Input className="my-input"   readOnly  value={selectedAmount}/>
+                        <Input className="my-input" />
                     </Form.Item>
                 </Col>
                 <Col span={12}>

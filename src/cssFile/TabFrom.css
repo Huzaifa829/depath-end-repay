@@ -29,3 +29,9 @@
     border-color: black !important;
     box-shadow: 0px 0px 9px -4px black !important;
   }
+  span.ant-select-tree-switcher.ant-select-tree-switcher-noop {
+    display: none;
+}
+span.ant-select-tree-node-content-wrapper.ant-select-tree-node-content-wrapper-normal.ant-select-tree-node-selected{
+  background-color: rgb(192, 192, 192)  !important;
+}

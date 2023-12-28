@@ -16,19 +16,27 @@ const TabFrom2 = () => {
     const [selectedValue, setSelectedValue] = useState(null);
     const [selectedEmail, setSelectedEmail] = useState('');
     const [selectedFacebok, setSelectedFacebok] = useState('');
-    const [selectedAmount, setSelectedAmount] = useState('');
 
-    const treeData = users.map((row, index) => {
-        // Add a condition to check if the type is "Money"
-        if (row.type === "Favor") {
-          return {
-            title: row.name,
-            value: row.email,
-          };
-        }
-        // If the type is not "Money", return null or an empty object
-        return null;
-      }).filter(item => item !== null);
+
+
+
+    const treeData = users.map((row, index) => ({
+        title: row.name,
+        value: row.email,
+    }));
+
+
+
+    // const [selectedAmount, setSelectedAmount] = useState('');
+    // const treeData = users.map((row, index) => {
+    //     if (row.type === "Favor") {
+    //       return {
+    //         title: row.name,
+    //         value: row.email,
+    //       };
+    //     }
+    //     return null;
+    //   }).filter(item => item !== null);
 
     const handleTreeSelectChange = (value) => {
         setSelectedValue(value);
@@ -41,7 +49,7 @@ const TabFrom2 = () => {
                 console.log('confirm', user)
                 setSelectedEmail(user.email)
                 setSelectedFacebok(user.facebookLink)
-                setSelectedAmount(user.amount)
+                // setSelectedAmount(user.amount)
 
             }
             else {
@@ -97,7 +105,7 @@ const TabFrom2 = () => {
             <Row gutter={16}>
                 <Col span={12}>
                     <Form.Item label= {t("TabFrom2_1.message")}> {/*Favor Amount:*/}
-                        <Input className="my-input"  readOnly  value={selectedAmount}  />
+                        <Input className="my-input" />
                     </Form.Item>
                 </Col>
                 <Col span={12}>
@@ -111,6 +119,7 @@ const TabFrom2 = () => {
                                         treeData={treeData}
                                         placeholder="Select a value"
                                         onChange={handleTreeSelectChange}
+                                        className="custom-tree-select"
                                     />
                             </Col>
                             <Col span={6}>
@@ -128,7 +137,7 @@ const TabFrom2 = () => {
                 </Col>
                 <Col span={12}>
                     <Form.Item label={t("TabFrom2_5.message")}> {/*Adversary Facebook Id or Facebook Link:*/}
-                        <Input className="my-input" />
+                        <Input className="my-input"  readOnly value={selectedFacebok}/>
                     </Form.Item>
                 </Col>
             </Row>

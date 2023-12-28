@@ -9,23 +9,23 @@ const PopupForm = ({ open, onClose }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [facebookLink, setFacebookLink] = useState('');
-  const [amount, setAmount] = useState('');
-  const [type, setType] = useState('');
+  // const [amount, setAmount] = useState('');
+  // const [type, setType] = useState('');
 
   const handleNameChange = (e) => setName(e.target.value);
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handleFacebookLinkChange = (e) => setFacebookLink(e.target.value);
-  const handleAmountChange = (e) => setAmount(e.target.value);
-  const handleTypeChange = (e) => setType(e.target.value);
+  // const handleAmountChange = (e) => setAmount(e.target.value);
+  // const handleTypeChange = (e) => setType(e.target.value);
 
   const handleSubmit = () => {
-    const userdata = { name, email, facebookLink, amount, type };
+    const userdata = { name, email, facebookLink};
     dispatch(actionCreators.adduser(userdata));
     setName('');
     setEmail('');
     setFacebookLink('');
-    setAmount('');
-    setType('');
+    // setAmount('');
+    // setType('');
     // Close the popup after submission
     onClose();
   };
@@ -41,13 +41,13 @@ const PopupForm = ({ open, onClose }) => {
           <Grid item xs={12} sm={6}>
             <TextField label="Email" value={email} onChange={handleEmailChange} fullWidth margin="normal" />
           </Grid>
-          <Grid item xs={12}  sm={6}>
+          <Grid item xs={12} >
             <TextField label="Facebook Link" value={facebookLink} onChange={handleFacebookLinkChange} fullWidth margin="normal" />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          {/* <Grid item xs={12} sm={6}>
             <TextField label="Amount" value={amount} onChange={handleAmountChange} fullWidth margin="normal" />
-          </Grid>
-          <Grid item xs={12} sm={12}>
+          </Grid> */}
+          {/* <Grid item xs={12} sm={12}>
             <FormControl fullWidth>
               <InputLabel  id="demo-simple-select-label">Type</InputLabel>
               <Select labelId="demo-simple-select-label" label="Age" value={type} onChange={handleTypeChange}>
@@ -63,7 +63,7 @@ const PopupForm = ({ open, onClose }) => {
                 <MenuItem value="Challenge">Challenge</MenuItem>
               </Select>
             </FormControl>
-          </Grid>
+          </Grid> */}
         </Grid>
       </DialogContent>
       <DialogActions>
