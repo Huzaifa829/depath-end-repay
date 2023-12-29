@@ -10,59 +10,85 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import { Button } from 'antd';
 import { useTranslation } from 'react-i18next';
+import { LinearProgress } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
+import { actionCreators } from '../state/index'
+import { Modal } from 'antd';
+import ProgresBarRound from './ProgressBar/ProgresBarRound';
 // import { useDispatch } from 'react-redux';
 
 const columns = [
-    { id: 'name', label: 'S.no', minWidth: 30 },
-    { id: 'code', label: 'Adversary Name', minWidth: 170 },
-    { id: 'population', label: 'Category', minWidth: 70, align: 'left', },
-    { id: 'size', label: 'Due Date', minWidth: 70, align: 'left', },
-    { id: 'datapass', label: 'Transaction Direction', minWidth: 100, align: 'left', },
-    { id: 'density', label: 'Amount', minWidth: 100, align: 'left', },
+    { id: 'index', label: 'S.no', minWidth: 30 },
+    { id: 'name', label: 'Adversary Name', minWidth: 100 },
+    { id: 'type', label: 'Transaction/Type', minWidth: 30 },
+    { id: 'check', label: 'check', minWidth: 50, align: 'left' },
+    { id: 'PaymentOptions', label: 'Payment Options', minWidth: 50, align: 'left' },
+
+    
+    { id: 'amount', label: 'Total Amount', minWidth: 30, align: 'left' },
+    { id: 'progress', label: 'Progress', minWidth: 100, align: 'center' },
+    {
+        id: 'actions',
+        label: 'Veiw',
+        minWidth: 20,
+        align: 'center',
+    },
 ];
 
-function createData(name, code, population, size,datapass,density) {
-    return { name, code, population, size,datapass, density,};
+function createData(index, name, type, check, PaymentOptions, amount,progress) {
+    return { index, name, type, check, PaymentOptions, amount,progress };
 }
-
 const rows = [
-    createData('1', 'Please Select Adversary Name:', "Money", "undefined",'11-12-2023',"123123123 Coins",),
-    createData('2', 'Please Select Adversary Name:', "Money", "undefined",'11-12-2023',"123123123 Coins",),
-    createData('3', 'Please Select Adversary Name:', "Money", "undefined",'11-12-2023',"123123123 Coins",),
-    createData('4', 'Please Select Adversary Name:', "Money", "undefined",'11-12-2023',"123123123 Coins",),
-    createData('5', 'Please Select Adversary Name:', "Money", "undefined",'11-12-2023',"123123123 Coins",),
-    createData('6', 'Please Select Adversary Name:', "Money", "undefined",'11-12-2023',"123123123 Coins",),
-    createData('7', 'Please Select Adversary Name:', "Money", "undefined",'11-12-2023',"123123123 Coins",),
-    createData('8', 'Please Select Adversary Name:', "Money", "undefined",'11-12-2023',"123123123 Coins",),
-    createData('9', 'Please Select Adversary Name:', "Money", "undefined",'11-12-2023',"123123123 Coins",),
-    createData('10', 'Please Select Adversary Name:', "Money", "undefined",'11-12-2023',"123123123 Coins",),
-    createData('11', 'Please Select Adversary Name:', "Money", "undefined",'11-12-2023',"123123123 Coins",),
-    createData('12', 'Please Select Adversary Name:', "Money", "undefined",'11-12-2023',"123123123 Coins",),
-    createData('13', 'Please Select Adversary Name:', "Money", "undefined",'11-12-2023',"123123123 Coins",),
-    createData('14', 'Please Select Adversary Name:', "Money", "undefined",'11-12-2023',"123123123 Coins",),
-    createData('15', 'Please Select Adversary Name:', "Money", "undefined",'11-12-2023',"123123123 Coins",),
-    createData('16', 'Please Select Adversary Name:', "Money", "undefined",'11-12-2023',"123123123 Coins",),
-
-  
-
+    {
+        name: 'hzuaifa',
+        category: 'abc',
+        dueDate: 'abc',
+        datapass: '25%',  // Assuming this is your progress value
+        amount: '123231',
+    },
+    {
+        name: 'hzuaifa',
+        category: 'abc',
+        dueDate: 'abc',
+        datapass: '25%',  // Assuming this is your progress value
+        amount: '123231',
+    },
+    {
+        name: 'hzuaifa',
+        category: 'abc',
+        dueDate: 'abc',
+        datapass: '25%',  // Assuming this is your progress value
+        amount: '123231',
+    },
 ];
 // console.log(rows)
 export default function Tab6() {
 
-    const buttonStyles = {
-        backgroundColor: 'black',
-        color: '#ffffff',
-        borderColor: 'black',
-        transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',
-      };
-     
+    const [isModalVisible, setIsModalVisible] = React.useState(false);
+    const [selectedRowData, setSelectedRowData] = React.useState(null);
+    const handlePendingButtonClick = (row) => {
+        setSelectedRowData(row);
+        setIsModalVisible(true);
+    };
+    const handleModalCancel = () => {
+        setIsModalVisible(false);
+    };
+
+
+    const dispatch = useDispatch();
+    const users = useSelector((state) => state.Setteled);
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
     };
-
+    const buttonStyles = {
+        backgroundColor: 'green',
+        color: '#ffffff',
+        borderColor: 'black',
+        transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',
+    };
     const handleChangeRowsPerPage = (event) => {
         setRowsPerPage(+event.target.value);
         setPage(0);
@@ -79,7 +105,8 @@ export default function Tab6() {
                     <Table stickyHeader aria-label="sticky table">
                         <TableHead>
                             <TableRow>
-                                {columns.map((column) => (
+                                <TableCell>S.no</TableCell>
+                                {columns.slice(1).map((column) => (
                                     <TableCell
                                         key={column.id}
                                         align={column.align}
@@ -91,14 +118,25 @@ export default function Tab6() {
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                            {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
+                            {users.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, rowIndex) => {
                                 return (
-                                    <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-                                        {columns.map((column, columnIndex) => {
+                                    <TableRow hover role="checkbox" tabIndex={-1} key={rowIndex}>
+                                        <TableCell>{rowIndex + 1}</TableCell>
+                                        {columns.slice(1).map((column, columnIndex) => {
                                             const value = row[column.id];
                                             return (
                                                 <TableCell key={column.id} align={column.align}>
-                                                     {value}
+                                                    {column.id === 'actions' ? (
+                                                        <Button style={buttonStyles} key={columnIndex} onClick={() => handlePendingButtonClick(row)}>
+                                                            {/* {t("Tab3_2.message")} */}
+                                                            Veiw
+                                                        </Button>
+                                                    ) : column.id === 'progress' ? (
+                                                        <ProgresBarRound percentage={60} />
+                                                    )
+                                                     :(
+                                                        value
+                                                    )}
                                                 </TableCell>
                                             );
                                         })}
@@ -117,6 +155,34 @@ export default function Tab6() {
                     onPageChange={handleChangePage}
                     onRowsPerPageChange={handleChangeRowsPerPage}
                 />
+                <Modal
+                    title="Pending Details"
+                    visible={isModalVisible}
+                    onCancel={handleModalCancel}
+                    footer={[
+                 
+                    ]}
+                >
+                    {selectedRowData && (
+                        // Render the details of the selected row inside the modal content
+                        <div>
+                            <p>Adversary Name: {selectedRowData.name}</p>
+                            <p>amount: {selectedRowData.amount}</p>
+                            <p>check: {selectedRowData.check}</p>
+                            <p>email: {selectedRowData.email}</p>
+                            <p>fblink: {selectedRowData.fblink}</p>
+                            <p>PaymentOptions: {selectedRowData.PaymentOptions}</p>
+                            {selectedRowData.rowData.map((item, index) => (
+                                <div key={index}>
+                                    <p>Date: {item.date}</p>
+                                    <p>On Date Amount: {item.inputValue}</p>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </Modal>
+
+
             </Paper>
         </div>
     );

@@ -19,7 +19,7 @@ const TabFrom1 = () => {
     const [additionalRows, setAdditionalRows] = useState(1);
     const [showAmountField, setShowAmountField] = useState(false);
     const [rowData, setRowData] = useState([]);
-  
+
     const dispatch = useDispatch();
     const open = useSelector((state) => state.amount);
     const users = useSelector((state) => state.UserData);
@@ -35,55 +35,57 @@ const TabFrom1 = () => {
         title: row.name,
         value: row.email,
     }));
-const hello=[
-    {
-        date:'asdjasjd',
-        inputValie:'asdjkasjkd'
-    },
-    {
-        date:'asdjasjd',
-        inputValie:'asdjkasjkd'
-    }
-]
+    const hello = [
+        {
+            date: 'asdjasjd',
+            inputValie: 'asdjkasjkd'
+        },
+        {
+            date: 'asdjasjd',
+            inputValie: 'asdjkasjkd'
+        }
+    ]
 
 
     const handleAddDebtCase = () => {
-       
+
         console.log('Row Data:', rowData);
 
         const allData = {
-            name:selectedValue,
+            name: selectedValue,
             amount: selectedAmount,
             email: selectedEmail,
             fblink: selectedFacebok,
             check: selectedOption,
             type: 'money',
-            PaymentOptions:"Full",
-            rowData:rowData
+            PaymentOptions: "Full",
+            rowData: rowData
         }
         dispatch(actionCreators.addAdversaries(allData));
-        console.log("adverseris_data",addAdversaries)
-       
-            Swal.fire({
-              title: 'Success!',
-              text: 'The data has been added successfully.',
-              icon: 'success',
-              confirmButtonText: 'OK',
-            });
-     
-        
-        
-      
-   
+        dispatch(actionCreators.SentAdversaries(allData));
+        dispatch(actionCreators.RecivedAdversaries(allData));
+        console.log("adverseris_data", addAdversaries)
+
+        Swal.fire({
+            title: 'Success!',
+            text: 'The data has been added successfully.',
+            icon: 'success',
+            confirmButtonText: 'OK',
+        });
+
+
+
+
+
 
     };
 
 
 
-    const handleTreeSelectChange = (value) => {
-        setSelectedValue(value);
-        // console.log('Selected Value:', value);
-        // console.log('USERS:', users);
+    const handleTreeSelectChange = (value, label, extra) => {
+
+
+        console.log('USERS:', label[0]);
 
         users.map((user) => {
             if (value == user.email) {
@@ -91,6 +93,8 @@ const hello=[
                 console.log('confirm', user)
                 setSelectedEmail(user.email)
                 setSelectedFacebok(user.facebookLink)
+                setSelectedValue(label[0]);
+
                 // setSelectedAmount(user.amount)
 
             }
@@ -112,80 +116,80 @@ const hello=[
     const handleButtonClick = () => {
         setAdditionalRows((prevRows) => prevRows + 1);
         setShowAmountField(true);
-      };
-      const handleDeleteRow = (rowIndex) => {
-       
+    };
+    const handleDeleteRow = (rowIndex) => {
+
         setAdditionalRows((prevRows) => prevRows - 1);
 
         // Update rowData to remove the deleted row
         setRowData((prevData) => {
-          const newData = [...prevData];
-          if (newData.length > 0) {
-            // Remove inputValie property from each object in the array
-            newData.forEach(item => delete item.inputValue);
-        // Log the modified array
-            console.log(hello);
-        }
-          newData.splice(rowIndex, 1);
-          return newData;
+            const newData = [...prevData];
+            if (newData.length > 0) {
+                // Remove inputValie property from each object in the array
+                newData.forEach(item => delete item.inputValue);
+                // Log the modified array
+                console.log(hello);
+            }
+            newData.splice(rowIndex, 1);
+            return newData;
         });
-      };
-    
-      const renderAdditionalRows = () => {
+    };
+
+    const renderAdditionalRows = () => {
         const rows = [];
-      
+
         for (let i = 0; i < additionalRows; i++) {
-          rows.push(
-            <Row key={i} span={12}>
-              <Col span={4}>
-                <Form.Item label={t("TabFrom1_7.message")}>
-                  <DatePicker
-                    className="my-input"
-                    readOnly
-                    onChange={(date, dateString) => {
-                      const updatedRowData = { date: dateString };
-                      if (dateString && dateString.trim() !== "") {
-                        // Include inputValue only if date is present
-                        updatedRowData.inputValue = rowData[i]?.inputValue;
-                      }
-                      rowData[i] = updatedRowData;
-                      setRowData([...rowData]);
-                    }}
-                  />
-                </Form.Item>
-              </Col>
-              {showAmountField && additionalRows > 1 && (
-                <Col span={6}>
-                  <Form.Item label={t("TabFrom1_2.message")}>
-                    <Input
-                      className="my-input"
-                      onChange={(e) => {
-                        const inputValue = e.target.value.trim() !== "" ? e.target.value : null;
-                        rowData[i] = { ...rowData[i], inputValue };
-                        setRowData([...rowData]);
-                      }}
-                    />
-                  </Form.Item>
-                </Col>
-              )}
-              <Col span={1}>
-                {additionalRows > 1 && (
-                  <Popconfirm
-                    title="Are you sure to delete this row?"
-                    onConfirm={() => handleDeleteRow(i)}
-                    okText="Yes"
-                    cancelText="No"
-                  >
-                    <Button type="link" icon={<DeleteOutlined />} />
-                  </Popconfirm>
-                )}
-              </Col>
-            </Row>
-          );
+            rows.push(
+                <Row key={i} span={12}>
+                    <Col span={4}>
+                        <Form.Item label={t("TabFrom1_7.message")}>
+                            <DatePicker
+                                className="my-input"
+                                readOnly
+                                onChange={(date, dateString) => {
+                                    const updatedRowData = { date: dateString };
+                                    if (dateString && dateString.trim() !== "") {
+                                        // Include inputValue only if date is present
+                                        updatedRowData.inputValue = rowData[i]?.inputValue;
+                                    }
+                                    rowData[i] = updatedRowData;
+                                    setRowData([...rowData]);
+                                }}
+                            />
+                        </Form.Item>
+                    </Col>
+                    {showAmountField && additionalRows > 1 && (
+                        <Col span={6}>
+                            <Form.Item label={t("TabFrom1_2.message")}>
+                                <Input
+                                    className="my-input"
+                                    onChange={(e) => {
+                                        const inputValue = e.target.value.trim() !== "" ? e.target.value : null;
+                                        rowData[i] = { ...rowData[i], inputValue };
+                                        setRowData([...rowData]);
+                                    }}
+                                />
+                            </Form.Item>
+                        </Col>
+                    )}
+                    <Col span={1}>
+                        {additionalRows > 1 && (
+                            <Popconfirm
+                                title="Are you sure to delete this row?"
+                                onConfirm={() => handleDeleteRow(i)}
+                                okText="Yes"
+                                cancelText="No"
+                            >
+                                <Button type="link" icon={<DeleteOutlined />} />
+                            </Popconfirm>
+                        )}
+                    </Col>
+                </Row>
+            );
         }
         return rows;
-      };
-      
+    };
+
 
 
 
@@ -195,6 +199,15 @@ const hello=[
         color: '#ffffff',
         borderColor: 'black',
         transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',
+        
+    };
+    const buttonStyles1= {
+        backgroundColor: 'black',
+        color: '#ffffff',
+      
+        borderColor: 'black',
+        transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',
+     // Add this line for width
     };
     const [componentSize, setComponentSize] = useState('default');
 
@@ -257,7 +270,7 @@ const hello=[
                                     />
                                 </Col>
                                 <Col span={6}>
-                                    <Button onClick={handleOpen} style={buttonStyles}>{t("TabFrom1_4.message")}</Button> {/*Add New Adversary*/}
+                                    <Button onClick={handleOpen} style={buttonStyles1}>{t("TabFrom1_4.message")}</Button> {/*Add New Adversary*/}
                                 </Col>
                             </Row>
                         </Form.Item>

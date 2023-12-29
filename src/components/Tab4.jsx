@@ -45,6 +45,11 @@ const rows = [
 
 
 export default function Tab4() {
+    const dispatch = useDispatch();
+    const users = useSelector((state) => state.SentDataAdversaries);
+    console.log(users)
+    const [page, setPage] = React.useState(0);
+    const [rowsPerPage, setRowsPerPage] = React.useState(10);
     const [isModalVisible, setIsModalVisible] = React.useState(false);
     const [selectedRowData, setSelectedRowData] = React.useState(null);
     const handlePendingButtonClick = (row) => {
@@ -58,11 +63,7 @@ export default function Tab4() {
 
 
 
-    const dispatch = useDispatch();
-    const users = useSelector((state) => state.Adversaries);
-    console.log(users)
-    const [page, setPage] = React.useState(0);
-    const [rowsPerPage, setRowsPerPage] = React.useState(10);
+   
     const buttonStyles = {
         backgroundColor: 'green',
         color: '#ffffff',
@@ -82,7 +83,7 @@ export default function Tab4() {
     return (
         <div className='HA_table_main_add'>
             <div className='HA_table_main_add_child'>
-                <p className='HA_table_main_add_child_text'>{t("Tab4_1.message")}</p>{/*Requests Sent*/}
+                <p className='HA_table_main_add_child_text'>{t("Tab4_1.message")}</p>{/*Sent*/}
             </div>
             <Paper sx={{ width: '100%', overflow: 'hidden' }}>
                 <TableContainer sx={{ maxHeight: 440 }}>

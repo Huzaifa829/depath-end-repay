@@ -18,7 +18,7 @@
 
 
 const modalReducer = (state = false, action) => {
-  console.log(state)
+  // console.log(state)
     if (action.type === 'true') {
        return state = true;
       } else if (action.type === 'false') {

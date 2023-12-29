@@ -51,10 +51,10 @@
         "message":"My Adversaries"
     },
     "HA_text5":{
-        "message":"Requests Sent"
+        "message":"Sent"
     },
     "HA_text6":{
-        "message":"Offers Recieved"
+        "message":"Recieved"
     },
     "HA_text7":{
         "message":"Settled Debt Cases"

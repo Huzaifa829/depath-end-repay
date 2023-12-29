@@ -58,6 +58,51 @@ export const addAdversaries = (Adversaries)=>{
         });
     }
 }
+export const SentAdversaries = (SentAdversaries)=>{
+    console.log("working 1")
+    return(dispatch)=>{
+        dispatch({
+            type:'Sent_Adversaries',
+            data:SentAdversaries,
+        });
+    }
+}
+export const RecivedAdversaries = (RecivedAdversaries)=>{
+    console.log("working 1")
+    return(dispatch)=>{
+        dispatch({
+            type:'Recived_Adversaries',
+            data:RecivedAdversaries,
+        });
+    }
+}
+export const RecivRemoveAdversary = (adversaryId) => {
+    console.log("Removing adversary with ID:", adversaryId);
+    return (dispatch) => {
+        dispatch({
+            type: 'Reciv_REMOVE_ADVERSARY',
+            id: adversaryId,
+        });
+    };
+};
+export const SentRemoveAdversary = (adversaryId) => {
+    console.log("Removing adversary with ID:", adversaryId);
+    return (dispatch) => {
+        dispatch({
+            type: 'Sent_REMOVE_ADVERSARY',
+            id: adversaryId,
+        });
+    };
+};
+export const addSetteled = (Setteled)=>{
+    console.log("working 1")
+    return(dispatch)=>{
+        dispatch({
+            type:'Add_Setteled',
+            data:Setteled,
+        });
+    }
+}
 // export const closeModal = () => ({
 //   type: CLOSE_MODAL,
 // });
