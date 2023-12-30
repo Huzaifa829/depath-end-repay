@@ -24,6 +24,7 @@ const columns = [
     { id: 'check', label: 'check', minWidth: 50, align: 'left' },
     { id: 'PaymentOptions', label: 'Payment Options', minWidth: 50, align: 'left' },
     { id: 'amount', label: 'Total Amount', minWidth: 30, align: 'left' },
+    { id: 'Status', label: 'Status', minWidth: 50, align: 'left' },
     {
         id: 'actions',
         label: 'Veiw',
@@ -33,8 +34,8 @@ const columns = [
 ];
 
 
-function createData(index, name, type, check, PaymentOptions, amount) {
-    return { index, name, type, check, PaymentOptions, amount };
+function createData(index, name, type, check, PaymentOptions, Status, amount) {
+    return { index, name, type, check, PaymentOptions, Status, amount };
 }
 
 const rows = [
@@ -50,20 +51,28 @@ export default function Tab3() {
     const { Option } = Select;
     const dispatch = useDispatch();
     const users = useSelector((state) => state.RecivedDataAdversaries);
-    const users1 = useSelector((state) => state.Setteled);
+    // const users1 = useSelector((state) => state.Setteled);
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
     const [isModalVisible, setIsModalVisible] = React.useState(false);
+    const [isModalVisible1, setIsModalVisible1] = React.useState(false);
+    const [selectedRowData1, setSelectedRowData1] = React.useState(null);
     const [isSecondModalVisible, setIsSecondModalVisible] = React.useState(false);
     const [selectedRowData, setSelectedRowData] = React.useState(null);
+    const [modalselectedRowData1, modalsetSelectedRowData1] = React.useState(null);
+    const [modalselectData1, modalsetSelectData1] = React.useState(null);
+    const [setlementinput, setsetlementinput] = React.useState('');
+    const [modaldescriptioninput, setmodaldescriptioninput] = React.useState('');
     const [additionalRows, setAdditionalRows] = React.useState(1);
     const [showAmountField, setShowAmountField] = React.useState(false);
     const [rowData, setRowData] = React.useState([]);
+
+    console.log(users)
     const handlePendingButtonClick = (row) => {
         setSelectedRowData(row);
         setIsModalVisible(true);
     };
-    const checkhandle = (row) => {
+    const SentTosetelment = (row) => {
         // console.log(row)
         dispatch(actionCreators.RecivRemoveAdversary(row));
         dispatch(actionCreators.SentRemoveAdversary(row));
@@ -75,9 +84,17 @@ export default function Tab3() {
     const handleModalCancel = () => {
         setIsModalVisible(false);
     };
+    const handleModalCancel1 = () => {
+        setIsModalVisible1(false);
+    };
+    const handleModalCancel2 = () => {
+        setIsSecondModalVisible(false)
+    };
 
-
-    const handleSettlementsClick = () => {
+    const handleSettlementsClick = (array) => {
+        modalsetSelectedRowData1(array)
+        setsetlementinput(array.amount)
+        modalsetSelectData1(array.type)
         handleModalCancel(); // Close the current modal
         setIsSecondModalVisible(true); // Open the new modal
     };
@@ -85,6 +102,41 @@ export default function Tab3() {
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
     };
+
+    const selectedoptionupdate = (e) => {
+        modalsetSelectData1(e)
+    }
+    const modalsetelmentupdate = () => {
+        const data = {
+            id: modalselectedRowData1.id,
+            sented: false,
+            recive: true,
+            user:'user2',
+            newSetelments: {
+                amount: setlementinput,
+                type: modalselectData1,
+                rowData: rowData,
+                description: modaldescriptioninput
+            },
+        }
+        // console.log('working',data)
+        dispatch(actionCreators.SentUpdateAdversary(data));
+        dispatch(actionCreators.RecivUpdateAdversary(data));
+        handleModalCancel2();
+        console.log('working or not', users)
+
+    }
+
+
+
+    const handlePendingButtonClick1 = (row) => {
+        // console.log(row)
+        setSelectedRowData1(row);
+        setIsModalVisible1(true);
+    };
+
+
+
     const buttonStyles = {
         backgroundColor: 'green',
         color: '#ffffff',
@@ -217,9 +269,9 @@ export default function Tab3() {
                                             return (
                                                 <TableCell key={column.id} align={column.align}>
                                                     {column.id === 'actions' ? (
-                                                        <Button style={buttonStyles} key={columnIndex} onClick={() => handlePendingButtonClick(row)}>
+                                                        <Button style={buttonStyles} key={columnIndex} onClick={() => (row.recive ? handlePendingButtonClick1(row) : handlePendingButtonClick(row))}>
                                                             {/* {t("Tab3_2.message")} */}
-                                                            pending
+                                                            {row.recive ? 'View' : 'Action'}
                                                         </Button>
                                                     ) : (
                                                         value
@@ -242,15 +294,16 @@ export default function Tab3() {
                     onPageChange={handleChangePage}
                     onRowsPerPageChange={handleChangeRowsPerPage}
                 />
-                <Modal
+                    <Modal
                     title="Pending Details"
                     visible={isModalVisible}
+                    style={{ maxHeight: '60vh', overflowY: 'auto' }}
                     onCancel={handleModalCancel}
                     footer={[
-                        <Button key="settlements" onClick={() => handleSettlementsClick()}>
+                        <Button key="settlements" onClick={() => handleSettlementsClick(selectedRowData)}>
                             Settlements
                         </Button>,
-                        <Button key="accepted" type="primary" onClick={() => checkhandle(selectedRowData)}>
+                        <Button key="accepted" type="primary" onClick={() => SentTosetelment(selectedRowData)}>
                             Accepted
                         </Button>,
                     ]}
@@ -272,18 +325,35 @@ export default function Tab3() {
                             ))}
                         </div>
                     )}
+                    {selectedRowData && selectedRowData.newSetelments && selectedRowData.newSetelments.map((item, index) => (
+                        <div key={index}>
+                            <h1>updated setelments {index}</h1>
+                            <p>amount: {item.amount}</p>
+                            <p>description: {item.description}</p>
+                            <p>rowData:</p>
+                            {item.rowData && item.rowData.map((item2, index2) => (
+                                <div key={index2}>
+                                    <p>Date: {item2.date}</p>
+                                    <p>On Date Amount: {item2.inputValue}</p>
+                                </div>
+                            ))}
+                        </div>
+                    ))}
                 </Modal>
                 <Modal
                     title="Settlements"
                     visible={isSecondModalVisible}
-                    onCancel={() => setIsSecondModalVisible(false)} // Close the second modal
+                    onCancel={handleModalCancel2} // Close the second modal
                     footer={[
-                        // Add buttons or actions for the second modal if needed
+                        <Button key="accepted" type="primary">
+                            Cancel
+                        </Button>,
                     ]}
                 >
                     {
 
                         <Form
+                            initialValues={{ selectOption: modalselectData1 }}
                             labelCol={{
                                 span: 24,
                             }}
@@ -298,20 +368,21 @@ export default function Tab3() {
                             <Row gutter={16}>
                                 <Col span={12}>
                                     <Form.Item label={t("TabFrom1_2.message")}>
-                                        <Input className="my-input" />
+                                        <Input className="my-input" value={setlementinput} onChange={(e) => setsetlementinput(e.target.value)} />
                                     </Form.Item>
                                 </Col>
                                 <Col span={12}>
                                     {/* Selector Dropdown */}
+
                                     <Form.Item label="Select Option" name="selectOption">
-                                        <Select>
-                                            <Option value="option1">Money</Option>
-                                            <Option value="option2">Favor</Option>
-                                            <Option value="option3">Service</Option>
-                                            <Option value="option4">Meal</Option>
-                                            <Option value="option5">Drink</Option>
-                                            <Option value="option6">Apology</Option>
-                                            <Option value="option7">Challenge</Option>
+                                        <Select onChange={selectedoptionupdate}>
+                                            <Option value="Money">Money</Option>
+                                            <Option value="Favor">Favor</Option>
+                                            <Option value="Service">Service</Option>
+                                            <Option value="Meal">Meal</Option>
+                                            <Option value="Drink">Drink</Option>
+                                            <Option value="Apology">Apology</Option>
+                                            <Option value="Challenge">Challenge</Option>
                                         </Select>
                                     </Form.Item>
                                 </Col>
@@ -319,15 +390,13 @@ export default function Tab3() {
 
                             <Row gutter={16}>
                                 <Col span={24}>
-                                    {/* Description Text Field */}
-                                    <TextField
-                                        id="filled-textarea"
-                                        label="Description"
-                                        placeholder=""
-                                        multiline
-                                        fullWidth
-                                        variant="filled"
-                                    />
+                                    <Form.Item label="Description">
+                                        <Input.TextArea
+                                            className="my-input"
+                                            autoSize={{ minRows: 2, maxRows: 3 }}
+                                            onChange={(e) => setmodaldescriptioninput(e.target.value)}
+                                        />
+                                    </Form.Item>
                                 </Col>
                             </Row>
 
@@ -348,7 +417,7 @@ export default function Tab3() {
                             <Row gutter={16}>
                                 <Col span={24}>
                                     <Form.Item>
-                                        <Button style={buttonStyles1}>
+                                        <Button style={buttonStyles1} onClick={modalsetelmentupdate}>
                                             {t("TabFrom1_13.message")}
                                         </Button>
                                         {/* + Add Debt Case */}
@@ -358,6 +427,46 @@ export default function Tab3() {
                         </Form>
                     }
                 </Modal>
+                <Modal
+    title="Pending Details"
+    visible={isModalVisible1}
+    onCancel={handleModalCancel1}
+    style={{ maxHeight: '60vh', overflowY: 'auto' }}
+    footer={null}
+>
+    {selectedRowData1 && (
+        <div>
+            <p>Adversary Name: {selectedRowData1.name}</p>
+            <p>amount: {selectedRowData1.amount}</p>
+            <p>check: {selectedRowData1.check}</p>
+            <p>email: {selectedRowData1.email}</p>
+            <p>fblink: {selectedRowData1.fblink}</p>
+            <p>PaymentOptions: {selectedRowData1.PaymentOptions}</p>
+            {selectedRowData1.rowData.map((item, index) => (
+                <div key={index}>
+                    <p>Date: {item.date}</p>
+                    <p>On Date Amount: {item.inputValue}</p>
+                </div>
+            ))}
+        </div>
+    )}
+    {selectedRowData1 && selectedRowData1.newSetelments && selectedRowData1.newSetelments.map((item1, index1) => (
+        <div key={index1}>
+            <h1>updated setelments {index1}</h1>
+            <p>amount: {item1.amount}</p>
+            <p>description: {item1.description}</p>
+            <p>rowData:</p>
+            {item1.rowData && item1.rowData.map((item2, index2) => (
+                <div key={index2}>
+                    <p>Date: {item2.date}</p>
+                    <p>On Date Amount: {item2.inputValue}</p>
+                </div>
+            ))}
+        </div>
+    ))}
+</Modal>
+
+
 
             </Paper>
         </div>

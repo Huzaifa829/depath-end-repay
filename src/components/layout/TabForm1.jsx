@@ -1,7 +1,7 @@
 
 // TabFrom1
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button, Form, Input, TreeSelect, Checkbox, Row, Col, DatePicker, Radio, Popconfirm } from 'antd';
 import '../../cssFile/TabFrom.css'
@@ -21,6 +21,7 @@ const TabFrom1 = () => {
     const [rowData, setRowData] = useState([]);
 
     const dispatch = useDispatch();
+    const [uniqueId, setUniqueId] = useState('');
     const open = useSelector((state) => state.amount);
     const users = useSelector((state) => state.UserData);
     const addAdversaries = useSelector((state) => state.Adversaries);
@@ -45,13 +46,29 @@ const TabFrom1 = () => {
             inputValie: 'asdjkasjkd'
         }
     ]
-
+    const generateUniqueId = () => {
+        // The following line generates a random string that can be used as a unique ID
+        const newUniqueId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          const r = Math.random() * 16 | 0;
+          const v = c === 'x' ? r : (r & 0x3 | 0x8);
+          return v.toString(16);
+        });
+    
+        setUniqueId(newUniqueId);
+      };
+      useEffect(() => {
+        const intervalId = setInterval(generateUniqueId, 1000); // Change 1000 to the desired interval in milliseconds
+    
+        // Cleanup the interval when the component unmounts
+        return () => clearInterval(intervalId);
+      }, []);
 
     const handleAddDebtCase = () => {
 
         console.log('Row Data:', rowData);
 
         const allData = {
+            id:uniqueId,
             name: selectedValue,
             amount: selectedAmount,
             email: selectedEmail,
@@ -59,7 +76,11 @@ const TabFrom1 = () => {
             check: selectedOption,
             type: 'money',
             PaymentOptions: "Full",
-            rowData: rowData
+            Status:'pendding',
+            rowData: rowData,
+            newSetelments:[],
+            sented:true,
+            recive:false
         }
         dispatch(actionCreators.addAdversaries(allData));
         dispatch(actionCreators.SentAdversaries(allData));

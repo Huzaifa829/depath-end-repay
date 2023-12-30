@@ -94,6 +94,24 @@ export const SentRemoveAdversary = (adversaryId) => {
         });
     };
 };
+export const RecivUpdateAdversary = (adversaryId) => {
+    console.log("reciv update adversary with ID:", adversaryId);
+    return (dispatch) => {
+        dispatch({
+            type: 'Reciv_UPDATE_ADVERSARY',
+            id: adversaryId,
+        });
+    };
+};
+export const SentUpdateAdversary = (adversaryId) => {
+    console.log("sent update adversary with ID:", adversaryId);
+    return (dispatch) => {
+        dispatch({
+            type: 'Sent_UPDATE_ADVERSARY',
+            id: adversaryId,
+        });
+    };
+};
 export const addSetteled = (Setteled)=>{
     console.log("working 1")
     return(dispatch)=>{
