@@ -8,11 +8,11 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
+// import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import GoogleTranslate from './LagnuageWegit/LangWeg';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -58,22 +58,22 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchAppBar() {
 
-  const amount = useSelector(state =>state.amount)
+  // const amount = useSelector(state =>state.amount)
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor: '#ebebeb' }}>
+      <AppBar position="static" sx={{ backgroundColor: 'white', boxShadow: 'none'  }}>
         <Toolbar>
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}
+            sx={{ flexGrow: 1}}
           >
              <Link to="/">
             <img className="navabr_logo" src={img1} alt="" />
             </Link>
           </Typography>
-          <Search style={{ backgroundColor: '#b9b8b8', color: 'black' }}>
+          {/* <Search style={{ backgroundColor: '#b9b8b8', color: 'black' }}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
@@ -81,7 +81,7 @@ export default function SearchAppBar() {
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
               />
-          </Search>
+          </Search> */}
           <div style={{marginLeft:'10px'}}>
           <GoogleTranslate/>
           </div>

@@ -2,7 +2,7 @@
 {
     width: 100%;
     height: 100px;
-    background-color: #ebebeb;
+    background-color: white;
     padding: 0px 0px 0px 0px;
 }
 .navabr_logo{
@@ -16,5 +16,11 @@
     .navabr_logo{
       
         margin-left: 0px;
+    }
+}
+@media screen and (max-width: 580px) {
+    .navabr_logo {
+        width: 172px;
+        height: 100%;
     }
 }

@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Navbar from '../components/Navbar';
 import '../cssFile/landingPage.css';
-import img1 from '../assets/images/new image 1 (2).png';
+import img1 from '../assets/images/dreamstime_xl_199119493.png';
 import Button from '@mui/material/Button';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import LoginIcon from '@mui/icons-material/Login';
@@ -18,6 +18,7 @@ import Footer from '../components/Footer_HA';
 import SignupPage from './SignUP';
 import HomepageTabFrom1 from '../components/layout/HomePagetab1';
 import { Link } from 'react-router-dom';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 
 const LoginPage = () => {
@@ -46,6 +47,9 @@ const LoginPage = () => {
         padding: '15px 30px',
         fontSize: '1rem',
         margin: '10px 10px 0px 0px',
+        backgroundColor:"white",
+        color:'black',
+        border:'1px solid black',
         '@media screen and (max-width: 780px)': {
             padding: '10px 15px',
             fontSize: '1rem',
@@ -88,13 +92,16 @@ const LoginPage = () => {
                     <img className='HA_main_bn_2_image' src={img1} alt="" />
                 </div>
             </div>}
-            {HATab1 === 'HA2' &&
-                <div style={{ width: '100%', display: "flex", justifyContent: 'center', paddingTop: '25px' }} >
-                    <div style={{ width: "90%" }} id="google_translate_element">
-                        <HomepageTabFrom1 openLoginForm={openLoginForm} />
+            {HATab1 === 'HA2' && (
+                <div style={{ width: '100%', display: "flex", flexDirection: 'column', alignItems: 'flex-start', padding: '20px 80px 50px 80px' }}>
+                        <ArrowBackIcon onClick={() => TabChange('HA1')} style={{ fontSize: '2rem', cursor: 'pointer' }} />
+                    <div style={{ width: "90%", display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <div id="google_translate_element" style={{ width: "90%" }}>
+                            <HomepageTabFrom1 openLoginForm={openLoginForm} />
+                        </div>
                     </div>
                 </div>
-            }
+            )}
 
             <Dialog open={isLoginFormOpen} onClose={closeLoginForm} aria-labelledby="login-form-dialog">
 

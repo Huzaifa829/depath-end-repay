@@ -35,3 +35,8 @@
 span.ant-select-tree-node-content-wrapper.ant-select-tree-node-content-wrapper-normal.ant-select-tree-node-selected{
   background-color: rgb(192, 192, 192)  !important;
 }
+@media screen and (max-width: 600px) {
+.HA_input_buton_MAIN{
+  margin-top: 10px !important;
+}
+}

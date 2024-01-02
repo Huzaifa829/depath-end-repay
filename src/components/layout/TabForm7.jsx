@@ -31,7 +31,7 @@ const TabFrom7 = () => {
 
 
 
-    
+
     // const [selectedAmount, setSelectedAmount] = useState('');
     // const treeData = users.map((row, index) => {
     //     if (row.type === "Challenge") {
@@ -64,14 +64,14 @@ const TabFrom7 = () => {
         });
 
     };
-    
-        const handleOpen = () => {
-            dispatch(actionCreators.openModal(true));
-            console.log(open)
-        };
-        const handleClose = () => {
-            dispatch(actionCreators.closeModal());
-        };
+
+    const handleOpen = () => {
+        dispatch(actionCreators.openModal(true));
+        console.log(open)
+    };
+    const handleClose = () => {
+        dispatch(actionCreators.closeModal());
+    };
 
 
     const buttonStyles = {
@@ -79,7 +79,7 @@ const TabFrom7 = () => {
         color: '#ffffff',
         borderColor: 'black',
         transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',
-      };
+    };
     const [componentSize, setComponentSize] = useState('default');
 
     const onFormLayoutChange = ({ size }) => {
@@ -106,78 +106,84 @@ const TabFrom7 = () => {
             size={componentSize}
             style={{
                 maxWidth: 1000,
+                margin: '0 auto', // Center the form on larger screens
             }}
         >
-            <Row gutter={16}>
-                <Col span={12}>
-                    <Form.Item label={t("TabFrom7_1.message")}> {/*Challenge Amount:*/}
-                        <Input className="my-input"/>
+            <Row gutter={[16, 16]}>
+                <Col xs={24} sm={12} md={12} lg={12} xl={12}>
+                    <Form.Item label={t("TabFrom7_1.message")}>
+                        <Input className="my-input" />
                     </Form.Item>
                 </Col>
-                <Col span={12}>
-                    <Form.Item label={t("TabFrom7_2.message")}> {/*Select Adversary Name:*/}
-                        <Row gutter={8}>
-                            <Col span={16}>
-                            <TreeSelect
-                                        readOnly
-                                        style={{ width: '100%' }}
-                                        dropdownStyle={{ maxHeight: 400, overflow: 'auto' }}
-                                        treeData={treeData}
-                                        placeholder="Select a value"
-                                        onChange={handleTreeSelectChange}
-                                    />
+                <Col xs={24} sm={12} md={12} lg={12} xl={12}>
+                    <Form.Item label={t("TabFrom7_2.message")}>
+                        <Row gutter={8} justify="space-between" align="middle">
+                            <Col xs={24} sm={16} md={16} lg={16} xl={16} style={{ marginTop: '0px' }}>
+                                <TreeSelect
+                                    readOnly
+                                    style={{ width: '100%' }}
+                                    dropdownStyle={{ maxHeight: 500, overflow: 'auto' }}
+                                    treeData={treeData}
+                                    placeholder="Select a value"
+                                    onChange={handleTreeSelectChange}
+                                />
                             </Col>
-                            <Col span={6}>
-                            <Button onClick={handleOpen} style={buttonStyles}>{t("TabFrom1_4.message")}</Button> {/*Add New Adversary*/}
+                            <Col className='HA_input_buton_MAIN' xs={24} sm={8} md={8} lg={8} xl={8} style={{ marginTop: '0px' }}>
+                                <Button onClick={handleOpen} style={buttonStyles} block>
+                                    {t("TabFrom1_4.message")}
+                                </Button>
                             </Col>
                         </Row>
                     </Form.Item>
                 </Col>
             </Row>
-            <Row gutter={16}>
-                <Col span={12}>
-                    <Form.Item label={t("TabFrom7_4.message")}> {/*Adversary Email:*/}
-                        <Input className="my-input" readOnly value={selectedEmail}  />
+            <Row gutter={[16, 16]}>
+                <Col xs={24} sm={12} md={12} lg={12} xl={12}>
+                    <Form.Item label={t("TabFrom7_4.message")}>
+                        <Input className="my-input" readOnly value={selectedEmail} />
                     </Form.Item>
                 </Col>
-                <Col span={12}>
-                    <Form.Item label={t("TabFrom7_5.message")}> {/*Adversary Facebook Id or Facebook Link:*/}
-                        <Input className="my-input" readOnly  value={selectedFacebok}/>
+                <Col xs={24} sm={12} md={12} lg={12} xl={12}>
+                    <Form.Item label={t("TabFrom7_5.message")}>
+                        <Input className="my-input" readOnly value={selectedFacebok} />
                     </Form.Item>
                 </Col>
             </Row>
-            <Row gutter={16}>
-            <Col span={12}>
-                <Form.Item label={t("TabFrom7_6.message")}> {/*DatePicker*/}
-                    <DatePicker className="my-input" />
-                </Form.Item>
-            </Col>
-            <Col span={12}>
-                    {/* New Col for Description Input */}
-                    <Form.Item label={t("TabFrom7_7.message")}> {/*Description*/}
+            <Row gutter={[16, 16]}>
+                <Col xs={24} sm={12} md={12} lg={12} xl={12}>
+                    <Form.Item label={t("TabFrom7_6.message")}>
+                        <DatePicker className="my-input" />
+                    </Form.Item>
+                </Col>
+                <Col xs={24} sm={12} md={12} lg={12} xl={12}>
+                    <Form.Item label={t("TabFrom7_7.message")}>
                         <Input.TextArea rows={4} className="my-input" />
                     </Form.Item>
                 </Col>
             </Row>
-          
             <Form.Item>
-                <Button style={buttonStyles}>{t("TabFrom7_8.message")}</Button> {/*+ Add a Installment*/}
+                <Button style={buttonStyles} block>
+                    {t("TabFrom7_8.message")}
+                </Button>
             </Form.Item>
             <Form.Item>
-                <Checkbox onChange={onChange}>{t("TabFrom7_9.message")}</Checkbox> {/*I accept the terms of use*/}
+                <Checkbox onChange={onChange}>{t("TabFrom7_9.message")}</Checkbox>
             </Form.Item>
-                <Form.Item label={t("TabFrom7_10.message")}> {/*Receive or Pay:*/}
-                        <Col span={3}>
-                            <Radio.Group onChange={onChange} value={undefined}>
-                                <Radio value="receive">{t("TabFrom7_11.message")}</Radio> {/*Receive*/}
-                                <Radio value="pay">{t("TabFrom7_12.message")}</Radio> {/*Pay*/}
-                            </Radio.Group>
-                        </Col>
-                </Form.Item>
-                <Form.Item>
-                <Button style={buttonStyles}>{t("TabFrom7_13.message")}</Button> {/*+ Add Debt Case*/}
+            <Form.Item label={t("TabFrom7_10.message")}>
+                <Col span={24}>
+                    <Radio.Group onChange={onChange} value={undefined}>
+                        <Radio value="receive">{t("TabFrom7_11.message")}</Radio>
+                        <Radio value="pay">{t("TabFrom7_12.message")}</Radio>
+                    </Radio.Group>
+                </Col>
+            </Form.Item>
+            <Form.Item>
+                <Button style={buttonStyles} block>
+                    {t("TabFrom7_13.message")}
+                </Button>
             </Form.Item>
         </Form>
+
     );
 };
 

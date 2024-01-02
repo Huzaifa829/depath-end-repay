@@ -1,55 +1,79 @@
-.HA_tab1_main{
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    padding: 50px 20px 20px 20px;
-    /* background-color: yellow; */
-}
-.HA_tab1_heading{
-    padding: 0px;
-    margin: 0px;
-    font-size: 2em;
-    font-weight: 900    ;
-}
-.HA_tab1_heading_text{
-    font-size: 1em;
-    font-weight: 500;
-    margin: 0;
-    line-height: 2em;
-}
-.HA_tab1_btn_main{
-    width: 100%;
-    padding: 20px;
-    /* background-color: chartreuse; */
-}
-.HA_tab1_form_main{
-    width: 100%;
-    padding: 20px;
-    /* background-color: chocolate; */
+.HA_tab1_main {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 50px 0px 0px 20px;
+  /* background-color: yellow; */
 }
 
-  
+.HA_tab1_heading {
+  padding: 0px;
+  margin: 0px;
+  font-size: 2em;
+  font-weight: 900;
+}
+
+.HA_tab1_heading_text {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0;
+  line-height: 2em;
+}
+
+.HA_tab1_btn_main {
+  width: 100%;
+  padding: 20px 0px 0px 20px;
+  /* background-color: chartreuse; */
+}
+
+.HA_tab1_form_main {
+  width: 100%;
+  padding: 20px 0px 0px 20px;
+
+  /* background-color: chocolate; */
+}
+
+
 /* Add this to your CSS file (e.g., Tab1.css) */
 
 .slide-enter {
-    transform: translateX(0);
+  transform: translateX(0);
+}
+
+.slide-enter-active {
+  transform: translateX(100%);
+  transition: transform 500ms ease-in-out;
+}
+
+.slide-exit {
+  transform: translateX(100%);
+}
+
+.slide-exit-active {
+  transform: translateX(0%);
+  transition: transform 500ms ease-in-out;
+}
+
+@media screen and (max-width: 580px) {
+  .HA_tab1_main {
+    padding: 50px 0px 0px 0px !important;
   }
-  
-  .slide-enter-active {
-    transform: translateX(100%);
-    transition: transform 500ms ease-in-out;
+
+  .HA_tab1_btn_main {
+   padding-left: 0px;
+
+    }
+
+  .HA_tab1_form_main {
+    padding-left: 0px;
+
+
   }
-  
-  .slide-exit {
-    transform: translateX(100%);
+  .ant-picker.ant-picker-default.css-dev-only-do-not-override-p7e5j5.my-input {
+ 
+    width: 150px;
   }
-  
-  .slide-exit-active {
-    transform: translateX(0%);
-    transition: transform 500ms ease-in-out;
-  }
-  
-  
+}

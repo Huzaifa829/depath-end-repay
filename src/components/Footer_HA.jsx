@@ -35,7 +35,7 @@ const Footer = () => {
           <InstagramIcon/>
         </a></li>
     </ul>
-    <p>&copy;{t("footer4.message")}</p> {/*2023  | All Rights Reserved*/}
+    <p>&copy;2023  | All Rights Reserved</p> {/*2023  | All Rights Reserved*/}
     </div>
     
   </div>

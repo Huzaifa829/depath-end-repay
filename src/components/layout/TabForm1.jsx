@@ -48,52 +48,66 @@ const TabFrom1 = () => {
     ]
     const generateUniqueId = () => {
         // The following line generates a random string that can be used as a unique ID
-        const newUniqueId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-          const r = Math.random() * 16 | 0;
-          const v = c === 'x' ? r : (r & 0x3 | 0x8);
-          return v.toString(16);
+        const newUniqueId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            const r = Math.random() * 16 | 0;
+            const v = c === 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
         });
-    
+
         setUniqueId(newUniqueId);
-      };
-      useEffect(() => {
+    };
+    useEffect(() => {
         const intervalId = setInterval(generateUniqueId, 1000); // Change 1000 to the desired interval in milliseconds
-    
+
         // Cleanup the interval when the component unmounts
         return () => clearInterval(intervalId);
-      }, []);
+    }, []);
 
     const handleAddDebtCase = () => {
+        let abc = false
+        if (selectedValue === selectedValue) {
+            const allData = {
+                id: uniqueId,
+                name: selectedValue,
+                amount: selectedAmount,
+                email: selectedEmail,
+                fblink: selectedFacebok,
+                check: selectedOption,
+                type: 'money',
+                PaymentOptions: "Full",
+                Status: 'pendding',
+                rowData: rowData,
+                newSetelments: [],
+                sented: true,
+                recive: false
+            }
+            dispatch(actionCreators.addAdversaries(allData));
+            dispatch(actionCreators.SentAdversaries(allData));
+            dispatch(actionCreators.RecivedAdversaries(allData));
+            console.log("adverseris_data", addAdversaries)
 
-        console.log('Row Data:', rowData);
-
-        const allData = {
-            id:uniqueId,
-            name: selectedValue,
-            amount: selectedAmount,
-            email: selectedEmail,
-            fblink: selectedFacebok,
-            check: selectedOption,
-            type: 'money',
-            PaymentOptions: "Full",
-            Status:'pendding',
-            rowData: rowData,
-            newSetelments:[],
-            sented:true,
-            recive:false
+            abc = true
         }
-        dispatch(actionCreators.addAdversaries(allData));
-        dispatch(actionCreators.SentAdversaries(allData));
-        dispatch(actionCreators.RecivedAdversaries(allData));
-        console.log("adverseris_data", addAdversaries)
 
-        Swal.fire({
-            title: 'Success!',
-            text: 'The data has been added successfully.',
-            icon: 'success',
-            confirmButtonText: 'OK',
-        });
 
+
+        if (abc === true) {
+
+            Swal.fire({
+                title: 'Success!',
+                text: 'The data has been added successfully.',
+                icon: 'success',
+                confirmButtonText: 'OK',
+            });
+            setSelectedAmount('');
+            setSelectedValue(null);
+            setSelectedEmail('');
+            setSelectedFacebok('');
+            setSelectedOption(undefined);
+            setAdditionalRows(1);
+            setShowAmountField(false);
+            setRowData([]);
+        }
 
 
 
@@ -220,15 +234,15 @@ const TabFrom1 = () => {
         color: '#ffffff',
         borderColor: 'black',
         transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',
-        
+
     };
-    const buttonStyles1= {
+    const buttonStyles1 = {
         backgroundColor: 'black',
         color: '#ffffff',
-      
+        fontSize:'1em',
         borderColor: 'black',
         transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',
-     // Add this line for width
+        // Add this line for width
     };
     const [componentSize, setComponentSize] = useState('default');
 
@@ -248,7 +262,6 @@ const TabFrom1 = () => {
 
     return (
         <>
-
             <Form
                 labelCol={{
                     span: 24, // Set span to 24 to have labels on top
@@ -264,22 +277,21 @@ const TabFrom1 = () => {
                 size={componentSize}
                 style={{
                     maxWidth: 1000,
+                    margin: '0', // Center the form on larger screens
                 }}
             >
-                <Row gutter={16}>
-                    <Col span={12}>
-                        <Form.Item label={t("TabFrom1_2.message")}> {/*Amount*/}
+                <Row gutter={[16, 16]}>
+                    <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+                        <Form.Item label={t("TabFrom1_2.message")}>
                             <Input className="my-input" onChange={(e) => {
-                                const text = e.target.value;
-                                setSelectedAmount(text);
+                                setSelectedAmount(e.target.value);
                             }} />
                         </Form.Item>
                     </Col>
-                    <Col span={12}>
-                        <Form.Item label={t("TabFrom1_3.message")}> {/*Select Adversary Name:*/}
-                            <Row gutter={8}>
-                                <Col span={16}>
-
+                    <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+                        <Form.Item label={t("TabFrom1_3.message")}>
+                            <Row gutter={8} justify="space-between" align="middle">
+                                <Col xs={24} sm={16} md={16} lg={16} xl={16} style={{ marginTop: '0px' }}>
                                     <TreeSelect
                                         readOnly
                                         style={{ width: '100%' }}
@@ -287,24 +299,25 @@ const TabFrom1 = () => {
                                         treeData={treeData}
                                         placeholder="Select a value"
                                         onChange={handleTreeSelectChange}
-
                                     />
                                 </Col>
-                                <Col span={6}>
-                                    <Button onClick={handleOpen} style={buttonStyles1}>{t("TabFrom1_4.message")}</Button> {/*Add New Adversary*/}
+                                <Col className='HA_input_buton_MAIN' xs={24} sm={8} md={8} lg={8} xl={8} style={{ marginTop: '0px' }}>
+                                    <Button onClick={handleOpen} style={buttonStyles1} block>
+                                        {t("TabFrom1_4.message")}
+                                    </Button>
                                 </Col>
                             </Row>
                         </Form.Item>
                     </Col>
                 </Row>
-                <Row gutter={16}>
-                    <Col span={12}>
-                        <Form.Item label={t("TabFrom1_5.message")}> {/*Adversary Email:*/}
+                <Row gutter={[16, 16]}>
+                    <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+                        <Form.Item label={t("TabFrom1_5.message")}>
                             <Input className="my-input" readOnly value={selectedEmail} />
                         </Form.Item>
                     </Col>
-                    <Col span={12}>
-                        <Form.Item label={t("TabFrom1_6.message")}> {/*Adversary Facebook Id or Facebook Link:*/}
+                    <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+                        <Form.Item label={t("TabFrom1_6.message")}>
                             <Input className="my-input" readOnly value={selectedFacebok} />
                         </Form.Item>
                     </Col>

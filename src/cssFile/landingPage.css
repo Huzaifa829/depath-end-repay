@@ -10,7 +10,7 @@
       width: 100%;
       flex-wrap: wrap-reverse;
       height: auto;
-      padding: 40px 0px;
+      padding: 40px 0px 0px 0px;
       /* background-color: aqua; */
   }
 
@@ -42,8 +42,8 @@
       /* background-color: aqua; */
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 15px 15px 40px -10px gray;
-      border: 1px solid black;
+      /* box-shadow: 15px 15px 40px -10px gray;
+      border: 1px solid black; */
   }
 
   .HA_main_bn_1_text_child_heading {

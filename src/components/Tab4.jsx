@@ -269,7 +269,7 @@ console.log(users)
                                             return (
                                                 <TableCell key={column.id} align={column.align}>
                                                     {column.id === 'actions' ? (
-                                                        <Button style={buttonStyles} key={columnIndex} onClick={() => (row.sented ? handlePendingButtonClick1(row) : handlePendingButtonClick(row))}>
+                                                        <Button style={row.sented ?buttonStyles1:buttonStyles} key={columnIndex} onClick={() => (row.sented ? handlePendingButtonClick1(row) : handlePendingButtonClick(row))}>
                                                             {/* {t("Tab3_2.message")} */}
                                                             {row.sented ? 'View' : 'Action'}
                                                         </Button>
@@ -297,7 +297,7 @@ console.log(users)
                 <Modal
                     title="Pending Details"
                     visible={isModalVisible}
-                    style={{ maxHeight: '60vh', overflowY: 'auto' }}
+               
                     onCancel={handleModalCancel}
                     footer={[
                         <Button key="settlements" onClick={() => handleSettlementsClick(selectedRowData)}>
@@ -308,6 +308,7 @@ console.log(users)
                         </Button>,
                     ]}
                 >
+                      <div  style={{ maxHeight: '60vh', overflowY: 'auto' }}>
                     {selectedRowData && (
                         // Render the details of the selected row inside the modal content
                         <div>
@@ -327,7 +328,7 @@ console.log(users)
                     )}
                     {selectedRowData && selectedRowData.newSetelments && selectedRowData.newSetelments.map((item, index) => (
                         <div key={index}>
-                            <h1>updated setelments {index}</h1>
+                             <h1>Last updated setelments {index+1}</h1>
                             <p>amount: {item.amount}</p>
                             <p>description: {item.description}</p>
                             <p>rowData:</p>
@@ -339,14 +340,18 @@ console.log(users)
                             ))}
                         </div>
                     ))}
+                    </div>
                 </Modal>
                 <Modal
                     title="Settlements"
                     visible={isSecondModalVisible}
                     onCancel={handleModalCancel2} // Close the second modal
                     footer={[
-                        <Button key="accepted" type="primary">
-                            Cancel
+                        <Button key="accepted" type="primary" onClick={handleModalCancel2}>
+                        Cancel
+                    </Button>,
+                        <Button style={buttonStyles1} onClick={modalsetelmentupdate}>
+                            {t("TabFrom1_13.message")}
                         </Button>,
                     ]}
                 >
@@ -414,16 +419,7 @@ console.log(users)
                                 </Col>
                             </Row>
 
-                            <Row gutter={16}>
-                                <Col span={24}>
-                                    <Form.Item>
-                                        <Button style={buttonStyles1} onClick={modalsetelmentupdate}>
-                                            {t("TabFrom1_13.message")}
-                                        </Button>
-                                        {/* + Add Debt Case */}
-                                    </Form.Item>
-                                </Col>
-                            </Row>
+                        
                         </Form>
                     }
                 </Modal>
@@ -431,11 +427,13 @@ console.log(users)
                     title="Pending Details"
                     visible={isModalVisible1}
                     onCancel={handleModalCancel1}
-                    style={{ maxHeight: '60vh', overflowY: 'auto' }}
+                  
                     footer={null}
                 >
+                      <div  style={{ maxHeight: '60vh', overflowY: 'auto' }}>
                     {selectedRowData1 && (
                         <div>
+
                             <p>Adversary Name: {selectedRowData1.name}</p>
                             <p>amount: {selectedRowData1.amount}</p>
                             <p>check: {selectedRowData1.check}</p>
@@ -452,7 +450,7 @@ console.log(users)
                     )}
                     {selectedRowData1 && selectedRowData1.newSetelments && selectedRowData1.newSetelments.map((item1, index1) => (
                         <div key={index1}>
-                            <h1>updated setelments {index1}</h1>
+                            <h1>Last updated setelments {index1+1}</h1>
                             <p>amount: {item1.amount}</p>
                             <p>description: {item1.description}</p>
                             <p>rowData:</p>
@@ -464,6 +462,7 @@ console.log(users)
                             ))}
                         </div>
                     ))}
+                    </div>
                 </Modal>
 
 

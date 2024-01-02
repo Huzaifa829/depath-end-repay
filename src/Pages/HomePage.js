@@ -29,6 +29,7 @@ import PopupForm from '../components/PopupForm/PopupForm1';
 import { useDispatch, useSelector } from 'react-redux';
 // import { bindActionCreators } from 'redux';
 import {actionCreators} from '../state/index'
+import { Block } from '@mui/icons-material';
 
 
 
@@ -60,6 +61,20 @@ const HomePage = () => {
       const handleClose = () => {
         dispatch(actionCreators.closeModal());
       };
+      const handleIconClick = () => {
+        // Your logic or actions to be executed when the icon is clicked
+        // const elements = document.querySelectorAll('.HA_side_btn_main'); // Select all elements with the class HA_side_btn_main
+        // const elements1 = document.querySelectorAll('.HA_side_bar_btn'); // Select all elements with the class HA_side_btn_main
+        // let huz1 = elements1[0].children[1]
+        //  huz1.style.display = (huz1.style.display === 'none' || huz1.style.display === '') ? 'block' : 'none';
+        // elements.forEach((element) => {
+        //  let huz = element.children[1]
+        //  console.log("Icon clicked!",huz1);
+
+        //  huz.style.display = (huz.style.display === 'none' || huz.style.display === '') ? 'block' : 'none';
+        // });
+      
+      };
 
   return (
     <>
@@ -68,8 +83,8 @@ const HomePage = () => {
       <div className='HA_main'>
         <div className='HA_main_part1'>
           <div className='HA_side_bar_btn'>
-            <MenuIcon color='white' />
-            <span className='HA_side_bar_text'>{t("HA_text.message")}</span>
+          <MenuIcon color='white' onClick={handleIconClick} />
+            <span style={{display:"Block",width:"200px"}} className='HA_side_bar_text'>{t("HA_text.message")}</span>
           </div>
           {renderSidebtn('Tab1', t("HA_text2.message"), <FolderIcon />)}{/*Add Debt Cases*/}
 
