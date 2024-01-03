@@ -150,12 +150,12 @@ useEffect(()=>{
                 }}
             >
                 <Row gutter={16}>
-                    <Col span={12}>
+                <Col xs={24} sm={24} md={12} lg={12} xl={12}>
                         <Form.Item label={t("Tab9_5.message")}> {/*Amount (REPAYcoins):*/}
                             <Input className="my-input" />
                         </Form.Item>
                     </Col>
-                    <Col span={12}>
+                    <Col xs={24} sm={24} md={12} lg={12} xl={12}>
                         <Form.Item label={t("Tab9_6.message")}> {/*Transaction Type:*/}
                             <Select placeholder={t("Tab9_7.message")}> {/*Full Payment*/}
                                 <Select.Option value="demo">{t("Tab9_8.message")}</Select.Option> {/*Full Payment*/}

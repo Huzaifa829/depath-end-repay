@@ -14,4 +14,15 @@ ul.ReactFlagsSelect-module_selectOptions__3LNBJ.ReactFlagsSelect-module_fullWidt
     height: 14px;
     margin-left: 8px; 
   }
-  
+  .custom-select-container img.HA_image_sizing {
+    width: 29px  !important;
+}
+
+.custom-select-container .css-bba0h6-control {
+    height: 40px !important;
+}
+  @media screen and (max-width: 768px) {
+    img.HA_image_sizing {
+      width: 33px  !important;
+  }
+  }

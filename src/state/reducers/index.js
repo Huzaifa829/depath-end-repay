@@ -5,6 +5,7 @@ import Add_Adversaries from "./addAdversaries.js";
 import Add_Setteled from "./addSetteled.js";
 import Reciv_Adversaries from "./RecivedDataAdv.js";
 import Sent_Setteled from "./SentDataAdv.js";
+import SideBAr from "./SideBar.js"
 
 
 const Reducers = combineReducers({
@@ -14,6 +15,7 @@ const Reducers = combineReducers({
     SentDataAdversaries:Sent_Setteled,
     RecivedDataAdversaries:Reciv_Adversaries,
     Setteled:Add_Setteled,
+    SideBAr:SideBAr
 })
 
 export default Reducers

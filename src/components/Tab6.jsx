@@ -24,7 +24,7 @@ const columns = [
     { id: 'check', label: 'check', minWidth: 50, align: 'left' },
     { id: 'PaymentOptions', label: 'Payment Options', minWidth: 50, align: 'left' },
 
-    
+
     { id: 'amount', label: 'Total Amount', minWidth: 30, align: 'left' },
     { id: 'progress', label: 'Progress', minWidth: 100, align: 'center' },
     {
@@ -35,8 +35,8 @@ const columns = [
     },
 ];
 
-function createData(index, name, type, check, PaymentOptions, amount,progress) {
-    return { index, name, type, check, PaymentOptions, amount,progress };
+function createData(index, name, type, check, PaymentOptions, amount, progress) {
+    return { index, name, type, check, PaymentOptions, amount, progress };
 }
 const rows = [
     {
@@ -94,11 +94,28 @@ export default function Tab6() {
         setPage(0);
     };
     const [t, i18n] = useTranslation("global")
+    const popdetailFont={
+        fontFamily:' Montserrat, sans-serif',
+        fontWeight:'800'
+    }
+    const popdetailFont1={
+        fontFamily:' Montserrat, sans-serif',
+        fontWeight:'400'
+    }
+// popup shown detail
+
+const InfoBlock = ({ label, value }) => (
+    <div style={{ display: 'flex', justifyContent: 'space-between',marginBottom:'10px', }}>
+        <span style={popdetailFont}>{label}:</span>
+        <span style={popdetailFont1}>{value}</span>
+    </div>
+);
+// popup shown detail
     return (
         <div className='HA_table_main_add'>
             <div className='HA_table_main_add_child'>
                 <p className='HA_table_main_add_child_text'>{t("Tab6_1.message")}</p>{/*Setteled Debt Cases*/}
-               
+
             </div>
             <Paper sx={{ width: '100%', overflow: 'hidden' }}>
                 <TableContainer sx={{ maxHeight: 440 }}>
@@ -134,9 +151,9 @@ export default function Tab6() {
                                                     ) : column.id === 'progress' ? (
                                                         <ProgresBarRound percentage={60} />
                                                     )
-                                                     :(
-                                                        value
-                                                    )}
+                                                        : (
+                                                            value
+                                                        )}
                                                 </TableCell>
                                             );
                                         })}
@@ -156,26 +173,49 @@ export default function Tab6() {
                     onRowsPerPageChange={handleChangeRowsPerPage}
                 />
                 <Modal
-                    title="Pending Details"
+                    title="Details"
                     visible={isModalVisible}
                     onCancel={handleModalCancel}
                     footer={[
-                 
+                        <Button key="accepted" type="primary" onClick={handleModalCancel}>
+                        Cancel
+                    </Button>,
                     ]}
                 >
                     {selectedRowData && (
                         // Render the details of the selected row inside the modal content
-                        <div>
-                            <p>Adversary Name: {selectedRowData.name}</p>
-                            <p>amount: {selectedRowData.amount}</p>
-                            <p>check: {selectedRowData.check}</p>
-                            <p>email: {selectedRowData.email}</p>
-                            <p>fblink: {selectedRowData.fblink}</p>
-                            <p>PaymentOptions: {selectedRowData.PaymentOptions}</p>
-                            {selectedRowData.rowData.map((item, index) => (
-                                <div key={index}>
-                                    <p>Date: {item.date}</p>
-                                    <p>On Date Amount: {item.inputValue}</p>
+                        <div className='HA_modal_scroll_hide' style={{ maxHeight: '60vh', overflowY: 'auto' }}>
+                            {selectedRowData && (
+                                <div className='HA_modal_scroll_hide1'>
+                                    <h1 style={{ textAlign: 'center', fontFamily: 'Montserrat, sans-serif', }}>Debt Cases</h1>
+                                    <InfoBlock label="Adversary Name" value={selectedRowData.name} />
+                                    <InfoBlock label="Amount" value={selectedRowData.amount} />
+                                    <InfoBlock label="Check" value={selectedRowData.check} />
+                                    <InfoBlock label="Email" value={selectedRowData.email} />
+                                    <InfoBlock label="Fblink" value={selectedRowData.fblink} />
+                                    <InfoBlock label="PaymentOptions" value={selectedRowData.PaymentOptions} />
+
+                                    {selectedRowData.rowData.map((item, index) => (
+                                        <div key={index}>
+                                            <InfoBlock label="Date" value={item.date} />
+                                            <InfoBlock label="On Date Amount" value={item.inputValue} />
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                            {selectedRowData && selectedRowData.newSetelments && selectedRowData.newSetelments.map((item1, index1) => (
+                                <div key={index1} className='HA_modal_scroll_hide1'>
+                                    <h1 style={{ textAlign: 'center', fontFamily: 'Montserrat, sans-serif', }}>setelment {index1 + 1}</h1>
+                                    <InfoBlock label="amount" value={item1.amount} />
+                                    <InfoBlock label="description" value={item1.description} />
+
+                                    {item1.rowData && item1.rowData.map((item2, index2) => (
+                                        <div key={index2}>
+                                            <InfoBlock label="Date" value={item2.date} />
+                                            <InfoBlock label="On Date Amount" value={item2.inputValue} />
+
+                                        </div>
+                                    ))}
                                 </div>
                             ))}
                         </div>

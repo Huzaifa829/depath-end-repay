@@ -56,15 +56,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 
 
-export default function SearchAppBar() {
+export default function Navbar2() {
 
   // const amount = useSelector(state =>state.amount)
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ backgroundColor: '#faf9f9', boxShadow: 'none'  }}>
-        <Toolbar className='HA_mainnavbar_seting_main'>
+        <Toolbar>
           <Typography
-          className='HA_mainnavbar_seting'
             variant="h6"
             noWrap
             component="div"

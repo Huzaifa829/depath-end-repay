@@ -18,7 +18,7 @@
 .footer {
   /* position: relative; */
   width: 96%;
-  background: white;
+  background: #faf9f9;
   
   /* min-height: 100px; */
   padding: 0px 2%;
@@ -89,4 +89,9 @@
 .HA_footer_div_ul>li{
   color: black;
   font-size: 18px;
+}
+@media screen and (max-width: 425px) {
+  .footer {
+    flex-direction: column;
+  }
 }

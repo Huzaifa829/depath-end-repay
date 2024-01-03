@@ -24,7 +24,7 @@
     width: auto;
     display: flex;
     flex-direction: column;
-    height: 94%;
+    height: 90%;
     padding: 20px 20px;
     background-color: #ebebeb;
     overflow-y: scroll;
@@ -35,11 +35,11 @@
 }
 .HA_main_part2{
     background-color:white;
-    border-radius: 15px;
+    border-radius: 0px;
     width:100%;
     height: 97%;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
     overflow-y: scroll;
     /* background-color: brown; */
 
@@ -54,18 +54,36 @@
 .HA_side_bar_btn_check:hover{
     /* background-color: aqua; */
 }
-@media screen and (max-width: 580px) {
-    .HA_side_btn_text{
+.HA_dawer_main_HA{
+display: none;
+
+/* background-color: white; */
+z-index: 1;
+}
+@media screen and (max-width: 768px) {
+    .HA_dawer_main_HA{
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 14px;
+        }
+        .HA_main_part1{
+            display: none;
+        }
+    /* .HA_side_btn_text{
         display: none !important;
     }
     .HA_side_bar_text{
         display: none !important;
-    }
-    .HA_side_bar_btn{
+    } */
+    /* .HA_side_bar_btn{
         padding: 10px !important;
     }
     .HA_side_btn_main {
         padding: 10px !important;
 
     }
+    .HA_main_part1{
+        padding: 20px 0px;
+    } */
   }

@@ -1,3 +1,6 @@
+/* styles.css or App.css or any global style file */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,600&display=swap');
+
 .HA_table_main_add{
     padding: 20px;
 }
@@ -16,3 +19,36 @@
     font-size: 2vmax;
     margin: 0px;
 }
+.HA_modal_scroll_hide1{
+    border: 1px solid gray;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgb(235, 235, 235);
+}
+.HA_modal_scroll_hide::-webkit-scrollbar{
+    display: none; 
+}
+@media screen and (max-width: 600px) {
+    .HA_table_main_add{
+        padding: 0px;
+    }
+    .HA_table_main_add_child{
+        padding-top: 50px;
+    }
+    }
+@media screen and (max-width: 400px) {
+    .HA_table_main_add_child{
+        width: 100%;
+        display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+    
+    }
+    .HA_table_main_add_child>p{
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+    .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation5.css-qh7kl5-MuiPaper-root{
+        width: 230px !important;
+    }
+    }

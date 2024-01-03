@@ -5,7 +5,7 @@ function Sidebtn(props) {
     const { icon, text, onClick, selected } = props;
 
     const buttonStyle = {
-        backgroundColor: selected ? 'gray' : 'initial', // Change 'blue' to the desired color
+        backgroundColor: selected ? '#c9c9c9' : 'initial', // Change 'blue' to the desired color
     
     };
 

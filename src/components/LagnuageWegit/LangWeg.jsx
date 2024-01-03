@@ -13,52 +13,20 @@ import mb from '../../assets/images/icons8-myanmar-48.png';
 const ImageDropdown = () => {
   const navigate = useNavigate();
   const [t, i18n] = useTranslation('global');
-  const options = [
-    { value: 'en', label: <img src={en} alt="myanmar" /> },
-    { value: 'cb', label: <img src={cb} alt="cambodia" /> },
-    { value: 'ii', label: <img src={ii} alt="Indonesia" /> },
-    { value: 'vv', label: <img src={vv} alt="vietnam" /> },
-    { value: 'll', label: <img src={ll} alt="laos" /> },
-    { value: 'mm', label: <img src={mm} alt="malaysia" /> },
-    { value: 'mb', label: <img src={mb} alt="myanmar" /> },
-  ];
-
-  const customStyles = {
-    control: (base) => ({
-      ...base,
-      height: '48px',
-      zIndex: 4,
-    }),
-    menu: (base) => ({
-      ...base,
-      zIndex: 4, // Set the z-index for the options dropdown
-    }),
+  const customStylesflag = {
+    width: '30px',
+    '@media screen and (max-width: 600px)': {
+      width: '20px', // Adjust the width for screens with a width of 600 pixels or less
+    },
   };
 
-  const handleSelectChange = (selectedOption) => {
-    const lowerCountryCode = selectedOption.value;
-    i18n.changeLanguage(lowerCountryCode);
-    console.log('Selected Value:', lowerCountryCode);
-  };
-
-  const defaultOption = {
-    value: i18n.language, // Use the current language or default to 'en'
-    label: <img src={en} alt="Default" />,
-  };
-  
-  useEffect(() => {
-    // Update the default flag based on the current language when the component mounts
-    defaultOption.label = <img src={getFlagImage(i18n.language)} alt="Default" />;
-  }, [i18n.language]);
-
+  // Move getFlagImage function declaration above its usage
   const getFlagImage = (language) => {
     switch (language) {
       case 'cb':
         return cb;
       case 'ii':
         return ii;
-      // case 'en':
-      //   return en;
       case 'vv':
         return vv;
       case 'll':
@@ -68,9 +36,53 @@ const ImageDropdown = () => {
       case 'mb':
         return mb;
       default:
-        return en; // Default to 'en' if the language is not found
+        return en;
     }
   };
+
+  const options = [
+    { value: 'en', label: <img style={customStylesflag} src={en} alt="myanmar" /> },
+    { value: 'cb', label: <img style={customStylesflag} src={cb} alt="cambodia" /> },
+    { value: 'ii', label: <img style={customStylesflag} src={ii} alt="Indonesia" /> },
+    { value: 'vv', label: <img style={customStylesflag} src={vv} alt="vietnam" /> },
+    { value: 'll', label: <img style={customStylesflag} src={ll} alt="laos" /> },
+    { value: 'mm', label: <img style={customStylesflag} src={mm} alt="malaysia" /> },
+    { value: 'mb', label: <img style={customStylesflag} src={mb} alt="myanmar" /> },
+  ];
+
+  const customStyles = {
+    control: (base) => ({
+      ...base,
+      height: '50px',
+      zIndex: 4,
+      '@media screen and (max-width: 600px)': {
+        height: '20px',  // Adjust the height for screens with a width of 600 pixels or less
+      },
+    }),
+    menu: (base) => ({
+      ...base,
+      zIndex: 4,
+      '@media screen and (max-width: 600px)': {
+        fontSize: '14px',  // Adjust the font size for screens with a width of 600 pixels or less
+      },
+    }),
+  };
+
+  
+  const handleSelectChange = (selectedOption) => {
+    const lowerCountryCode = selectedOption.value;
+    i18n.changeLanguage(lowerCountryCode);
+    console.log('Selected Value:', lowerCountryCode);
+  };
+
+  const defaultOption = {
+    value: i18n.language,
+    label: <img style={customStylesflag} src={getFlagImage(i18n.language)} alt="Default" />,
+  };
+  
+  useEffect(() => {
+    defaultOption.label = <img style={customStylesflag} src={getFlagImage(i18n.language)} alt="Default" />;
+  }, [i18n.language]);
 
   return (
     <div>
@@ -86,6 +98,8 @@ const ImageDropdown = () => {
 };
 
 export default ImageDropdown;
+
+
 
 
 

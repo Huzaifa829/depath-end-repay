@@ -42,12 +42,12 @@ const HomeTabFrom1 = ({ openLoginForm }) => {
             }}
         >
             <Row gutter={16}>
-                <Col span={12}>
+            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
                     <Form.Item label={t("HomeTabFrom2.message")}>  {/*Amount*/}
                         <Input className="my-input"  />
                     </Form.Item>
                 </Col>
-                <Col span={12}>
+                <Col xs={24} sm={24} md={12} lg={12} xl={12}>
                     <Form.Item label={t("HomeTabFrom3.message")}> {/*Enter Adversary Name:*/}
                             <Input className="my-input" />
                         
@@ -55,18 +55,18 @@ const HomeTabFrom1 = ({ openLoginForm }) => {
                 </Col>
             </Row>
             <Row gutter={16}>
-                <Col span={12}>
+            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
                     <Form.Item label={t("HomeTabFrom4.message")}> {/*Adversary Email:*/}
                         <Input className="my-input" />
                     </Form.Item>
                 </Col>
-                <Col span={12}>
+                <Col xs={24} sm={24} md={12} lg={12} xl={12}>
                     <Form.Item label={t("HomeTabFrom5.message")}> {/*Adversary Facebook Id or Facebook Link:*/}
                         <Input className="my-input" />
                     </Form.Item>
                 </Col>
             </Row>
-            <Col span={12}>
+            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
                 <Form.Item label={t("HomeTabFrom6.message")}> {/*DatePicker*/}
                     <DatePicker className="my-input" />
                 </Form.Item>

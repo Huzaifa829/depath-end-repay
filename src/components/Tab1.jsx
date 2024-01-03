@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import '../cssFile/Tab1.css';
+import React, { useState, useEffect } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { useTranslation } from 'react-i18next';
 import { Button, Flex } from 'antd';
 import { CSSTransition } from 'react-transition-group';
@@ -19,37 +21,81 @@ const Tab1 = () => {
         fontWeight: '500',
     };
     const selectedButtonStyles = {
-        backgroundColor: 'gray', // Change this to the desired color
+        backgroundColor: '#b1b1b1',
         borderColor: 'black',
         color: 'white',
         fontWeight: '500',
     };
 
     const [activeForm, setActiveForm] = useState(1);
+    const [isMobile, setIsMobile] = useState(false);
 
     const handleButtonClick = (formNumber) => {
         setActiveForm(formNumber);
     };
-    const [t, i18n] = useTranslation("global")
+
+    const [t, i18n] = useTranslation('global');
+
+    const sliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: true,
+        focusOnSelect: true,
+    };
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 600); // Adjust the width as needed
+        };
+
+        // Initial check on mount
+        handleResize();
+
+        // Listen for window resize events
+        window.addEventListener('resize', handleResize);
+
+        // Clean up event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return (
         <>
             <div className='HA_tab1_main'>
-            <p className='HA_tab1_heading'>{t("HomePageTab1_1.message")}</p>{/*Add Debt Case*/}
+                <p className='HA_tab1_heading'>{t("HomePageTab1_1.message")}</p>{/*Add Debt Case*/}
                 <p className='HA_tab1_heading_text'>{t("HomePageTab1_2.message")}</p>{/*In case of any transaction, 10% of the Repay coins will be deducted!*/}
             </div>
-            <div className='HA_tab1_btn_main'>
-                <Flex gap="small" wrap="wrap">
-                {[1, 2, 3, 4, 5, 6, 7].map((formNumber) => (
-                        <Button
-                            key={formNumber}
-                            style={activeForm === formNumber ? selectedButtonStyles : buttonStyles}
-                            onClick={() => handleButtonClick(formNumber)}
-                        >
-                            {t(`HomePageTab1_${formNumber + 2}.message`)}
-                        </Button>
-                    ))}
-                    
-                {/* <Button style={buttonStyles} onClick={() => handleButtonClick(1)}>{t("HomePageTab1_3.message")}</Button>Money
+            <div className={isMobile ? 'HA_tab1_btn_main_mobile' : 'HA_tab1_btn_main'}>
+                {isMobile ? (
+                    <Slider {...sliderSettings}>
+                        {[1, 2, 3, 4, 5, 6, 7].map((formNumber) => (
+                            <Button
+                                key={formNumber}
+                                style={activeForm === formNumber ? selectedButtonStyles : buttonStyles}
+                                onClick={() => handleButtonClick(formNumber)}
+                            >
+                                {t(`HomePageTab1_${formNumber + 2}.message`)}
+                            </Button>
+                        ))}
+                    </Slider>
+                ) : (
+                    <Flex gap="small" wrap="wrap">
+                        {[1, 2, 3, 4, 5, 6, 7].map((formNumber) => (
+                            <Button
+                                key={formNumber}
+                                style={activeForm === formNumber ? selectedButtonStyles : buttonStyles}
+                                onClick={() => handleButtonClick(formNumber)}
+                            >
+                                {t(`HomePageTab1_${formNumber + 2}.message`)}
+                            </Button>
+                        ))}
+                    </Flex>
+                )}
+            </div>
+
+            {/* <Button style={buttonStyles} onClick={() => handleButtonClick(1)}>{t("HomePageTab1_3.message")}</Button>Money
                     <Button style={buttonStyles} onClick={() => handleButtonClick(2)}>{t("HomePageTab1_4.message")}</Button>Favor
                     <Button style={buttonStyles} onClick={() => handleButtonClick(3)}>{t("HomePageTab1_5.message")}</Button>Service
                     <Button style={buttonStyles} onClick={() => handleButtonClick(4)}>{t("HomePageTab1_6.message")}</Button>Meal
@@ -58,8 +104,8 @@ const Tab1 = () => {
                     <Button style={buttonStyles} onClick={() => handleButtonClick(7)}>{t("HomePageTab1_9.message")}</Button>Challenge */}
 
 
-                </Flex>
-            </div>
+
+
             <div className='HA_tab1_form_main'>
                 <CSSTransition
                     in={activeForm === 1}
@@ -123,4 +169,3 @@ const Tab1 = () => {
 };
 
 export default Tab1;
-    

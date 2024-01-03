@@ -121,6 +121,10 @@ export const addSetteled = (Setteled)=>{
         });
     }
 }
+export const toggleDrawer = (isOpen) => ({
+    type: "TOGGLE_DRAWER",
+    payload: isOpen,
+  });
 // export const closeModal = () => ({
 //   type: CLOSE_MODAL,
 // });

@@ -12,7 +12,15 @@
     background-color: #ebebeb;
 }
 
+
 @media screen and (max-width: 768px) {
+    .HA_mainnavbar_seting_main{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .HA_mainnavbar_seting{
+        display: none;
+    }
     .navabr_logo{
       
         margin-left: 0px;

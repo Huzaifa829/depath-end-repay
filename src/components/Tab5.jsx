@@ -134,8 +134,23 @@ export default function Tab3() {
         setSelectedRowData1(row);
         setIsModalVisible1(true);
     };
+    const popdetailFont={
+        fontFamily:' Montserrat, sans-serif',
+        fontWeight:'800'
+    }
+    const popdetailFont1={
+        fontFamily:' Montserrat, sans-serif',
+        fontWeight:'400'
+    }
+// popup shown detail
 
-
+const InfoBlock = ({ label, value }) => (
+    <div style={{ display: 'flex', justifyContent: 'space-between',marginBottom:'10px', }}>
+        <span style={popdetailFont}>{label}:</span>
+        <span style={popdetailFont1}>{value}</span>
+    </div>
+);
+// popup shown detail
 
     const buttonStyles = {
         backgroundColor: 'green',
@@ -295,7 +310,7 @@ export default function Tab3() {
                     onRowsPerPageChange={handleChangeRowsPerPage}
                 />
                 <Modal
-                    title="Pending Details"
+             title="Details"
                     visible={isModalVisible}
                    
                     onCancel={handleModalCancel}
@@ -308,38 +323,40 @@ export default function Tab3() {
                         </Button>,
                     ]}
                 >
-                      <div  style={{ maxHeight: '60vh', overflowY: 'auto' }}>
-                    {selectedRowData && (
-                        // Render the details of the selected row inside the modal content
-                        <div>
-                            <p>Adversary Name: {selectedRowData.name}</p>
-                            <p>amount: {selectedRowData.amount}</p>
-                            <p>check: {selectedRowData.check}</p>
-                            <p>email: {selectedRowData.email}</p>
-                            <p>fblink: {selectedRowData.fblink}</p>
-                            <p>PaymentOptions: {selectedRowData.PaymentOptions}</p>
-                            {selectedRowData.rowData.map((item, index) => (
-                                <div key={index}>
-                                    <p>Date: {item.date}</p>
-                                    <p>On Date Amount: {item.inputValue}</p>
-                                </div>
-                            ))}
-                        </div>
-                    )}
-                    {selectedRowData && selectedRowData.newSetelments && selectedRowData.newSetelments.map((item, index) => (
-                        <div key={index}>
-                            <h1>last updated setelments {index+1}</h1>
-                            <p>amount: {item.amount}</p>
-                            <p>description: {item.description}</p>
-                            <p>rowData:</p>
-                            {item.rowData && item.rowData.map((item2, index2) => (
-                                <div key={index2}>
-                                    <p>Date: {item2.date}</p>
-                                    <p>On Date Amount: {item2.inputValue}</p>
-                                </div>
-                            ))}
-                        </div>
-                    ))}
+                     <div className='HA_modal_scroll_hide' style={{ maxHeight: '60vh', overflowY: 'auto' }}>
+                        {selectedRowData && (
+                            <div className='HA_modal_scroll_hide1'>
+                                <h1 style={{ textAlign: 'center', fontFamily: 'Montserrat, sans-serif', }}>Debt Cases</h1>
+                                <InfoBlock label="Adversary Name" value={selectedRowData.name} />
+                                <InfoBlock label="Amount" value={selectedRowData.amount} />
+                                <InfoBlock label="Check" value={selectedRowData.check} />
+                                <InfoBlock label="Email" value={selectedRowData.email} />
+                                <InfoBlock label="Fblink" value={selectedRowData.fblink} />
+                                <InfoBlock label="PaymentOptions" value={selectedRowData.PaymentOptions} />
+
+                                {selectedRowData.rowData.map((item, index) => (
+                                    <div key={index}>
+                                        <InfoBlock label="Date" value={item.date} />
+                                        <InfoBlock label="On Date Amount" value={item.inputValue} />
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                        {selectedRowData && selectedRowData.newSetelments && selectedRowData.newSetelments.map((item1, index1) => (
+                            <div key={index1}  className='HA_modal_scroll_hide1'>
+                                <h1 style={{ textAlign: 'center', fontFamily: 'Montserrat, sans-serif', }}>setelment {index1 + 1}</h1>
+                                <InfoBlock label="amount" value={item1.amount} />
+                                <InfoBlock label="description" value={item1.description} />
+
+                                {item1.rowData && item1.rowData.map((item2, index2) => (
+                                    <div key={index2}>
+                                          <InfoBlock label="Date" value={item2.date} />
+                                          <InfoBlock label="On Date Amount" value={item2.inputValue} />
+                        
+                                    </div>
+                                ))}
+                            </div>
+                        ))}
                     </div>
                 </Modal>
                 <Modal
@@ -426,50 +443,53 @@ export default function Tab3() {
                     }
                 </Modal>
                 <Modal
-                    title="Pending Details"
-                    visible={isModalVisible1}
-                    onCancel={handleModalCancel1}
-                   
-                    footer={[
-                        <Button key="accepted" type="primary" onClick={handleModalCancel2}>
-                            Cancel
-                        </Button>,
-                    ]}
-                >
-                    <div  style={{ maxHeight: '60vh', overflowY: 'auto' }}>
-                    {selectedRowData1 && (
-                        <div>
-                            <p>Adversary Name: {selectedRowData1.name}</p>
-                            <p>amount: {selectedRowData1.amount}</p>
-                            <p>check: {selectedRowData1.check}</p>
-                            <p>email: {selectedRowData1.email}</p>
-                            <p>fblink: {selectedRowData1.fblink}</p>
-                            <p>PaymentOptions: {selectedRowData1.PaymentOptions}</p>
-                            {selectedRowData1.rowData.map((item, index) => (
-                                <div key={index}>
-                                    <p>Date: {item.date}</p>
-                                    <p>On Date Amount: {item.inputValue}</p>
-                                </div>
-                            ))}
-                        </div>
-                    )}
-                    {selectedRowData1 && selectedRowData1.newSetelments && selectedRowData1.newSetelments.map((item1, index1) => (
-                        <div key={index1}>
-                            <h1>updated setelments {index1+1}</h1>
-                            <p>amount: {item1.amount}</p>
-                            <p>description: {item1.description}</p>
-                            <p>rowData:</p>
-                            {item1.rowData && item1.rowData.map((item2, index2) => (
-                                <div key={index2}>
-                                    <p>Date: {item2.date}</p>
-                                    <p>On Date Amount: {item2.inputValue}</p>
-                                </div>
-                            ))}
-                        </div>
-                    ))}
-                    </div>
-                </Modal>
+                   title="Details"
+                 visible={isModalVisible1}
+                 onCancel={handleModalCancel1}
 
+                 footer={[
+                     <Button key="accepted" type="primary" onClick={handleModalCancel1}>
+                         Cancel
+                     </Button>,
+
+                 ]}
+             >
+                 <div className='HA_modal_scroll_hide' style={{ maxHeight: '60vh', overflowY: 'auto' }}>
+                     {selectedRowData1 && (
+                         <div className='HA_modal_scroll_hide1'>
+                              <h1 style={{ textAlign: 'center', fontFamily: 'Montserrat, sans-serif', }}>Debt Cases</h1>
+                             <InfoBlock label="Adversary Name" value={selectedRowData1.name} />
+                             <InfoBlock label="Amount" value={selectedRowData1.amount} />
+                             <InfoBlock label="Check" value={selectedRowData1.check} />
+                             <InfoBlock label="Email" value={selectedRowData1.email} />
+                             <InfoBlock label="Fblink" value={selectedRowData1.fblink} />
+                             <InfoBlock label="PaymentOptions" value={selectedRowData1.PaymentOptions} />
+
+                             {selectedRowData1.rowData.map((item, index) => (
+                                 <div key={index}>
+                                     <InfoBlock label="Date" value={item.date} />
+                                     <InfoBlock label="On Date Amount" value={item.inputValue} />
+                                 </div>
+                             ))}
+                         </div>
+                     )}
+                     {selectedRowData1 && selectedRowData1.newSetelments && selectedRowData1.newSetelments.map((item1, index1) => (
+                         <div key={index1}  className='HA_modal_scroll_hide1'>
+                             <h1 style={{ textAlign: 'center', fontFamily: 'Montserrat, sans-serif', }}>setelment {index1 + 1}</h1>
+                             <InfoBlock label="amount" value={item1.amount} />
+                             <InfoBlock label="description" value={item1.description} />
+
+                             {item1.rowData && item1.rowData.map((item2, index2) => (
+                                 <div key={index2}>
+                                       <InfoBlock label="Date" value={item2.date} />
+                                       <InfoBlock label="On Date Amount" value={item2.inputValue} />
+                     
+                                 </div>
+                             ))}
+                         </div>
+                     ))}
+                 </div>
+             </Modal>
 
 
             </Paper>

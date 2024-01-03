@@ -19,6 +19,7 @@ import SignupPage from './SignUP';
 import HomepageTabFrom1 from '../components/layout/HomePagetab1';
 import { Link } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Navbar2 from '../components/Navbar2_home';
 
 
 const LoginPage = () => {
@@ -67,7 +68,7 @@ const LoginPage = () => {
     const [t, i18n] = useTranslation("global")
     return (
         <>
-            <Navbar />
+            <Navbar2 />
 
             {HATab1 === 'HA1' && <div id='hA_main_banner_id' className='hA_main_banner'>
                 <div className='HA_main_bn_1'>
@@ -93,7 +94,7 @@ const LoginPage = () => {
                 </div>
             </div>}
             {HATab1 === 'HA2' && (
-                <div style={{ width: '100%', display: "flex", flexDirection: 'column', alignItems: 'flex-start', padding: '20px 80px 50px 80px' }}>
+                <div className='HA_landinf_page_demo'>
                         <ArrowBackIcon onClick={() => TabChange('HA1')} style={{ fontSize: '2rem', cursor: 'pointer' }} />
                     <div style={{ width: "90%", display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <div id="google_translate_element" style={{ width: "90%" }}>

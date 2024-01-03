@@ -38,19 +38,19 @@ const LoginForm1 = () => {
         }}
       >
         <Row gutter={16}>
-          <Col span={12}>
+        <Col xs={24} sm={24} md={12} lg={12} xl={12}>
             <Form.Item label={t("Tab8_1.message")} name="name">{/*Name:*/}
               <Input className="my-input" />
             </Form.Item>
           </Col>
-          <Col span={12}>
+          <Col xs={24} sm={24} md={12} lg={12} xl={12}>
             <Form.Item label={t("Tab8_2.message")} name="email">{/*Email:*/}
               <Input className="my-input" />
             </Form.Item>
           </Col>
         </Row>
         <Row gutter={16}>
-          <Col span={12}>
+        <Col xs={24} sm={24} md={12} lg={12} xl={12}>
             <Form.Item label={t("Tab8_3.message")} name="facebook">{/*Facebook*/}
               <Input className="my-input" />
             </Form.Item>
@@ -95,7 +95,7 @@ const LoginForm2 = () => {
         }}
       >
         <Row gutter={16}>
-          <Col span={12}>
+        <Col xs={24} sm={24} md={12} lg={12} xl={12}>
             <Form.Item label={t("Tab8_6.message")} name="password">{/*Password:*/}
               <Input type='password' className="my-input" />
             </Form.Item>
@@ -140,7 +140,7 @@ const LoginForm3 = () => {
         }}
       >
         <Row gutter={16}>
-          <Col span={12}>
+        <Col xs={24} sm={24} md={12} lg={12} xl={12}>
             <Form.Item label={t("Tab8_9.message")} name="Currency">{/*Currency:*/}
               <Input className="my-input" />
             </Form.Item>

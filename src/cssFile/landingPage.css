@@ -70,13 +70,26 @@
       font-family: 'Montserrat, sans-serif' !important;
       font-weight: 800 !important;
   }
-
+.HA_landinf_page_demo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 20px 80px 50px 80px;
+}
   /* .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
       width: 100% !important;
 
   } */
 
   @media screen and (max-width: 768px) {
+    .HA_landinf_page_demo{
+        width: 92%;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        padding: 10px 10px 50px 10px;
+    }
       .HA_main_bn_1 {
           width: 100%;
           display: flex;
