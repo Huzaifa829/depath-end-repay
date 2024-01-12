@@ -40,6 +40,7 @@ import Tab7 from '../components/Tab7';
 import Tab8 from '../components/Tab8';
 import Tab9 from '../components/Tab9';
 import Navbar2 from '../components/Navbar2_home';
+import UserMenu from '../components/UserLoginSidebar/UserVeiwSidebar';
 
 
 
@@ -159,8 +160,9 @@ const HomePage = () => {
         </div>
         <div className='HA_main_part1'>
           <div className='HA_side_bar_btn'>
-            <MenuIcon color='white' onClick={handleIconClick} />
-            <span style={{ display: "Block", width: "200px" }} className='HA_side_bar_text'>{t("HA_text.message")}</span>
+            {/* <MenuIcon color='white' onClick={handleIconClick} />
+            <span style={{ display: "Block", width: "200px" }} className='HA_side_bar_text'>{t("HA_text.message")}</span> */}
+            <UserMenu/>
           </div>
           {renderSidebtn('Tab1', t("HA_text2.message"), <FolderIcon />)}{/*Add Debt Cases*/}
 

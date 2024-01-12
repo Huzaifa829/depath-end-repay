@@ -23,19 +23,19 @@ const Footer = () => {
   <div>
     <ul className="social-icon">
       <li className="social-icon__item"><a className="social-icon__link" href="#">
-          <FacebookIcon/>
+          <FacebookIcon style={{ fontSize: 40 }}/>
         </a></li>
       <li className="social-icon__item"><a className="social-icon__link" href="#">
-      <TwitterIcon/>
+      <TwitterIcon style={{ fontSize: 40 }}/>
         </a></li>
       <li className="social-icon__item"><a className="social-icon__link" href="#">
-      <LinkedInIcon/>
+      <LinkedInIcon style={{ fontSize: 40 }}/>
         </a></li>
-      <li className="social-icon__item"><a className="social-icon__link" href="#">
+      {/* <li className="social-icon__item"><a className="social-icon__link" href="#">
           <InstagramIcon/>
-        </a></li>
+        </a></li> */}
     </ul>
-    <p>&copy;2023  | All Rights Reserved</p> {/*2023  | All Rights Reserved*/}
+    {/* <p>&copy;2023  | All Rights Reserved</p> 2023  | All Rights Reserved */}
     </div>
     
   </div>

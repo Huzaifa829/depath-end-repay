@@ -160,12 +160,12 @@ const TabFrom4 = () => {
                         <Input.TextArea rows={4} className="my-input" />
                     </Form.Item>
                 </Col>
-            </Row>
             <Form.Item>
                 <Button style={buttonStyles} block>
                     {t("TabFrom4_8.message")}
                 </Button>
             </Form.Item>
+            </Row>
             <Form.Item>
                 <Checkbox onChange={onChange}>{t("TabFrom4_9.message")}</Checkbox>
             </Form.Item>

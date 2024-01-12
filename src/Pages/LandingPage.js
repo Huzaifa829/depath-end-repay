@@ -27,6 +27,11 @@ const LoginPage = () => {
 
     const openLoginForm = () => {
         setIsLoginFormOpen(true);
+        handleTabChange('Tab1')
+    };
+    const openLoginFormSignUp = () => {
+        setIsLoginFormOpen(true);
+        handleTabChange('Tab2')
     };
 
     const closeLoginForm = () => {
@@ -74,13 +79,13 @@ const LoginPage = () => {
                 <div className='HA_main_bn_1'>
                     <div className='HA_main_bn_1_text_div'>
                         <p className='HA_main_bn_1_text_child_heading'>
-                            {t("text.message")} <span className='HA_main_bn_1_text_span'>{t("text1.message")}</span>
+                            <span style={{fontSize:"4rem",color:'#FF10F0'}}>Unknown </span>{t("text.message")} <span className='HA_main_bn_1_text_span'>{t("text1.message")}</span>
                         </p>
                         <p className='HA_main_bn_1_text_child_para'>
                             {t("text2.message")}
                         </p>
                         <div className='HA_main_bn_1_btn'>
-                            <Button variant="contained" endIcon={<ArrowForwardIcon />} onClick={() => TabChange('HA2')} sx={buttonStyles}>
+                            <Button variant="contained" endIcon={<ArrowForwardIcon />} onClick={openLoginFormSignUp} sx={buttonStyles}>
                                 {t("text3.message")}
                             </Button>
                             <Button variant="contained" endIcon={<LoginIcon />} sx={buttonStyles1} onClick={openLoginForm}>
