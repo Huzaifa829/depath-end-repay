@@ -9,9 +9,9 @@ const { TabPane } = Tabs;
 const LoginForm1 = () => {
   const [t, i18n] = useTranslation("global")
     const buttonStyles = {
-      backgroundColor: 'black',
+      backgroundColor: 'rgb(21, 101, 192)',
       color: '#ffffff',
-      borderColor: 'black',
+      borderColor: 'rgb(21, 101, 192)',
       transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',
     };
   
@@ -67,9 +67,9 @@ const LoginForm2 = () => {
   const [t, i18n] = useTranslation("global")
 
     const buttonStyles = {
-      backgroundColor: 'black',
+      backgroundColor: 'rgb(21, 101, 192)',
       color: '#ffffff',
-      borderColor: 'black',
+      borderColor: 'rgb(21, 101, 192)',
       transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',
     };
   
@@ -113,9 +113,9 @@ const LoginForm3 = () => {
   const [t, i18n] = useTranslation("global")
 
     const buttonStyles = {
-      backgroundColor: 'black',
+      backgroundColor: 'rgb(21, 101, 192)',
       color: '#ffffff',
-      borderColor: 'black',
+      borderColor: 'rgb(21, 101, 192)',
       transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',
     };
   

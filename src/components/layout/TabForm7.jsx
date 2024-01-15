@@ -75,9 +75,9 @@ const TabFrom7 = () => {
 
 
     const buttonStyles = {
-        backgroundColor: 'black',
+        backgroundColor: 'rgb(21, 101, 192)',
         color: '#ffffff',
-        borderColor: 'black',
+        borderColor: 'rgb(21, 101, 192)',
         transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',
     };
     const [componentSize, setComponentSize] = useState('default');
@@ -106,7 +106,6 @@ const TabFrom7 = () => {
             size={componentSize}
             style={{
                 maxWidth: 1000,
-                margin: '0 auto', // Center the form on larger screens
             }}
         >
             <Row gutter={[16, 16]}>
@@ -178,7 +177,7 @@ const TabFrom7 = () => {
                 </Col>
             </Form.Item>
             <Form.Item>
-                <Button style={buttonStyles} block>
+                <Button style={buttonStyles} >
                     {t("TabFrom7_13.message")}
                 </Button>
             </Form.Item>

@@ -8,7 +8,7 @@ import '../../cssFile/TabFrom.css'
 const HomeTabFrom1 = ({ openLoginForm }) => {
 
     const buttonStyles = {
-        backgroundColor: 'black',
+        backgroundColor: 'rgb(21, 101, 192)',
         color: '#ffffff',
         borderColor: 'black',
         transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',

@@ -2,11 +2,11 @@
 
 
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Navbar from '../components/Navbar';
 import '../cssFile/landingPage.css';
-import img1 from '../assets/images/dreamstime_xl_199119493.png';
+import img1 from '../assets/images/pricing.png';
 import Button from '@mui/material/Button';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import LoginIcon from '@mui/icons-material/Login';
@@ -20,10 +20,48 @@ import HomepageTabFrom1 from '../components/layout/HomePagetab1';
 import { Link } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Navbar2 from '../components/Navbar2_home';
+import NewsTicker from '../components/Newsthicker/Newsthicker';
 
 
 const LoginPage = () => {
     const [isLoginFormOpen, setIsLoginFormOpen] = useState(false);
+    const [visibleNewsIndex, setVisibleNewsIndex] = useState(0);
+    const newsData = [
+        {
+            id: '1',
+            name: 'Alex',
+            category: 'Technology',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnLLQRG2yePVQWraO8uYbNLTw7IOMwBibjgA&usqp=CAU',
+        },
+        {
+            id: '2',
+            name: 'John',
+            category: 'Money',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb5ZCN4ruLo5kZEi3-fGSiANvNqSHf6O89lQ&usqp=CAU',
+        },
+        {
+            id: '3',
+            name: 'Kelvin',
+            category: 'Favor',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW2o_VKgKABU_o67F5eXyocVcyhbQgaCg8KA&usqp=CAU',
+        },
+        {
+            id: '4',
+            name: 'Alexsa',
+            category: 'Deink',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuyyFhmNpq9_WIcgHDsKHXzl-CJuUV1XquFw&usqp=CAU',
+        },
+    ];
+
+    useEffect(() => {
+        // Set up a timer to switch to the next news item every 5 seconds
+        const timer = setInterval(() => {
+            setVisibleNewsIndex((prevIndex) => (prevIndex + 1) % newsData.length);
+        }, 5000);
+
+        // Clear the timer on component unmount
+        return () => clearInterval(timer);
+    }, [newsData.length]);
 
     const openLoginForm = () => {
         setIsLoginFormOpen(true);
@@ -37,6 +75,7 @@ const LoginPage = () => {
     const closeLoginForm = () => {
         setIsLoginFormOpen(false);
     };
+
 
     const buttonStyles = {
         backgroundColor: '#FF10F0',
@@ -53,9 +92,9 @@ const LoginPage = () => {
         padding: '15px 30px',
         fontSize: '1rem',
         margin: '10px 10px 0px 0px',
-        backgroundColor:"white",
-        color:'black',
-        border:'1px solid black',
+        backgroundColor: "white",
+        color: 'black',
+        border: '1px solid black',
         '@media screen and (max-width: 780px)': {
             padding: '10px 15px',
             fontSize: '1rem',
@@ -79,7 +118,7 @@ const LoginPage = () => {
                 <div className='HA_main_bn_1'>
                     <div className='HA_main_bn_1_text_div'>
                         <p className='HA_main_bn_1_text_child_heading'>
-                            <span style={{fontSize:"4rem",color:'#FF10F0'}}>Unknown </span>{t("text.message")} <span className='HA_main_bn_1_text_span'>{t("text1.message")}</span>
+                            <span style={{ fontSize: "4rem", color: 'rgb(16 167 255)' }}>Unknown </span>{t("text.message")} <span className='HA_main_bn_1_text_span'>{t("text1.message")}</span>
                         </p>
                         <p className='HA_main_bn_1_text_child_para'>
                             {t("text2.message")}
@@ -92,6 +131,15 @@ const LoginPage = () => {
                                 {t("text4.message")}
                             </Button>
                         </div>
+                        <div className='HA_landing_news_thicker' >
+                            {newsData.map((item, index) => (
+                                <NewsTicker
+                                    key={item.id}
+                                    news={item}
+                                    isVisible={index === visibleNewsIndex}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
                 <div className='HA_main_bn_2'>
@@ -100,7 +148,7 @@ const LoginPage = () => {
             </div>}
             {HATab1 === 'HA2' && (
                 <div className='HA_landinf_page_demo'>
-                        <ArrowBackIcon onClick={() => TabChange('HA1')} style={{ fontSize: '2rem', cursor: 'pointer' }} />
+                    <ArrowBackIcon onClick={() => TabChange('HA1')} style={{ fontSize: '2rem', cursor: 'pointer' }} />
                     <div style={{ width: "90%", display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <div id="google_translate_element" style={{ width: "90%" }}>
                             <HomepageTabFrom1 openLoginForm={openLoginForm} />

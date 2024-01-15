@@ -19,9 +19,10 @@
   /* position: relative; */
   width: 96%;
   background: #faf9f9;
-  
+
   /* min-height: 100px; */
   padding: 0px 2%;
+  transition: 1s;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,6 +53,7 @@
   display: inline-block;
   transition: 0.5s;
 }
+
 .social-icon__link:hover {
   transform: translateY(-10px);
 }
@@ -78,7 +80,7 @@
   font-weight: 300;
 }
 
-.HA_footer_div{
+.HA_footer_div {
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -86,12 +88,53 @@
   /* height: 100px; */
   /* background-color: aqua; */
 }
-.HA_footer_div_ul>li{
+
+.HA_footer_div_ul>li {
   color: black;
   font-size: 18px;
 }
+
+/* .HA_Footer_top_open_icon{
+  width: 35px !important;
+  background-color: #faf9f9;
+  position: relative;
+  left:95%;
+  bottom: 44px;
+
+} */
+.HA_Footer_top_open_icon {
+  background-color: #faf9f9;
+  position: absolute;
+  top: -13px;
+  right: 5px ;
+  /* Adjust the right distance as needed */
+  color: black;
+}
+
+.footer {
+  position: relative;
+}
+.css-1p823my-MuiListItem-root{
+  padding: 0px !important;
+}
+.fade-transition {
+  opacity: 1;
+  transition: opacity 0.5s ease; /* Adjust the transition duration and timing function as needed */
+}
+
+.fade-transition.hidden {
+  opacity: 0;
+}
+
 @media screen and (max-width: 425px) {
   .footer {
     flex-direction: column;
   }
+
+  /* .HA_Footer_top_open_icon {
+    top: -13px;
+  right: 5px ;
+  } */
 }
+
+@media screen and (max-width: 320px) {}

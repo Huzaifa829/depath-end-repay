@@ -16,7 +16,7 @@
 
   .HA_main_bn_1 {
       display: flex;
-      align-items: center;
+      /* align-items: center; */
       width: 48%;
       justify-content: center;
       /* height: 40vh; */
@@ -81,6 +81,10 @@
       width: 100% !important;
 
   } */
+  .HA_landing_news_thicker{
+    height: 160px;
+    padding: 100px 0px 0px 0px 
+  }
 
   @media screen and (max-width: 768px) {
     .HA_landinf_page_demo{

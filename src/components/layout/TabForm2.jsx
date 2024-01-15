@@ -69,9 +69,9 @@ const TabFrom2 = () => {
     };
 
     const buttonStyles = {
-        backgroundColor: 'black',
+        backgroundColor: 'rgb(21, 101, 192)',
         color: '#ffffff',
-        borderColor: 'black',
+        borderColor: 'rgb(21, 101, 192)',
         transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',
     };
     const [componentSize, setComponentSize] = useState('default');
@@ -172,7 +172,7 @@ const TabFrom2 = () => {
                 </Col>
             </Form.Item>
             <Form.Item>
-                <Button style={buttonStyles} block>
+                <Button style={buttonStyles} >
                     {t("TabFrom2_13.message")}
                 </Button>
             </Form.Item>

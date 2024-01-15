@@ -230,17 +230,17 @@ const TabFrom1 = () => {
 
 
     const buttonStyles = {
-        backgroundColor: 'black',
+        backgroundColor: 'rgb(21, 101, 192)',
         color: '#ffffff',
-        borderColor: 'black',
+        borderColor: 'rgb(21, 101, 192)',
         transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',
 
     };
     const buttonStyles1 = {
-        backgroundColor: 'black',
+        backgroundColor: 'rgb(21, 101, 192)',
         color: '#ffffff',
         fontSize:'1em',
-        borderColor: 'black',
+        borderColor: 'rgb(21, 101, 192)',
         transition: 'background-color 0.3s, color 0.3s, border-color 0.3s',
         // Add this line for width
     };
