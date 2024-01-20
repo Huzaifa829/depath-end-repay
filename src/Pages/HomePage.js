@@ -89,7 +89,7 @@ const HomePage = () => {
       onKeyDown={handleDrawerClose}
     >
       <List>
-        <div style={{padding:'10px'}}>
+        <div style={{padding:'10px',backgroundColor:'#f9f9f9'}}>
       <img className="navabr_logo" src={img1} alt="" />
       </div>
         {renderSidebtn('Tab1', t("HA_text2.message"), <FolderIcon />)}{/*Add Debt Cases*/}

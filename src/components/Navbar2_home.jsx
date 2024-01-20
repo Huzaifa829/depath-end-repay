@@ -69,7 +69,7 @@ export default function Navbar2() {
             component="div"
             sx={{ flexGrow: 1}}
           >
-             <Link to="/">
+             <Link style={{display:'flex',alignItems:'center'}} to="/">
             <img className="navabr_logo" src={img1} alt="" />
             </Link>
           </Typography>

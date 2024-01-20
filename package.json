@@ -26,6 +26,7 @@
     "react-helmet": "^6.1.0",
     "react-i18next": "^13.5.0",
     "react-load-script": "^0.0.6",
+    "react-medium-image-zoom": "^5.1.10",
     "react-redux": "^9.0.4",
     "react-router-dom": "^6.21.0",
     "react-scripts": "5.0.1",

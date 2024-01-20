@@ -29,6 +29,10 @@
   /* flex-direction: column; */
   /* margin-top: 100px; */
 }
+.HA_footer_main{
+  display: flex;
+  align-items: flex-start  !important;
+}
 
 .social-icon,
 .menu {
@@ -126,11 +130,15 @@
   opacity: 0;
 }
 
+
 @media screen and (max-width: 425px) {
   .footer {
     flex-direction: column;
+    /* align-items: flex-start; */
   }
-
+.HA_footer_div_ul{
+  padding: 0;
+}
   /* .HA_Footer_top_open_icon {
     top: -13px;
   right: 5px ;

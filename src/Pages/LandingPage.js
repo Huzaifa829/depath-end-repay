@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Navbar from '../components/Navbar';
 import '../cssFile/landingPage.css';
-import img1 from '../assets/images/pricing.png';
+import img1 from '../assets/images/pricing (2).png';
 import Button from '@mui/material/Button';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import LoginIcon from '@mui/icons-material/Login';
@@ -21,6 +21,8 @@ import { Link } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Navbar2 from '../components/Navbar2_home';
 import NewsTicker from '../components/Newsthicker/Newsthicker';
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 
 const LoginPage = () => {
@@ -112,8 +114,9 @@ const LoginPage = () => {
     const [t, i18n] = useTranslation("global")
     return (
         <>
+        <div style={{ display: 'flex', flexDirection: 'column', height: '100vh'}}>
             <Navbar2 />
-
+            {/* <div className='hello_world_hasd'> */}
             {HATab1 === 'HA1' && <div id='hA_main_banner_id' className='hA_main_banner'>
                 <div className='HA_main_bn_1'>
                     <div className='HA_main_bn_1_text_div'>
@@ -144,8 +147,21 @@ const LoginPage = () => {
                 </div>
                 <div className='HA_main_bn_2'>
                     <img className='HA_main_bn_2_image' src={img1} alt="" />
+                    <Zoom>
+                        <img
+                            alt="That Wanaka Tree, New Zealand by Laura Smetsers"
+                            src={img1}
+                            width="200"
+                            className='HA_main_bn_2_image44'
+                        />
+                    </Zoom>
+
                 </div>
             </div>}
+            {/* </div> */}
+            <Footer />
+        </div>
+       
             {HATab1 === 'HA2' && (
                 <div className='HA_landinf_page_demo'>
                     <ArrowBackIcon onClick={() => TabChange('HA1')} style={{ fontSize: '2rem', cursor: 'pointer' }} />
@@ -185,8 +201,92 @@ const LoginPage = () => {
                     }
                 </DialogContent>
             </Dialog>
-            <Footer />
         </>
+        // <>
+        //     <Navbar2 />
+
+        //     {HATab1 === 'HA1' && <div id='hA_main_banner_id' className='hA_main_banner'>
+        //         <div className='HA_main_bn_1'>
+        //             <div className='HA_main_bn_1_text_div'>
+        //                 <p className='HA_main_bn_1_text_child_heading'>
+        //                     <span style={{ fontSize: "4rem", color: 'rgb(16 167 255)' }}>Unknown </span>{t("text.message")} <span className='HA_main_bn_1_text_span'>{t("text1.message")}</span>
+        //                 </p>
+        //                 <p className='HA_main_bn_1_text_child_para'>
+        //                     {t("text2.message")}
+        //                 </p>
+        //                 <div className='HA_main_bn_1_btn'>
+        //                     <Button variant="contained" endIcon={<ArrowForwardIcon />} onClick={openLoginFormSignUp} sx={buttonStyles}>
+        //                         {t("text3.message")}
+        //                     </Button>
+        //                     <Button variant="contained" endIcon={<LoginIcon />} sx={buttonStyles1} onClick={openLoginForm}>
+        //                         {t("text4.message")}
+        //                     </Button>
+        //                 </div>
+        //                 <div className='HA_landing_news_thicker' >
+        //                     {newsData.map((item, index) => (
+        //                         <NewsTicker
+        //                             key={item.id}
+        //                             news={item}
+        //                             isVisible={index === visibleNewsIndex}
+        //                         />
+        //                     ))}
+        //                 </div>
+        //             </div>
+        //         </div>
+        //         <div className='HA_main_bn_2'>
+        //             <img className='HA_main_bn_2_image' src={img1} alt="" />
+        //             <Zoom>
+        //                 <img
+        //                     alt="That Wanaka Tree, New Zealand by Laura Smetsers"
+        //                     src={img1}
+        //                     width="200"
+        //                     className='HA_main_bn_2_image44'
+        //                 />
+        //             </Zoom>
+
+        //         </div>
+        //     </div>}
+        //     {HATab1 === 'HA2' && (
+        //         <div className='HA_landinf_page_demo'>
+        //             <ArrowBackIcon onClick={() => TabChange('HA1')} style={{ fontSize: '2rem', cursor: 'pointer' }} />
+        //             <div style={{ width: "90%", display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        //                 <div id="google_translate_element" style={{ width: "90%" }}>
+        //                     <HomepageTabFrom1 openLoginForm={openLoginForm} />
+        //                 </div>
+        //             </div>
+        //         </div>
+        //     )}
+
+        //     <Dialog open={isLoginFormOpen} onClose={closeLoginForm} aria-labelledby="login-form-dialog">
+
+        //         {activeTab === 'Tab1' && <DialogTitle className='HA_check_text' id="login-form-dialog">{t("text5.message")}</DialogTitle>}{/*Login */}
+
+        //         {activeTab === 'Tab2' && <DialogTitle className='HA_check_text' id="login-form-dialog">{t("text6.message")}</DialogTitle>}{/*SignUp */}
+        //         <DialogContent>
+
+        //             {activeTab === 'Tab1' && <Popupform />}
+        //             {activeTab === 'Tab2' && <SignupPage />}
+        //             {activeTab === 'Tab1' &&
+        //                 <div className='HA_login_border'>
+        //                     <p className='HA_create_acount' onClick={() => handleTabChange('Tab2')}> <span className='HA_create_acount_span'>{t("text7.message")}</span> {t("text8.message")} </p>
+        //                     <Link to="/home">
+        //                         <Button style={{ backgroundColor: 'black', color: "white", fontWeight: "500", padding: "5px 15px", lineHeight: "2", fontSize: "10px" }} >
+        //                             {t("text9.message")}
+        //                         </Button>
+        //                     </Link>
+        //                 </div>
+        //             }
+        //             {activeTab === 'Tab2' &&
+        //                 <div className='HA_login_border'>
+
+        //                     <p className='HA_create_acount' onClick={() => handleTabChange('Tab1')}>{t("text10.message")}</p>
+        //                 </div>
+
+        //             }
+        //         </DialogContent>
+        //     </Dialog>
+        //     <Footer />
+        // </>
     );
 };
 

@@ -3,6 +3,14 @@
     overflow: hidden;
     opacity: 0;
     animation: fadeInUp 1s ease-in-out forwards;
+    background-color: #faf9f9;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  
   }
   
   @keyframes fadeInUp {
@@ -31,4 +39,12 @@
       opacity: 0;
     }
   }
+  @media screen and (max-width: 425px) {
+    .news-ticker {
+    
+      padding: 10px 0px;
+      margin: 0px !important;
   
+    
+    }
+  }

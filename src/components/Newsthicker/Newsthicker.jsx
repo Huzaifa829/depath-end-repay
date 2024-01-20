@@ -7,19 +7,19 @@ const NewsTicker = ({ news,isVisible  }) => {
   const { id, name, category, imageUrl } = news;
 
   return (
-    <div style={{position:'absolute'}}>
+    <div className='HA_newsthicker_main_DIV'>
     <Paper
       elevation={3}
       className={`news-ticker ${isVisible ? 'visible' : 'hidden'}`}
-      style={{
-        backgroundColor: '#faf9f9',
-        padding: '10px',
-        margin:'10px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        width: '345px', // Set your desired width here
-      }}
+      // style={{
+      //   backgroundColor: '#faf9f9',
+      //   padding: '10px',
+      //   margin:'10px',
+      //   display: 'flex',
+      //   alignItems: 'center',
+      //   justifyContent: 'space-between',
+      //   width: '100%', // Set your desired width here
+      // }}
     >
       <Grid container spacing={2} alignItems="center">
         <Grid item>
