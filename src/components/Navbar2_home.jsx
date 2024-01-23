@@ -61,16 +61,16 @@ export default function Navbar2() {
   // const amount = useSelector(state =>state.amount)
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor: '#faf9f9', boxShadow: 'none'  }}>
+      <AppBar position="static" sx={{ backgroundColor: '#faf9f9', boxShadow: 'none' }}>
         <Toolbar>
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1}}
+            sx={{ flexGrow: 1 }}
           >
-             <Link style={{display:'flex',alignItems:'center'}} to="/">
-            <img className="navabr_logo" src={img1} alt="" />
+            <Link style={{ display: 'flex', alignItems: 'center' }} to="/">
+              <img className="navabr_logo" src={img1} alt="" />
             </Link>
           </Typography>
           {/* <Search style={{ backgroundColor: '#b9b8b8', color: 'black' }}>
@@ -82,8 +82,8 @@ export default function Navbar2() {
               inputProps={{ 'aria-label': 'search' }}
               />
           </Search> */}
-          <div style={{marginLeft:'10px'}}>
-          <GoogleTranslate/>
+          <div style={{ marginLeft: '10px' }}>
+            <GoogleTranslate />
           </div>
         </Toolbar>
       </AppBar>

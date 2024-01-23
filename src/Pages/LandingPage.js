@@ -7,6 +7,8 @@ import { useTranslation } from 'react-i18next';
 import Navbar from '../components/Navbar';
 import '../cssFile/landingPage.css';
 import img1 from '../assets/images/pricing (2).png';
+import img2 from '../assets/images/13 (1).png'
+import img3 from '../assets/images/13 (2).png';
 import Button from '@mui/material/Button';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import LoginIcon from '@mui/icons-material/Login';
@@ -133,6 +135,10 @@ const LoginPage = () => {
                             <Button variant="contained" endIcon={<LoginIcon />} sx={buttonStyles1} onClick={openLoginForm}>
                                 {t("text4.message")}
                             </Button>
+                        </div>
+                        <div style={{width:'auto',height:'auto',padding:'10px 0px',display:'flex',alignItems:'center',gap:'20px',flexWrap:'wrap'}}>
+                            <img width={150} src={img2} alt="" />
+                            <img width={150} src={img3} alt="" />
                         </div>
                         <div className='HA_landing_news_thicker' >
                             {newsData.map((item, index) => (
