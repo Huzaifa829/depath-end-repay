@@ -41,6 +41,7 @@ import Tab8 from '../components/Tab8';
 import Tab9 from '../components/Tab9';
 import Navbar2 from '../components/Navbar2_home';
 import UserMenu from '../components/UserLoginSidebar/UserVeiwSidebar';
+import { auth } from '../firebase';
 
 
 
@@ -62,6 +63,17 @@ const HomePage = () => {
   console.log(open1.isDrawerOpen,'asdjkaskdhjk')
   // const { openModal, closeModal } = bindActionCreators(actionCreators, dispatch);
 
+
+
+
+  const logout = async () => {
+    try {
+      await auth.signOut();
+    } catch (error) {
+      console.error('Failed to sign out', error);
+      throw error;
+    }
+  };
 
 
   const handleClose = () => {
@@ -101,13 +113,13 @@ const HomePage = () => {
         {renderSidebtn('Tab7', t("HA_text8.message"), <SettingsIcon />)}{/*Notification Settings*/}
         {renderSidebtn('Tab8', t("HA_text9.message"), <PersonIcon />)}{/*Profile*/}
         {renderSidebtn('Tab9', t("HA_text10.message"), <AccountBalanceWalletIcon />)}{/*Wallet*/}
-        <Link to="/">
+        {/* <Link to="/"> */}
           <ListItemButton>
-            <Button variant="contained" endIcon={<LogoutIcon />} style={btnstyle}>
+            <Button variant="contained" onClick={logout} endIcon={<LogoutIcon />} style={btnstyle}>
               {t("HA_text1.message")}
             </Button>
           </ListItemButton>
-        </Link>
+        {/* </Link> */}
       </List>
     </Box>
   );

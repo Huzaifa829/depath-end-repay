@@ -1,6 +1,6 @@
 import './App.css';
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next'; // Import I18nextProvider
 import LandingPage from './Pages/LandingPage.js';
 import HomePage from './Pages/HomePage.js';
@@ -16,6 +16,7 @@ import i18next from 'i18next';
 import NoteState from './context/check/NoteState.js';
 import { Provider } from 'react-redux';
 import { store } from './state/store.js';
+import { auth } from './firebase.js';
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -46,6 +47,19 @@ i18next.init({
 });
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser(null);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
   return (
     <NoteState>
     <Router>
@@ -53,7 +67,8 @@ function App() {
       <I18nextProvider i18n={i18next}> {/* Provide the i18n instance to I18nextProvider */}
         <Routes>
           <Route path='/' element={<LandingPage />} />
-          <Route path='/home' element={<HomePage />} />
+
+          <Route path='/home' element={user ? <HomePage /> : <Navigate to="/" />} />
         </Routes>
       </I18nextProvider>
       </Provider>

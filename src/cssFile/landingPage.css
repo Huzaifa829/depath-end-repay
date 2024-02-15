@@ -3,9 +3,11 @@
   body {
       font-family: 'Montserrat, sans-serif' !important;
   }
+
   .hello_world_hasd {
-    flex: 1;
+      flex: 1;
   }
+
   .hA_main_banner {
       display: flex;
       /* justify-content: center; */
@@ -39,14 +41,15 @@
       width: 60%;
       height: auto;
   }
-  .HA_main_bn_2_image44{
-    display: none;
+
+  .HA_main_bn_2_image44 {
+      display: none;
   }
 
   .HA_main_bn_1_text_div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       width: 80%;
       /* background-color: aqua; */
       /* padding: 20px; */
@@ -83,45 +86,148 @@
       font-family: 'Montserrat, sans-serif' !important;
       font-weight: 800 !important;
   }
-.HA_landinf_page_demo{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    padding: 20px 80px 50px 80px;
-}
+
+  .HA_landinf_page_demo {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+      padding: 20px 80px 50px 80px;
+  }
+
   /* .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
       width: 100% !important;
 
   } */
-  .HA_landing_news_thicker{
-    position: relative;
-    height: 100px;
-    padding: 50px 0px 0px 0px 
-  }
-  .HA_newsthicker_main_DIV{
-position: absolute;
-width: 70%;
+  .HA_landing_news_thicker {
+      position: relative;
+      height: 100px;
+      padding: 50px 0px 0px 0px
   }
 
+  .HA_newsthicker_main_DIV {
+      position: absolute;
+      width: 70%;
+  }
+
+  .HA_main_bn_2_image_container {
+      position: relative;
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+  }
+
+  .HA_main_bn_2_image_container2 {
+      display: none;
+  }
+
+  .text-overlay {
+      position: absolute;
+      top: 69%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 100%;
+      /* Ensures text spans the entire width of the container */
+  }
+
+  .centered-text {
+      color: black;
+      /* Change color as needed */
+      font-size: 1.0.5rem;
+      text-align: center;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      /* Adjust font size as needed */
+      /* Add any additional styling for your text */
+  }
+
+  .custom-overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: black !important;
+  }
+
+  .HA_HA_main_bn_2_image_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.HA_text-overlay {
+    position: absolute;
+    top: 69%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%; /* Ensures text spans the entire width of the container */
+}
+
+.HA_centered_text {
+    color: black; /* Change color as needed */
+    font-size:1.8rem; /* Adjust font size as needed */
+    /* Add any additional styling for your text */
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.close-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+}
+@media screen and (max-width: 1024px){
+
+.HA_centered_text {
+    font-size:1.4rem
+}
+}
   @media screen and (max-width: 768px) {
-    .HA_main_bn_2_image{
+    .HA_centered_text{
         display: none;
     }
-    .HA_main_bn_2_image44{
-        display:block;
-    }
-    .hA_main_banner{
-        padding-top: 50px;
-        justify-content: center;
-    }
-    .HA_landinf_page_demo{
-        width: 92%;
-        display: flex;
-        flex-direction: column;
-        /* align-items: center; */
-        padding: 10px 10px 50px 10px;
-    }
+      .HA_main_bn_2_image {
+          display: none;
+      }
+
+      .HA_main_bn_2_image_container {
+          display: none;
+
+      }
+
+      .HA_main_bn_2_image_container2 {
+          display: block;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .HA_main_bn_2_image44 {
+          display: block;
+      }
+
+      .hA_main_banner {
+          padding-top: 50px;
+          justify-content: center;
+      }
+
+      .HA_landinf_page_demo {
+          width: 92%;
+          display: flex;
+          flex-direction: column;
+          /* align-items: center; */
+          padding: 10px 10px 50px 10px;
+      }
+
       .HA_main_bn_1 {
           width: 100%;
           display: flex;
@@ -130,9 +236,10 @@ width: 70%;
           padding: 20px 20px 20px 24px;
 
       }
-      .HA_main_bn_1_text_div{
-        width: 100%;
-        padding: 20px 20px 20px 0px;
+
+      .HA_main_bn_1_text_div {
+          width: 100%;
+          padding: 20px 20px 20px 0px;
 
       }
 
@@ -150,15 +257,17 @@ width: 70%;
   }
 
   @media screen and (max-width: 425px) {
-    .HA_newsthicker_main_DIV{
-        width: 100%;
-    }
-    .HA_main_bn_1{
-        padding-left: 16px;
+      .HA_newsthicker_main_DIV {
+          width: 100%;
+      }
+
+      .HA_main_bn_1 {
+          padding-left: 16px;
 
 
-    }
-    .HA_main_bn_1_text_div{
-        padding: 0px;
-    }
+      }
+
+      .HA_main_bn_1_text_div {
+          padding: 0px;
+      }
   }

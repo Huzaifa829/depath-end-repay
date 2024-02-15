@@ -57,7 +57,7 @@
   transition: transform 500ms ease-in-out;
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (maxWidth: 580px) {
   .HA_tab1_main {
     padding: 50px 0px 0px 0px !important;
   }

@@ -1,22 +1,64 @@
 // login popup page
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Checkbox, Form, Input, message, Spin } from 'antd';
 import FacebookLogin from 'react-facebook-login';
 import { FacebookOutlined } from '@ant-design/icons';
 import '../cssFile/LoginPage.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { signInWithEmailAndPassword, updateProfile, FacebookAuthProvider, signInWithPopup } from 'firebase/auth';
+import { auth } from '../firebase';
 
 const LoginPage = () => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
+  const asdasdasd = {
+    borderRadius: '20px',
+  }
+  const onFinish = async (values) => {
+    try {
+      setLoading(true); // Set loading to true when sign-in process starts
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const { user } = userCredential
+      console.log(user.uid);
 
-   const asdasdasd= {
-    borderRadius:'20px',
-   }
-  const onFinish = (values) => {
-    console.log('Success:', values);
+      // Optionally, you can perform additional actions after successful sign-in
+      // For example, navigating to another page, setting user data in state, etc.
+      message.success(t("signIn_success_message"));
+      navigate('/home');
+    } catch (error) {
+      // Show error message
+      message.error(error.message);
+    } finally {
+      setLoading(false); // Set loading to false when sign-in process ends
+    }
   };
+  const handleFacebookLogin = async () => {
+    setLoading(true); // Set loading state to true during login process
+    try {
+      const result = await signInWithPopup(auth, new FacebookAuthProvider());
+      const user = result.user;
 
+      // Optionally, you can refresh the token if needed
+      // const tokenResult = await user.getIdTokenResult(true);
+
+      // Show success message
+      message.success("Login with Facebook successful");
+
+      // Navigate to the home page after successful login
+      navigate('/home');
+    } catch (error) {
+      // Handle Facebook login errors
+      console.error('Facebook login error:', error);
+      // Show error message
+      message.error(error.message);
+    } finally {
+      setLoading(false); // Set loading state to false after login process completes
+    }
+  };
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
@@ -28,87 +70,89 @@ const LoginPage = () => {
 
   const [t, i18n] = useTranslation("global")
   return (
-    <Form
-      name="basic"
-      labelCol={{
-        span: 8,
-      }}
-      wrapperCol={{
-        span: 16,
-      }}
-      style={{
-        maxWidth: 600,
-      }}
-      initialValues={{
-        remember: true,
-      }}
-      onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
-      autoComplete="off"
-    >
-      <Form.Item
-        name="username"
-        rules={[
-          {
-            required: true,
-            message: t("loginpop6.message"), //Please input your username!
-          },
-        ]}
-      >
-        <Input className='my-input' placeholder={t("loginpop1.message")} style={{ width: '30vmax',height:'40px' }} /> {/*Username*/}
-      </Form.Item>
-
-      <Form.Item
-        name="password"
-        rules={[
-          {
-            required: true,
-            message: t("loginpop7.message"), //Please input your password!
-          },
-        ]}
-      >
-        <Input.Password className='my-input'   placeholder={t("loginpop2.message")} style={{ width: '30vmax',height:'40px' }} /> {/*Password*/}
-      </Form.Item>
-
-      <Form.Item
-        name="remember"
-        valuePropName="checked"
+    <Spin spinning={loading}>
+      <Form
+        name="basic"
+        labelCol={{
+          span: 8,
+        }}
         wrapperCol={{
-          offset: 0,
           span: 16,
         }}
-      >
-        <Checkbox>{t("loginpop3.message")}</Checkbox> {/*Remember me*/}
-      </Form.Item>
-
-      <Form.Item
-        wrapperCol={{
-          offset: 3,
-          span: 18,
+        style={{
+          maxWidth: 600,
         }}
-      >
-         <Link to="/home">
-        <Button style={{width:"100%"}} type="primary" htmlType="submit">
-        {t("loginpop4.message")} {/*Login*/}
-        </Button>
-        </Link>
-      </Form.Item>
-      <Form.Item
-      style={{marginBottom:'50px'}}
-        wrapperCol={{
-          offset: 3,
-          span: 18,
+        initialValues={{
+          remember: true,
         }}
+        onFinish={onFinish}
+        onFinishFailed={onFinishFailed}
+        autoComplete="off"
       >
-        <Button style={{width:"100%",backgroundColor:'#4c69ba'}} type="primary" htmlType="submit">
-        {t("loginpop5.message")} {/*Login with Facebook*/}
-        </Button>
-      </Form.Item>
+        <Form.Item
+          name="email"
+          rules={[
+            {
+              required: true,
+              message: t("sign_pop6.message"),//Please input your email!
+            },
+          ]}
+        >
+          <Input placeholder={t("sign_pop.message")} style={{ width: '30vmax', height: '40px' }} onChange={(e) => setEmail(e.target.value)} />
+        </Form.Item>
 
-      {/* Facebook Login Button */}
-    
-      {/* <Link to="/home">Go to Home Page</Link> */}
-    </Form>
+        <Form.Item
+          name="password"
+          rules={[
+            {
+              required: true,
+              message: t("sign_pop7.message"),//Please input your password!
+            },
+          ]}
+        >
+          <Input.Password placeholder={t("sign_pop1.message")} style={{ width: '30vmax', height: '40px' }} onChange={(e) => setPassword(e.target.value)} />
+        </Form.Item>
+
+        <Form.Item
+          name="remember"
+          valuePropName="checked"
+          wrapperCol={{
+            offset: 0,
+            span: 16,
+          }}
+        >
+          <Checkbox>{t("loginpop3.message")}</Checkbox> {/*Remember me*/}
+        </Form.Item>
+
+        <Form.Item
+          wrapperCol={{
+            offset: 3,
+            span: 18,
+          }}
+        >
+          {/* <Link to="/home"> */}
+          <Button style={{ width: "100%" }} type="primary" htmlType="submit">
+            {t("loginpop4.message")} {/*Login*/}
+          </Button>
+          {/* </Link> */}
+        </Form.Item>
+        <Form.Item
+          style={{ marginBottom: '50px' }}
+          wrapperCol={{
+            offset: 3,
+            span: 18,
+          }}
+        >
+          <Button style={{ width: "100%", backgroundColor: '#4c69ba' }} type="primary" onClick={handleFacebookLogin}>
+            {t("loginpop5.message")} {/*Login with Facebook*/}
+          </Button>
+        </Form.Item>
+
+        {/* Facebook Login Button */}
+
+        {/* <Link to="/home">Go to Home Page</Link> */}
+      </Form>
+    </Spin>
   );
 };
 
