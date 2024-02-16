@@ -31,8 +31,21 @@ const LoginPage = () => {
       navigate('/home');
     } catch (error) {
       // Show error message
-      message.error(error.message);
-    } finally {
+      console.error(error.message);
+    
+      if (error.code === 'auth/user-not-found') {
+        // Handle case when user email is not found
+        message.error('User with this email does not exist.');
+      } else if (error.code === 'auth/wrong-password') {
+        // Handle case when password is incorrect
+        message.error('Incorrect password');
+      } else if(error.code ==='auth/invalid-credential'){
+        // Handle other errors
+        message.error('Sign up first');
+
+      }
+    }
+     finally {
       setLoading(false); // Set loading to false when sign-in process ends
     }
   };

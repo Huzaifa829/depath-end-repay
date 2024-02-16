@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { Button, Checkbox, Form, Input, message, Spin } from 'antd';
+import { Button, Checkbox, Form, Input, message, Spin, Modal, Row, Col } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { createUserWithEmailAndPassword, FacebookAuthProvider, signInWithPopup, updateProfile } from 'firebase/auth';
-import { auth } from '../firebase';
+import { auth, db } from '../firebase';
+import { doc, setDoc } from "firebase/firestore";
 import { Routes, Route, useNavigate } from 'react-router-dom';
+import FacebookOutlined from '@ant-design/icons/FacebookOutlined';
+import { Title } from '@mui/icons-material';
 
 const SignupPage = () => {
   const navigate = useNavigate();
@@ -22,35 +25,57 @@ const SignupPage = () => {
         displayName: fullName
       });
       // Show success message
-      await message.success(t("signup_success_message"));
+      message.success(t("signup_success_message"));
       // Clear input fields
       setFullName('');
       setEmail('');
       setPassword('');
       navigate('/home');
     } catch (error) {
-      // Show error message
-      message.error(error.message);
+      // Check error code
+      switch (error.code) {
+        case 'auth/email-already-in-use':
+          message.error('Email is already in use. Please choose another email.');
+          break;
+        case 'auth/weak-password':
+          message.error('Password is too weak. Please choose a stronger password.');
+          break;
+        default:
+          message.error(error.message);
+      }
     } finally {
       setLoading(false); // Set loading to false when signup process ends
     }
   };
+
 
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
   const handleFacebookSignup = async () => {
     setLoading(true); // Set loading state to true during signup process
+    const shouldProceed = await showConfirmationModal();
     try {
-      // Sign in with Facebook popup
-      const result = await signInWithPopup(auth, new FacebookAuthProvider());
-      const user = result.user;
-      
-      // Show success message
-      message.success("Signup with Facebook successful");
-  
-      // Navigate to the home page after successful signup
-      navigate('/home');
+
+      // Proceed with signup only if the user confirms
+      if (shouldProceed) {
+        // Sign in with Facebook popup
+        const result = await signInWithPopup(auth, new FacebookAuthProvider());
+        const user = result.user;
+        const { displayName, email, photoURL } = user;
+
+        // Save user data to your database or state as needed
+        // Example: Save to Firebase Firestore
+        await setDoc(doc(db, "users", user.uid), {
+          displayName: displayName,
+          email: email,
+          photoURL: photoURL
+        });
+        // Show success message
+        message.success("Signup with Facebook successful");
+        // Navigate to the home page after successful signup
+        navigate('/home');
+      }
     } catch (error) {
       // Handle signup errors
       console.error('Facebook signup error:', error);
@@ -60,96 +85,145 @@ const SignupPage = () => {
       setLoading(false); // Set loading state to false after signup process completes
     }
   };
+
+  const showConfirmationModal = () => {
+    return new Promise((resolve, reject) => {
+      const modal = Modal.confirm({
+        icon: null,
+        content: (
+          <>
+            <Row align="middle">
+              <Col>
+                <FacebookOutlined style={{ fontSize: '24px', color: '#3b5998' }} />
+              </Col>
+              <Col style={{ marginLeft: '10px' }}>
+                <p>Sign in with Facebook</p>
+              </Col>
+            </Row>
+            <Row justify="center">
+            <Col>
+              <h2 style={{ textAlign: 'center' }}>Sign in to Facebook</h2>
+            </Col>
+          </Row>
+          <Row>
+            <Col span={24}>
+              <p style={{ textAlign: 'left' }}>
+                By continuing, Facebook will share your name, email address, language preference and profile picture with LinkedIn. See Repaye privacy policy and Terms of Service.
+              </p>
+            </Col>
+          </Row>
+          </>
+        ),
+        onOk() {
+          resolve(true); // Resolve with true if user confirms
+        },
+        onCancel() {
+          resolve(false); // Resolve with false if user clicks "Cancel"
+          modal.destroy(); // Destroy the modal instance
+        },
+        footer: (
+          <Row justify="center">
+            <Col>
+              <Button onClick={() => { resolve(false);modal.destroy(); }}>Cancel</Button>
+            </Col>
+            <Col style={{ marginLeft: '10px' }}>
+              <Button onClick={() => { resolve(true);modal.destroy(); }}>Continue</Button>
+            </Col>
+          </Row>
+        ),
+      });
+    });
+  };
   return (
-    <Spin spinning={loading}> 
-    <Form
-      name="basic"
-      labelCol={{
-        span: 8,
-      }}
-      wrapperCol={{
-        span: 16,
-      }}
-      style={{
-        maxWidth: 600,
-      }}
-      initialValues={{
-        remember: true,
-      }}
-      onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
-      autoComplete="off"
-    >
-      <Form.Item
-        name="name"
-        rules={[
-          {
-            required: true,
-            message: t("sign_pop5.message"),//Please input your name!
-          },
-        ]}
-      >
-        <Input placeholder="Full Name" style={{ width: '30vmax', height: '40px' }} onChange={(e) => setFullName(e.target.value)} />
-      </Form.Item>
-      <Form.Item
-        name="email"
-        rules={[
-          {
-            required: true,
-            message: t("sign_pop6.message"),//Please input your email!
-          },
-        ]}
-      >
-        <Input placeholder={t("sign_pop.message")} style={{ width: '30vmax', height: '40px' }} onChange={(e) => setEmail(e.target.value)} />
-      </Form.Item>
-
-      <Form.Item
-        name="password"
-        rules={[
-          {
-            required: true,
-            message: t("sign_pop7.message"),//Please input your password!
-          },
-        ]}
-      >
-        <Input.Password placeholder={t("sign_pop1.message")} style={{ width: '30vmax', height: '40px' }} onChange={(e) => setPassword(e.target.value)} />
-      </Form.Item>
-
-      <Form.Item
-        name="remember"
-        valuePropName="checked"
+    <Spin spinning={loading}>
+      <Form
+        name="basic"
+        labelCol={{
+          span: 8,
+        }}
         wrapperCol={{
-          offset: 0,
           span: 16,
         }}
+        style={{
+          maxWidth: 600,
+        }}
+        initialValues={{
+          remember: true,
+        }}
+        onFinish={onFinish}
+        onFinishFailed={onFinishFailed}
+        autoComplete="off"
       >
-        <Checkbox>{t("sign_pop2.message")}</Checkbox>{/*Remember me*/}
-      </Form.Item>
+        <Form.Item
+          name="name"
+          rules={[
+            {
+              required: true,
+              message: t("sign_pop5.message"),//Please input your name!
+            },
+          ]}
+        >
+          <Input placeholder="Full Name" style={{ width: '30vmax', height: '40px' }} onChange={(e) => setFullName(e.target.value)} />
+        </Form.Item>
+        <Form.Item
+          name="email"
+          rules={[
+            {
+              required: true,
+              message: t("sign_pop6.message"),//Please input your email!
+            },
+          ]}
+        >
+          <Input placeholder={t("sign_pop.message")} style={{ width: '30vmax', height: '40px' }} onChange={(e) => setEmail(e.target.value)} />
+        </Form.Item>
 
-      <Form.Item
-        wrapperCol={{
-          offset: 3,
-          span: 18,
-        }}
-      >
-        <Button style={{ width: "100%" }} type="primary" htmlType="submit">
-          {t("sign_pop3.message")}
-        </Button>{/* Sign up*/}
-      </Form.Item>
-      {/* Facebook Login Button */}
-      <Form.Item
-        style={{ marginBottom: '50px' }}
-        wrapperCol={{
-          offset: 3,
-          span: 18,
-        }}
-      >
-        <Button style={{ width: "100%", backgroundColor: '#4c69ba' }} type="primary" onClick={handleFacebookSignup}>
-          {t("sign_pop4.message")}
-        </Button>{/*Login with Facebook*/}
-      </Form.Item>
-      {/* <Link to="/home">Go to Home Page</Link> */}
-    </Form>
+        <Form.Item
+          name="password"
+          rules={[
+            {
+              required: true,
+              message: t("sign_pop7.message"),//Please input your password!
+            },
+          ]}
+        >
+          <Input.Password placeholder={t("sign_pop1.message")} style={{ width: '30vmax', height: '40px' }} onChange={(e) => setPassword(e.target.value)} />
+        </Form.Item>
+
+        <Form.Item
+          name="remember"
+          valuePropName="checked"
+          wrapperCol={{
+            offset: 0,
+            span: 16,
+          }}
+        >
+          <Checkbox>{t("sign_pop2.message")}</Checkbox>{/*Remember me*/}
+        </Form.Item>
+
+        <Form.Item
+          wrapperCol={{
+            offset: 3,
+            span: 18,
+          }}
+        >
+          <Button style={{ width: "100%" }} type="primary" htmlType="submit">
+            {t("sign_pop3.message")}
+          </Button>{/* Sign up*/}
+        </Form.Item>
+        {/* Facebook Login Button */}
+        <Form.Item
+          style={{ marginBottom: '50px' }}
+          wrapperCol={{
+            offset: 3,
+            span: 18,
+          }}
+        >
+          <Button style={{ width: "100%", backgroundColor: '#4c69ba' }} type="primary" onClick={handleFacebookSignup}>
+            {t("sign_pop4.message")}
+          </Button>{/*Login with Facebook*/}
+        </Form.Item>
+        {/* <Link to="/home">Go to Home Page</Link> */}
+      </Form>
     </Spin>
   );
 };
