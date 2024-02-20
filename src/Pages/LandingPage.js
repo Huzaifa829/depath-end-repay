@@ -216,7 +216,7 @@ const LoginPage = () => {
                     </div>
                 )}
 
-<Dialog open={isLoginFormOpen} onClose={closeLoginForm} aria-labelledby="login-form-dialog">
+<Dialog style={{zIndex:'2'}} open={isLoginFormOpen} onClose={closeLoginForm} aria-labelledby="login-form-dialog">
     <DialogTitle className='HA_check_text' id="login-form-dialog">
         {activeTab === 'Tab1' && t("text5.message")}
         {activeTab === 'Tab2' && t("text6.message")}

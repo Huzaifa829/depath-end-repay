@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Button, Checkbox, Form, Input, message, Spin, Modal, Row, Col } from 'antd';
+import React, { useLayoutEffect, useRef, useState } from 'react';
+import { Button, Checkbox, Form, Input, message, Spin, Modal, Row, Col, Carousel } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { createUserWithEmailAndPassword, FacebookAuthProvider, signInWithPopup, updateProfile } from 'firebase/auth';
 import { auth, db } from '../firebase';
@@ -7,15 +7,62 @@ import { doc, setDoc } from "firebase/firestore";
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import FacebookOutlined from '@ant-design/icons/FacebookOutlined';
 import { Title } from '@mui/icons-material';
+import { useDispatch } from 'react-redux';
+import { actionCreators } from '../state/index'
+
 
 const SignupPage = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+  const [loading1, setLoading1] = useState(false);
+
+  const CarousalSlider = useRef(null);
 
   const [t, i18n] = useTranslation("global");
+
+
+  const [outerModalVisible, setOuterModalVisible] = useState(false);
+  const [innerModalVisible, setInnerModalVisible] = useState(false);
+  const [carouselIndex, setCarouselIndex] = useState(0);
+
+  const handleOuterModalShow = () => {
+    setOuterModalVisible(true);
+  };
+
+  const handleOuterModalHide = () => {
+    setOuterModalVisible(false);
+  };
+
+  const handleInnerModalShow = () => {
+    setInnerModalVisible(true);
+  };
+
+  const handleInnerModalHide = () => {
+    setInnerModalVisible(false);
+  };
+
+  const handleCarouselChange = (index) => {
+    setCarouselIndex(index);
+  };
+
+  const handleNextSlide = () => {
+    setCarouselIndex(carouselIndex + 1);
+  };
+
+  const CaurosalFinsh = () => {
+    setLoading1(true)
+    setTimeout(() => {
+      setInnerModalVisible(false);
+      navigate('/home');
+    }, 1000); // Delay navigation by 1 second
+    setTimeout(() => {
+      dispatch(actionCreators.openModal(true));
+    }, 2000); // Delay navigation by 1 second
+  };
 
   const onFinish = async (values) => {
     try {
@@ -27,10 +74,12 @@ const SignupPage = () => {
       // Show success message
       message.success(t("signup_success_message"));
       // Clear input fields
-      setFullName('');
-      setEmail('');
-      setPassword('');
-      navigate('/home');
+      // setFullName('');
+      // setEmail('');
+      // setPassword('');
+      // navigate('/home');
+      // const work = await handleContinue(1)
+      handleInnerModalShow()
     } catch (error) {
       // Check error code
       switch (error.code) {
@@ -48,7 +97,14 @@ const SignupPage = () => {
     }
   };
 
-
+  // const handleContinue = (slideNumber) => {
+  //   CarousalSlider.current.goTo(slideNumber, false); // Move to the specified slide
+  // };
+  // useLayoutEffect(() => {
+  //   if (CarousalSlider.current) {
+  //     CarousalSlider.current.goTo(1, false); // Start from slide 1 initially
+  //   }
+  // }, []);
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
@@ -101,17 +157,17 @@ const SignupPage = () => {
               </Col>
             </Row>
             <Row justify="center">
-            <Col>
-              <h2 style={{ textAlign: 'center' }}>Sign in to Facebook</h2>
-            </Col>
-          </Row>
-          <Row>
-            <Col span={24}>
-              <p style={{ textAlign: 'left' }}>
-                By continuing, Facebook will share your name, email address, language preference and profile picture with LinkedIn. See Repaye privacy policy and Terms of Service.
-              </p>
-            </Col>
-          </Row>
+              <Col>
+                <h2 style={{ textAlign: 'center' }}>Sign in to Facebook</h2>
+              </Col>
+            </Row>
+            <Row>
+              <Col span={24}>
+                <p style={{ textAlign: 'left' }}>
+                  By continuing, Facebook will share your name, email address, language preference and profile picture with Repaye. See Repaye privacy policy and Terms of Service.
+                </p>
+              </Col>
+            </Row>
           </>
         ),
         onOk() {
@@ -124,10 +180,10 @@ const SignupPage = () => {
         footer: (
           <Row justify="center">
             <Col>
-              <Button onClick={() => { resolve(false);modal.destroy(); }}>Cancel</Button>
+              <Button onClick={() => { resolve(false); modal.destroy(); }}>Cancel</Button>
             </Col>
             <Col style={{ marginLeft: '10px' }}>
-              <Button onClick={() => { resolve(true);modal.destroy(); }}>Continue</Button>
+              <Button onClick={() => { resolve(true); modal.destroy(); }}>Continue</Button>
             </Col>
           </Row>
         ),
@@ -135,96 +191,142 @@ const SignupPage = () => {
     });
   };
   return (
-    <Spin spinning={loading}>
-      <Form
-        name="basic"
-        labelCol={{
-          span: 8,
-        }}
-        wrapperCol={{
-          span: 16,
-        }}
-        style={{
-          maxWidth: 600,
-        }}
-        initialValues={{
-          remember: true,
-        }}
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
-        autoComplete="off"
-      >
-        <Form.Item
-          name="name"
-          rules={[
-            {
-              required: true,
-              message: t("sign_pop5.message"),//Please input your name!
-            },
-          ]}
-        >
-          <Input placeholder="Full Name" style={{ width: '30vmax', height: '40px' }} onChange={(e) => setFullName(e.target.value)} />
-        </Form.Item>
-        <Form.Item
-          name="email"
-          rules={[
-            {
-              required: true,
-              message: t("sign_pop6.message"),//Please input your email!
-            },
-          ]}
-        >
-          <Input placeholder={t("sign_pop.message")} style={{ width: '30vmax', height: '40px' }} onChange={(e) => setEmail(e.target.value)} />
-        </Form.Item>
-
-        <Form.Item
-          name="password"
-          rules={[
-            {
-              required: true,
-              message: t("sign_pop7.message"),//Please input your password!
-            },
-          ]}
-        >
-          <Input.Password placeholder={t("sign_pop1.message")} style={{ width: '30vmax', height: '40px' }} onChange={(e) => setPassword(e.target.value)} />
-        </Form.Item>
-
-        <Form.Item
-          name="remember"
-          valuePropName="checked"
+    <div style={{ display: 'flex' }}>
+      <Spin spinning={loading}>
+        <Form
+          name="basic"
+          labelCol={{
+            span: 8,
+          }}
           wrapperCol={{
-            offset: 0,
             span: 16,
           }}
+          style={{
+            maxWidth: 600,
+          }}
+          initialValues={{
+            remember: true,
+          }}
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
+          autoComplete="off"
         >
-          <Checkbox>{t("sign_pop2.message")}</Checkbox>{/*Remember me*/}
-        </Form.Item>
+          <Form.Item
+            name="name"
+            rules={[
+              {
+                required: true,
+                message: t("sign_pop5.message"),//Please input your name!
+              },
+            ]}
+          >
+            <Input placeholder="Full Name" style={{ width: '30vmax', height: '40px' }} onChange={(e) => setFullName(e.target.value)} />
+          </Form.Item>
+          <Form.Item
+            name="email"
+            rules={[
+              {
+                required: true,
+                message: t("sign_pop6.message"),//Please input your email!
+              },
+            ]}
+          >
+            <Input placeholder={t("sign_pop.message")} style={{ width: '30vmax', height: '40px' }} onChange={(e) => setEmail(e.target.value)} />
+          </Form.Item>
 
-        <Form.Item
-          wrapperCol={{
-            offset: 3,
-            span: 18,
-          }}
+          <Form.Item
+            name="password"
+            rules={[
+              {
+                required: true,
+                message: t("sign_pop7.message"),//Please input your password!
+              },
+            ]}
+          >
+            <Input.Password placeholder={t("sign_pop1.message")} style={{ width: '30vmax', height: '40px' }} onChange={(e) => setPassword(e.target.value)} />
+          </Form.Item>
+
+          <Form.Item
+            name="remember"
+            valuePropName="checked"
+            wrapperCol={{
+              offset: 0,
+              span: 16,
+            }}
+          >
+            <Checkbox>{t("sign_pop2.message")}</Checkbox>{/*Remember me*/}
+          </Form.Item>
+
+          <Form.Item
+            wrapperCol={{
+              offset: 3,
+              span: 18,
+            }}
+          >
+            <Button style={{ width: "100%" }} type="primary" htmlType="submit">
+              {t("sign_pop3.message")}
+            </Button>{/* Sign up*/}
+          </Form.Item>
+          {/* Facebook Login Button */}
+          <Form.Item
+            style={{ marginBottom: '50px' }}
+            wrapperCol={{
+              offset: 3,
+              span: 18,
+            }}
+          >
+            <Button style={{ width: "100%", backgroundColor: '#4c69ba' }} type="primary" onClick={handleFacebookSignup}>
+              {t("sign_pop4.message")}
+            </Button>{/*Login with Facebook*/}
+          </Form.Item>
+          {/* <Link to="/home">Go to Home Page</Link> */}
+        </Form>
+      </Spin>
+
+      <Spin spinning={loading1}>
+        <Modal
+          title="Additional Information for Personalized Financial Assistance"
+          visible={innerModalVisible}
+          onCancel={handleInnerModalHide}
+          footer={null}
+          maskClosable={false}
+          closeIcon={null}
         >
-          <Button style={{ width: "100%" }} type="primary" htmlType="submit">
-            {t("sign_pop3.message")}
-          </Button>{/* Sign up*/}
-        </Form.Item>
-        {/* Facebook Login Button */}
-        <Form.Item
-          style={{ marginBottom: '50px' }}
-          wrapperCol={{
-            offset: 3,
-            span: 18,
-          }}
-        >
-          <Button style={{ width: "100%", backgroundColor: '#4c69ba' }} type="primary" onClick={handleFacebookSignup}>
-            {t("sign_pop4.message")}
-          </Button>{/*Login with Facebook*/}
-        </Form.Item>
-        {/* <Link to="/home">Go to Home Page</Link> */}
-      </Form>
-    </Spin>
+          <Carousel
+            dots={false} draggable={false} swipe={false}
+            ref={CarousalSlider}
+            initialSlide={0}
+
+          >
+            <div>
+              <h3>Slide 1</h3>
+
+              <Button className="next-button" onClick={() => CarousalSlider.current.next()}>
+                Next
+              </Button>
+            </div>
+            <div>
+              <h3>Slide 2</h3>
+              <Button className="prev-button" onClick={() => CarousalSlider.current.prev()}>
+                back
+              </Button>
+              <Button className="next-button" onClick={() => CarousalSlider.current.next()}>
+                Next
+              </Button>
+            </div>
+            <div>
+              <h3>Slide 3</h3>
+              <Button className="prev-button" onClick={() => CarousalSlider.current.prev()}>
+                back
+              </Button>
+              <Button className="next-button" onClick={CaurosalFinsh}>
+                continue
+              </Button>
+            </div>
+          </Carousel>
+        </Modal>
+      </Spin>
+    </div>
   );
 };
 

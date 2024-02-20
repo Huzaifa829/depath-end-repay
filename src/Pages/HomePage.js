@@ -186,13 +186,13 @@ const HomePage = () => {
           {renderSidebtn('Tab7', t("HA_text8.message"), <SettingsIcon />)}{/*Notification Settings*/}
           {renderSidebtn('Tab8', t("HA_text9.message"), <PersonIcon />)}{/*Profile*/}
           {renderSidebtn('Tab9', t("HA_text10.message"), <AccountBalanceWalletIcon />)}{/*Wallet*/}
-          <Link to="/">
-            <Button variant="contained" endIcon={<LogoutIcon />}
+          {/* <Link to="/"> */}
+            <Button  onClick={logout} variant="contained" endIcon={<LogoutIcon />}
               style={btnstyle}
             >
               {t("HA_text1.message")}{/*sss*/}
             </Button>
-          </Link>
+          {/* </Link> */}
         </div>
         <div className='HA_main_part2'>
           {activeTab === 'Tab1' && <Tab1 />}

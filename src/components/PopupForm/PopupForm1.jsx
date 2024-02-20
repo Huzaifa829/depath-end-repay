@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button, TextField, Grid, Select, MenuItem, InputLabel, FormControl } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { actionCreators } from '../../state/index';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+
 
 const PopupForm = ({ open, onClose }) => {
   const dispatch = useDispatch();
@@ -32,7 +35,10 @@ const PopupForm = ({ open, onClose }) => {
 
   return (
     <Dialog open={open} onClose={onClose}>
-      <DialogTitle>Popup Form</DialogTitle>
+      <DialogTitle>Add User Debt Case Detail</DialogTitle>
+      <IconButton aria-label="close" onClick={onClose} sx={{ position: 'absolute', right: 8, top: 8 }}>
+    <CloseIcon />
+  </IconButton>
       <DialogContent>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
