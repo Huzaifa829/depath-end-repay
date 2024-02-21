@@ -30,6 +30,15 @@ export const openModal = (amount)=>{
         })
     }
 }
+export const ExtraDetailModalOpen = (value)=>{
+    // console.log(amount)
+    return(dispatch)=>{
+        dispatch({
+           type: "true",
+           show: value,
+        })
+    }
+}
 
 export const closeModal = (amount)=>{
     // console.log(amount)

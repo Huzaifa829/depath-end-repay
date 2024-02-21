@@ -8,9 +8,13 @@ import { FacebookOutlined } from '@ant-design/icons';
 import '../cssFile/LoginPage.css'
 import { Link, useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword, updateProfile, FacebookAuthProvider, signInWithPopup } from 'firebase/auth';
-import { auth } from '../firebase';
+import { auth, db } from '../firebase';
+import { collection, getDocs } from 'firebase/firestore';
+import { useDispatch, useSelector } from 'react-redux';
+import { actionCreators } from '../state/index'
 
 const LoginPage = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -27,8 +31,15 @@ const LoginPage = () => {
 
       // Optionally, you can perform additional actions after successful sign-in
       // For example, navigating to another page, setting user data in state, etc.
-      message.success(t("signIn_success_message"));
-      navigate('/home');
+      const querySnapshot = await getDocs(collection(db, "users"));
+      const userExists = querySnapshot.docs.some(doc => doc.id === userCredential.user.uid);
+
+      if (!userExists) {
+        dispatch(actionCreators.ExtraDetailModalOpen(true));
+        console.log('working')
+      } else {
+        navigate('/home');
+      }
     } catch (error) {
       // Show error message
       console.error(error.message);

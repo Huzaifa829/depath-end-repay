@@ -26,6 +26,7 @@ import NewsTicker from '../components/Newsthicker/Newsthicker';
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import CloseIcon from '@mui/icons-material/Close';
+import ExtraDteailFrom from '../components/PopupForm/ExtraDteailFrom';
 
 
 const LoginPage = () => {
@@ -244,6 +245,7 @@ const LoginPage = () => {
                 </p>
             </div>
         }
+        <ExtraDteailFrom/>
     </DialogContent>
 </Dialog>
             </>
