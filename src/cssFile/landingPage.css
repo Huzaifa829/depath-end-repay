@@ -156,44 +156,66 @@
   }
 
   .HA_HA_main_bn_2_image_container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
+      position: relative;
+      display: flex;
+      justify-content: center;
+  }
 
-.HA_text-overlay {
-    position: absolute;
-    top: 69%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%; /* Ensures text spans the entire width of the container */
-}
+  .HA_text-overlay {
+      position: absolute;
+      top: 69%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 100%;
+      /* Ensures text spans the entire width of the container */
+  }
 
-.HA_centered_text {
-    color: black; /* Change color as needed */
-    font-size:1.8rem; /* Adjust font size as needed */
-    /* Add any additional styling for your text */
-    text-align: center;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-.close-icon {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    cursor: pointer;
-}
-@media screen and (max-width: 1024px){
+  .HA_centered_text {
+      color: black;
+      /* Change color as needed */
+      font-size: 1.8rem;
+      /* Adjust font size as needed */
+      /* Add any additional styling for your text */
+      text-align: center;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
 
-.HA_centered_text {
-    font-size:1.4rem
-}
-}
+  .close-icon {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      cursor: pointer;
+  }
+
+  @media screen and (max-width: 1024px) {
+      .centered-text {
+          color: black;
+          /* Change color as needed */
+          font-size: 1.0.5rem;
+          text-align: center;
+          font-weight: bold;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+          /* Adjust font size as needed */
+          /* Add any additional styling for your text */
+      }
+
+      .HA_centered_text {
+          font-size: 1.4rem
+      }
+  }
+
   @media screen and (max-width: 768px) {
-    .HA_centered_text{
-        display: none;
+    .centered-text {
+    
+        font-size: 1rem;
+      
     }
+      .HA_centered_text {
+          display: none;
+      }
+
       .HA_main_bn_2_image {
           display: none;
       }
@@ -257,6 +279,11 @@
   }
 
   @media screen and (max-width: 425px) {
+    .centered-text {
+    
+        font-size: 1rem;
+      
+    }
       .HA_newsthicker_main_DIV {
           width: 100%;
       }

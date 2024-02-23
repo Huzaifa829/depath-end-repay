@@ -17,6 +17,7 @@ import NoteState from './context/check/NoteState.js';
 import { Provider } from 'react-redux';
 import { store } from './state/store.js';
 import { auth } from './firebase.js';
+import PrivacyPolicy from './Pages/PrivacyPolicy .jsx';
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -67,6 +68,7 @@ function App() {
       <I18nextProvider i18n={i18next}> {/* Provide the i18n instance to I18nextProvider */}
         <Routes>
           <Route path='/' element={<LandingPage />} />
+          <Route path='/privacy-policy' element={<PrivacyPolicy  />} />
 
           <Route path='/home' element={user ? <HomePage /> : <Navigate to="/" />} />
         </Routes>

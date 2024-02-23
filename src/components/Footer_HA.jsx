@@ -10,6 +10,7 @@ import PolicyIcon from '@mui/icons-material/Policy';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { ListItem, ListItemIcon, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const [t, i18n] = useTranslation('global');
@@ -35,12 +36,14 @@ const Footer = () => {
               </ListItemIcon>
               <Typography variant="body2">{t('footer1.message')}</Typography>
             </ListItem>
+            <Link to="/privacy-policy">
             <ListItem>
               <ListItemIcon>
                 <PolicyIcon style={{ color: 'black' }} fontSize="large" />
               </ListItemIcon>
               <Typography variant="body2">{t('footer2.message')}</Typography>
             </ListItem>
+            </Link>
             <ListItem>
               <ListItemIcon>
                 <PermContactCalendarIcon style={{ color: 'black' }} fontSize="large" />
@@ -58,7 +61,9 @@ const Footer = () => {
               </li>
               <li className="social-icon__item">
                 <a className="social-icon__link" href="#">
+                <Link to="/privacy-policy">
                   <PolicyIcon style={{ fontSize: 30 }} />
+                  </Link>
                 </a>
               </li>
               <li className="social-icon__item">

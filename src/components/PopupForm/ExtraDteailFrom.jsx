@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { actionCreators } from '../../state/index'
 import Swal from 'sweetalert2';
 import '../../cssFile/LoginPage.css';
+import logo1 from "../../assets/images/logoMain.png"
 
 const { Option } = Select;
 
@@ -114,7 +115,7 @@ const ExtraDteailFrom = () => {
       }, 2000); // Delay navigation by 1 second
       setTimeout(() => {
         dispatch(actionCreators.openModal(true));
-      }, 3000);
+      }, 4000);
     } catch (error) {
       console.error("Error updating Firestore document:", error);
       // Handle error if needed
@@ -122,14 +123,7 @@ const ExtraDteailFrom = () => {
   };
  
 
-  // const handleContinue = (slideNumber) => {
-  //   CarousalSlider.current.goTo(slideNumber, false); // Move to the specified slide
-  // };
-  // useLayoutEffect(() => {
-  //   if (CarousalSlider.current) {
-  //     CarousalSlider.current.goTo(1, false); // Start from slide 1 initially
-  //   }
-  // }, []);
+
   
 
 
@@ -221,11 +215,18 @@ const ExtraDteailFrom = () => {
     CaurosalFinsh()
 
   }
+  const customeHeader =(
+    <div>
+      <img style={{width:'100px'}} src={logo1} alt="" />
+      <p>Additional Information for Personalized Financial Assistance</p>
+    </div>
+  );
   return (
     <div style={{ display: 'flex' }}>
       <Modal
-        title="Additional Information for Personalized Financial Assistance"
+        title={customeHeader}
         visible={open}
+        // header={customeHeader}
         onCancel={handleInnerModalHide}
         footer={null}
         maskClosable={false}
@@ -240,7 +241,7 @@ const ExtraDteailFrom = () => {
 
           >
             <div>
-              <h3>Slide 1: Financial Goals</h3>
+              <h3>Financial Goals</h3>
               <p>Please specify your financial goals:</p>
               <Form>
                 <Form.Item>
@@ -271,14 +272,14 @@ const ExtraDteailFrom = () => {
 
               </Form>
 
-              <div className="HA_MAINbutton-container">
+              <div className="HA_MAINbutton_container1">
               <Button className="next-button" onClick={handleNextButtonClick}>
                 Next
               </Button>
               </div>
             </div>
             <div>
-              <h3>Slide 2: Income Details</h3>
+              <h3>Income Details</h3>
               <p>Please provide details about your income:</p>
               <Form>
                 <Form.Item
@@ -306,7 +307,7 @@ const ExtraDteailFrom = () => {
                   />
                 </Form.Item>
               </Form>
-              <div className="HA_MAINbutton-container">
+              <div className="HA_MAINbutton_container">
               <Button className="prev-button" onClick={() => CarousalSlider.current.prev()}>
                 back
               </Button>
@@ -316,7 +317,7 @@ const ExtraDteailFrom = () => {
               </div>
             </div>
             <div>
-              <h3>Slide 3: Additional Details</h3>
+              <h3>Additional Details</h3>
               <p>Please provide additional details:</p>
               <Form>
                 <Form.Item
@@ -397,7 +398,7 @@ const ExtraDteailFrom = () => {
                 Back
               </Button>
               <Button className="next-button" onClick={extraAlldetailAdd}>
-                Compeleted
+                Submit
               </Button>
               </div>
             </div>

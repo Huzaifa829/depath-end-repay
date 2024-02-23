@@ -70,10 +70,15 @@ const LoginPage = () => {
       // const tokenResult = await user.getIdTokenResult(true);
 
       // Show success message
-      message.success("Login with Facebook successful");
+      const querySnapshot = await getDocs(collection(db, "users"));
+      const userExists = querySnapshot.docs.some(doc => doc.id === user.uid);
 
-      // Navigate to the home page after successful login
-      navigate('/home');
+      if (!userExists) {
+        dispatch(actionCreators.ExtraDetailModalOpen(true));
+        console.log('working')
+      } else {
+        navigate('/home');
+      }
     } catch (error) {
       // Handle Facebook login errors
       console.error('Facebook login error:', error);

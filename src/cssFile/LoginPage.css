@@ -37,6 +37,10 @@ button.kep-login-facebook.metro{
     gap: 20px;
     
 }
+.HA_MAINbutton_container1{
+display: flex;
+justify-content: flex-end;
+}
   @media screen and (max-width: 600px) {
 
     .ant-col.ant-col-18.ant-col-offset-3.ant-form-item-control.css-dev-only-do-not-override-p7e5j5 {
