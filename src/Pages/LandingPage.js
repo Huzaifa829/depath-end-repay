@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Navbar from '../components/Navbar';
 import '../cssFile/landingPage.css';
-import img1 from '../assets/images/pricing (2).png';
+import img1 from '../assets/images/Untitled design (3).png';
 import img2 from '../assets/images/13 (1).png'
 import img3 from '../assets/images/13 (2).png';
 import Button from '@mui/material/Button';
@@ -138,7 +138,10 @@ const LoginPage = () => {
                                     {t("text4.message")}
                                 </Button>
                             </div>
-                            <div style={{ width: 'auto', height: 'auto', padding: '10px 0px', display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
+
+                            {/* comment Newsthicker start */}
+
+                            {/* <div style={{ width: 'auto', height: 'auto', padding: '10px 0px', display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
                                 <img width={150} src={img2} alt="" />
                                 <img width={150} src={img3} alt="" />
                             </div>
@@ -150,14 +153,17 @@ const LoginPage = () => {
                                         isVisible={index === visibleNewsIndex}
                                     />
                                 ))}
-                            </div>
+                            </div> */}
+
+                            {/* comment Newsthicker End */}
+
                         </div>
                     </div>
                     <div className='HA_main_bn_2'>
                         <div className='HA_HA_main_bn_2_image_container'>
                             <img className='HA_main_bn_2_image' src={img1} alt="" />
                             <div className="HA_text-overlay">
-                                <p className="HA_centered_text">Your Centered Text Here</p>
+                                <p className="HA_centered_text">Dynamic text banner</p>
                             </div>
                             </div>
 
@@ -167,21 +173,8 @@ const LoginPage = () => {
                                         <div>
                                             {img}
                                             <div
-                                                style={{
-                                                    position: 'absolute',
-                                                    top: '62%',
-                                                    left: '50%',
-                                                    transform: 'translate(-50%, -50%)',
-                                                    color: 'black',
-                                                    width: '350px',
-                                                    height:'auto',
-                                                    textAlign: 'center',
-                                                    fontSize: '24px',
-                                                    fontWeight: 'bold',
-                                                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', // Optional: add shadow for better visibility
-                                                }}
-                                            >
-                                                <p>This is the text on the image</p>
+                                            className='HA_zoom_main_div'>  
+                                                <p className='HA_zoom_text'>Dynamic text banner</p>
                                             </div>
                                             {buttonUnzoom}
                                         </div>
@@ -195,7 +188,7 @@ const LoginPage = () => {
                                         className='HA_main_bn_2_image44'
                                     />
                                     <div className="text-overlay HA_main_bn_2_image44">
-                                        <p className="centered-text">Your Centered Text Here</p>
+                                        <p className="centered-text">Dynamic text banner</p>
                                     </div>
                                 </Zoom>
                             </div>
@@ -217,7 +210,7 @@ const LoginPage = () => {
                     </div>
                 )}
 
-<Dialog style={{zIndex:'2'}} open={isLoginFormOpen} onClose={closeLoginForm} aria-labelledby="login-form-dialog">
+<Dialog style={{zIndex:'2',borderRadius:'0px'}} open={isLoginFormOpen} onClose={closeLoginForm} aria-labelledby="login-form-dialog">
     <DialogTitle className='HA_check_text' id="login-form-dialog">
         {activeTab === 'Tab1' && t("text5.message")}
         {activeTab === 'Tab2' && t("text6.message")}

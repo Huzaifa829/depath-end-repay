@@ -18,6 +18,7 @@ import { Provider } from 'react-redux';
 import { store } from './state/store.js';
 import { auth } from './firebase.js';
 import PrivacyPolicy from './Pages/PrivacyPolicy .jsx';
+import './App.css'
 
 i18next.init({
   interpolation: { escapeValue: false },

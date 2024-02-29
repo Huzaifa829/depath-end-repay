@@ -14,7 +14,12 @@
   align-items: flex-end;
   min-height: 100vh;
 } */
-
+/* svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root{
+  color: black;
+} */
+.HA_a_link{
+  text-decoration: none;
+}
 .footer {
   /* position: relative; */
   width: 96%;
@@ -131,7 +136,8 @@
 }
 
 
-@media screen and (maxWidth: 425px) {
+@media screen and (max-width: 425px) {
+ 
   .footer {
     flex-direction: column;
     /* align-items: flex-start; */
